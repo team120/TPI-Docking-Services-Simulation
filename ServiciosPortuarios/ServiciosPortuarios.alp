@@ -4,13 +4,13 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241833" AlpVersion="8.5.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241926" AlpVersion="8.5.1">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[serviciosportuarios]]></JavaPackageName>
-	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
+	<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>
 	<OptionLists>
 		<OptionList>
 			<Id>1598843455703</Id>
@@ -94,11 +94,11 @@
 					<OccurrenceDate>1598860800000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -123,7 +123,7 @@
 				<Connector>
 					<Id>1598888304235</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>510.5</X><Y>752</Y>
+					<X>509</X><Y>820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -149,14 +149,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-44</X><Y>0</Y></Point>
+						<Point><X>1</X><Y>0</Y></Point>
+						<Point><X>-41</X><Y>-2</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1598888404033</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>697.5</X><Y>752</Y>
+					<X>696</X><Y>820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -182,14 +182,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-77</X><Y>0</Y></Point>
+						<Point><X>1</X><Y>0</Y></Point>
+						<Point><X>-76</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1598888404035</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>231.5</X><Y>2</Y>
+					<X>230</X><Y>70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -215,8 +215,8 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>349</X><Y>750</Y></Point>
-						<Point><X>319</X><Y>750</Y></Point>
+						<Point><X>350</X><Y>750</Y></Point>
+						<Point><X>320</X><Y>750</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -384,8 +384,8 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>215</X><Y>0</Y></Point>
-						<Point><X>215</X><Y>-59</Y></Point>
-						<Point><X>275</X><Y>-123</Y></Point>
+						<Point><X>218</X><Y>-55</Y></Point>
+						<Point><X>276</X><Y>-57</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -419,8 +419,9 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>-102</Y></Point>
-						<Point><X>221</X><Y>-102</Y></Point>
-						<Point><X>280</X><Y>-51</Y></Point>
+						<Point><X>233</X><Y>-103</Y></Point>
+						<Point><X>233</X><Y>17</Y></Point>
+						<Point><X>281</X><Y>15</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -486,7 +487,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>114</X><Y>-71</Y></Point>
+						<Point><X>115</X><Y>-5</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -606,16 +607,10 @@
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 											<ClassName><![CDATA[Truck]]></ClassName>
-											<ItemName><![CDATA[1598843455631]]></ItemName>
+											<ItemName><![CDATA[1598911880849]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
-										<Parameter>
-											<Name><![CDATA[capacity]]></Name>
-										</Parameter>
-										<Parameter>
-											<Name><![CDATA[grainType]]></Name>
-										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -723,80 +718,9 @@
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>0</Id>
-					<Name><![CDATA[trucks]]></Name>
-					<X>90</X><Y>640</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<PresentationId>1598843455717</PresentationId>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Truck]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-							<ClassName><![CDATA[Truck]]></ClassName>
-							<ItemName><![CDATA[1598843455631]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[grainType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[Soy]]></Code>
-							</Value>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>true</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1598887491356</Id>
 					<Name><![CDATA[carMoveTo]]></Name>
-					<X>427.7</X><Y>742</Y>
+					<X>428.5</X><Y>808</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -889,7 +813,7 @@
 				<EmbeddedObject>
 					<Id>1598887592887</Id>
 					<Name><![CDATA[carDispose]]></Name>
-					<X>698.667</X><Y>752.166</Y>
+					<X>697.167</X><Y>820.166</Y>
 					<Label><X>-30</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -952,7 +876,7 @@
 				<EmbeddedObject>
 					<Id>1598888302646</Id>
 					<Name><![CDATA[carMoveTo1]]></Name>
-					<X>511.5</X><Y>742</Y>
+					<X>510</X><Y>810</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1045,7 +969,7 @@
 				<EmbeddedObject>
 					<Id>1598888402400</Id>
 					<Name><![CDATA[carMoveTo2]]></Name>
-					<X>581.5</X><Y>742</Y>
+					<X>580</X><Y>810</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2432,43 +2356,24 @@
 			</Presentation>
 
 				</Level>
-				<EmbeddedObjectPresentation>
-					<Id>1598843455717</Id>
-					<Name><![CDATA[trucks_presentation]]></Name>
-					<X>90</X><Y>665</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 			</Presentation>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
-			<Id>1598843455633</Id>
+			<Id>1598911880851</Id>
 			<Name><![CDATA[Truck]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
-				<Id>1598843455631</Id>
-				<Name><![CDATA[1598843455631]]></Name>
+				<Id>1598911880849</Id>
+				<Name><![CDATA[1598911880849]]></Name>
 				<GenericParameterValue Class="CodeValue">
 					<Code><![CDATA[T extends Agent]]></Code>
 				</GenericParameterValue>
 				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
 			</GenericParameter>
-			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<FlowChartsUsage>CAR</FlowChartsUsage>
 			<SamplesToKeep>100</SamplesToKeep>
 			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
 			<ElementsLimitValue>100</ElementsLimitValue>
@@ -2523,18 +2428,18 @@
 			<DatasetsCreationProperties>
 				<AutoCreate>true</AutoCreate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1598860800000</OccurrenceDate>
+					<OccurrenceDate>1596268800000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
-				<Id>1598843455629</Id>
+				<Id>1598911880847</Id>
 				<Name><![CDATA[scale]]></Name>
 				<X>0</X><Y>-150</Y>
 				<PublicFlag>false</PublicFlag>
@@ -2549,91 +2454,11 @@
 				<Scale>10</Scale>
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
-			<CurrentLevel>1598843455632</CurrentLevel>
-			<ConnectionsId>1598843455628</ConnectionsId>
-			<Variables>
-				<Variable Class="Parameter">
-					<Id>1598843455692</Id>
-					<Name><![CDATA[capacity]]></Name>
-					<X>50</X><Y>50</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>0</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1598843455706</Id>
-					<Name><![CDATA[grainType]]></Name>
-					<X>50</X><Y>100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[OptionList]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>0</Id>
-							<Label><![CDATA[grainType]]></Label>
-							<EditorContolType>EDITABLE_COMBO</EditorContolType>
-							<PredefParamValue>
-								<Id>0</Id>
-								<Name><![CDATA[Soy]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[Soy]]></Code>
-								</Value>
-							</PredefParamValue>
-							<PredefParamValue>
-								<Id>0</Id>
-								<Name><![CDATA[Wheat]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[Wheat]]></Code>
-								</Value>
-							</PredefParamValue>
-							<PredefParamValue>
-								<Id>0</Id>
-								<Name><![CDATA[Rye]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[Rye]]></Code>
-								</Value>
-							</PredefParamValue>
-							<PredefParamValue>
-								<Id>0</Id>
-								<Name><![CDATA[Barley]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[Barley]]></Code>
-								</Value>
-							</PredefParamValue>
-							<PredefParamValue>
-								<Id>0</Id>
-								<Name><![CDATA[Sorghum]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[Sorghum]]></Code>
-								</Value>
-							</PredefParamValue>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-			</Variables>
+			<CurrentLevel>1598911880850</CurrentLevel>
+			<ConnectionsId>1598911880846</ConnectionsId>
 			<AgentLinks>
 				<AgentLink>
-					<Id>1598843455628</Id>
+					<Id>1598911880846</Id>
 					<Name><![CDATA[connections]]></Name>
 					<X>50</X><Y>-50</Y>
 					<Label><X>15</X><Y>0</Y></Label>
@@ -2653,25 +2478,10 @@
 				</AgentLink>
 			</AgentLinks>
 
-			<ContainerLinks>
-				<ContainerLink>
-					<Id>1598843455775</Id>
-					<Name><![CDATA[main]]></Name>
-					<X>50</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-			</ContainerLinks>
 
 			<Presentation>
 				<Level>
-					<Id>1598843455632</Id>
+					<Id>1598911880850</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2684,8 +2494,8 @@
 
 			<Presentation>
 				<Figure3D>
-					<Id>1598843455645</Id>
-					<Name><![CDATA[truck_3]]></Name>
+					<Id>1598911880873</Id>
+					<Name><![CDATA[truck]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2696,50 +2506,26 @@
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[3d/truck_3.dae]]></ClassName>
+						<ClassName><![CDATA[3d/truck.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
 						<ColorMapping>
-							<Name><![CDATA[wheels]]></Name>
-							<OriginalColor>-11975098</OriginalColor>
+							<Name><![CDATA[Material__2__Surf]]></Name>
+							<OriginalColor>-3403008</OriginalColor>
 						</ColorMapping>
 						<ColorMapping>
-							<Name><![CDATA[body]]></Name>
-							<OriginalColor>-9598286</OriginalColor>
+							<Name><![CDATA[Material__1__Surf]]></Name>
+							<OriginalColor>-11908534</OriginalColor>
 						</ColorMapping>
 						<ColorMapping>
-							<Name><![CDATA[frame]]></Name>
-							<OriginalColor>-11447983</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[lights]]></Name>
-							<OriginalColor>-722586</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[tank]]></Name>
-							<OriginalColor>-8287107</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[mirrors]]></Name>
-							<OriginalColor>-11447983</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[windows]]></Name>
-							<OriginalColor>-10791078</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[radiator]]></Name>
-							<OriginalColor>-10921900</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[axis]]></Name>
-							<OriginalColor>-2063</OriginalColor>
+							<Name><![CDATA[Material__3__Surf]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
 						</ColorMapping>
 					</ColorTable>
 					<AutoScale>true</AutoScale>
 					<Scale>1.0</Scale>
 					<Rotation>0.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
@@ -2856,7 +2642,7 @@
 	</Experiments>
 	<ModelResources>
 		<Resource>
-			<Path><![CDATA[3d/truck_3.dae]]></Path>
+			<Path><![CDATA[3d/truck.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
