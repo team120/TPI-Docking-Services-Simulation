@@ -207,7 +207,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource]]></ItemName>
+						<ItemName><![CDATA[truckSource]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -274,7 +274,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay1]]></ItemName>
+						<ItemName><![CDATA[delayParking1]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -297,7 +297,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay1]]></ItemName>
+						<ItemName><![CDATA[delayParking1]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -409,7 +409,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay2]]></ItemName>
+						<ItemName><![CDATA[delayParking2]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -468,7 +468,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay2]]></ItemName>
+						<ItemName><![CDATA[delayParking2]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -594,7 +594,7 @@
 				<Connector>
 					<Id>1598929276663</Id>
 					<Name><![CDATA[connector16]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>1370</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -602,7 +602,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay]]></ItemName>
+						<ItemName><![CDATA[timeUnloading]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -620,14 +620,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1370</X><Y>1210</Y></Point>
-						<Point><X>1330</X><Y>1210</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1598929433456</Id>
 					<Name><![CDATA[connector12]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>1590</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -635,7 +635,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carDispose]]></ItemName>
+						<ItemName><![CDATA[truckDispose]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -653,14 +653,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1590</X><Y>1210</Y></Point>
-						<Point><X>1490</X><Y>1210</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-100</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1598929433458</Id>
 					<Name><![CDATA[connector17]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>1450</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -678,7 +678,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay]]></ItemName>
+						<ItemName><![CDATA[timeUnloading]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -686,14 +686,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1450</X><Y>1210</Y></Point>
-						<Point><X>1410</X><Y>1210</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1598964418782</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>1363.5</X><Y>1369</Y>
+					<X>1362.5</X><Y>1369</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -711,7 +711,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[convey]]></ItemName>
+						<ItemName><![CDATA[conveyToTank]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
@@ -744,7 +744,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyorExit]]></ItemName>
+						<ItemName><![CDATA[conveyorExitToTank]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
@@ -767,7 +767,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyorExit]]></ItemName>
+						<ItemName><![CDATA[conveyorExitToTank]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
@@ -777,7 +777,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[convey]]></ItemName>
+						<ItemName><![CDATA[conveyToTank]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
@@ -792,7 +792,7 @@
 				<Connector>
 					<Id>1598991854701</Id>
 					<Name><![CDATA[connector20]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>1418</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -800,7 +800,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tankValve]]></ItemName>
+						<ItemName><![CDATA[tankValveIn]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
@@ -818,8 +818,8 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1418</X><Y>1470</Y></Point>
-						<Point><X>1365</X><Y>1470</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-53</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -843,7 +843,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tankValve]]></ItemName>
+						<ItemName><![CDATA[tankValveIn]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
@@ -856,42 +856,9 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1598992784875</Id>
-					<Name><![CDATA[connector22]]></Name>
-					<X>1652</X><Y>1520</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[fluidDispose]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidDispose]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[valve]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-45</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1598992784876</Id>
 					<Name><![CDATA[connector23]]></Name>
-					<X>1587</X><Y>1520</Y>
+					<X>1590</X><Y>1520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -899,7 +866,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[valve]]></ItemName>
+						<ItemName><![CDATA[tankValveOut]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
@@ -918,7 +885,106 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-51</X><Y>0</Y></Point>
+						<Point><X>-54</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1599004103958</Id>
+					<Name><![CDATA[connector24]]></Name>
+					<X>1380</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[grainToShip]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Source]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[conveyToShip]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+						<ClassName><![CDATA[Convey]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1599004107302</Id>
+					<Name><![CDATA[connector25]]></Name>
+					<X>1470</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[conveyToShip]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+						<ClassName><![CDATA[Convey]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[sink1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Sink]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1599004157798</Id>
+					<Name><![CDATA[connector22]]></Name>
+					<X>1610</X><Y>1520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[tankValveOut]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[fluidDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -947,7 +1013,7 @@
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1598843165485</Id>
-					<Name><![CDATA[carSource]]></Name>
+					<Name><![CDATA[truckSource]]></Name>
 					<X>30</X><Y>1210</Y>
 					<Label><X>-10</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1261,7 +1327,7 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598887592887</Id>
-					<Name><![CDATA[carDispose]]></Name>
+					<Name><![CDATA[truckDispose]]></Name>
 					<X>1590</X><Y>1210</Y>
 					<Label><X>-35</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1608,7 +1674,7 @@
 					<Id>1598888994381</Id>
 					<Name><![CDATA[chooseParking]]></Name>
 					<X>120</X><Y>1200</Y>
-					<Label><X>-69.333</X><Y>21.666</Y></Label>
+					<Label><X>-40</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1783,9 +1849,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598889375576</Id>
-					<Name><![CDATA[delay1]]></Name>
+					<Name><![CDATA[delayParking1]]></Name>
 					<X>580</X><Y>1190</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
+					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1886,9 +1952,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598913579735</Id>
-					<Name><![CDATA[delay2]]></Name>
+					<Name><![CDATA[delayParking2]]></Name>
 					<X>580</X><Y>1320</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
+					<Label><X>-35</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2292,9 +2358,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598927539974</Id>
-					<Name><![CDATA[convey]]></Name>
+					<Name><![CDATA[conveyToTank]]></Name>
 					<X>1413.5</X><Y>1359</Y>
-					<Label><X>-4</X><Y>-16</Y></Label>
+					<Label><X>-43.5</X><Y>41</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2319,7 +2385,7 @@
 						<Parameter>
 							<Name><![CDATA[sourceConveyor]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[conveyor]]></Code>
+								<Code><![CDATA[conveyorToTank]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2343,7 +2409,7 @@
 						<Parameter>
 							<Name><![CDATA[targetConveyor]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[conveyor]]></Code>
+								<Code><![CDATA[conveyorToTank]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2699,9 +2765,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598929274632</Id>
-					<Name><![CDATA[delay]]></Name>
+					<Name><![CDATA[timeUnloading]]></Name>
 					<X>1370</X><Y>1190</Y>
-					<Label><X>-5</X><Y>-15</Y></Label>
+					<Label><X>-35</X><Y>55</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2957,9 +3023,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598991381388</Id>
-					<Name><![CDATA[conveyorExit]]></Name>
+					<Name><![CDATA[conveyorExitToTank]]></Name>
 					<X>1500.5</X><Y>1359.5</Y>
-					<Label><X>-25</X><Y>-25</Y></Label>
+					<Label><X>-80.5</X><Y>-24.5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3151,9 +3217,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598991851884</Id>
-					<Name><![CDATA[tankValve]]></Name>
+					<Name><![CDATA[tankValveIn]]></Name>
 					<X>1418</X><Y>1460.5</Y>
-					<Label><X>-10</X><Y>-15</Y></Label>
+					<Label><X>-8</X><Y>-15.5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3341,7 +3407,7 @@
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[valve.open()]]></Code>
+								<Code><![CDATA[tankValveOut.open()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3360,7 +3426,7 @@
 						<Parameter>
 							<Name><![CDATA[onBelow]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[valve.close()]]></Code>
+								<Code><![CDATA[tankValveOut.close()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3415,8 +3481,8 @@
 				<EmbeddedObject>
 					<Id>1598991913229</Id>
 					<Name><![CDATA[fluidDispose]]></Name>
-					<X>1652.5</X><Y>1500.5</Y>
-					<Label><X>-23</X><Y>-0.5</Y></Label>
+					<X>1760</X><Y>1500</Y>
+					<Label><X>-42.5</X><Y>49.5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3483,9 +3549,9 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1598992781974</Id>
-					<Name><![CDATA[valve]]></Name>
-					<X>1587</X><Y>1510</Y>
-					<Label><X>-10</X><Y>-15</Y></Label>
+					<Name><![CDATA[tankValveOut]]></Name>
+					<X>1590</X><Y>1510</Y>
+					<Label><X>-37</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3534,9 +3600,475 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[grainToShip.inject(1);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1599003100112</Id>
+					<Name><![CDATA[grainToShip]]></Name>
+					<X>1350</X><Y>1590</Y>
+					<Label><X>-10</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Source]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Source]]></ClassName>
+							<ItemName><![CDATA[1412336242928]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[arrivalType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.MANUAL]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interarrivalTime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[firstArrivalMode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[firstArrivalTime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modifyRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateExpression]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[setAgentParametersFromDB]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[databaseTable]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalDate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[multipleEntitiesPerArrival]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[entitiesPerArrival]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[limitArrivals]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxArrivals]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationX]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationY]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationZ]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationLatitude]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationLongitude]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationGeoPlaceName]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationXYZInNetwork]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationNetwork]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationLevel]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationNode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[locationAttractor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[speed]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[newEntity]]></Name>
+							<Value Class="EntityCodeValue">
+								<EntityEmbeddedObject>
+									<ActiveObjectClass>
+										<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+										<ClassName><![CDATA[BulkCargo]]></ClassName>
+									</ActiveObjectClass>
+									<GenericParameterSubstitute>
+										<GenericParameterSubstituteReference>
+											<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+											<ClassName><![CDATA[BulkCargo]]></ClassName>
+											<ItemName><![CDATA[1598928221866]]></ItemName>
+										</GenericParameterSubstituteReference>
+									</GenericParameterSubstitute>
+									<Parameters>
+									</Parameters>
+									<ReplicationFlag>true</ReplicationFlag>
+									<Replication Class="CodeValue">
+										<Code><![CDATA[100]]></Code>
+									</Replication>
+									<CollectionType>ARRAY_LIST_BASED</CollectionType>
+									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+									<XCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</XCode>
+									<YCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</YCode>
+									<ZCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ZCode>
+									<ColumnCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ColumnCode>
+									<RowCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</RowCode>
+									<LatitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LatitudeCode>
+									<LongitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LongitudeCode>
+									<LocationNameCode Class="CodeValue">
+										<Code><![CDATA[""]]></Code>
+									</LocationNameCode>
+									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+									<InitializationDatabaseTableQuery>
+										<TableReference>
+										</TableReference>
+									</InitializationDatabaseTableQuery>
+									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+									<QuantityColumn>
+									</QuantityColumn>
+								</EntityEmbeddedObject>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[changeDimensions]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[width]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[height]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[enableCustomStartTime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[startTime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[addToCustomPopulation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[population]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pushProtocol]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[false]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[discardHangingEntities]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[false]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onBeforeArrival]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAtExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onDiscard]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1599003116939</Id>
+					<Name><![CDATA[conveyToShip]]></Name>
+					<X>1430</X><Y>1590</Y>
+					<Label><X>-15</X><Y>45</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+						<ClassName><![CDATA[Convey]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+							<ClassName><![CDATA[Convey]]></ClassName>
+							<ItemName><![CDATA[1504168429638]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[sourceType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[sourcePositionOnConveyor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[sourceConveyor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[conveyorToShip]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[sourceOffsetFromBeginning]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[sourceOffset]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[changeOrientation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[orientation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetPositionOnConveyor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetConveyor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[conveyorToShip]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetOffsetFromBeginning]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetOffset]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetStation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[targetCustomStation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[routeIs]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[conveyorsToAvoid]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[conveyorsToInclude]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[conveyorSequence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[removeFromConveyor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[removeFromSpace]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAtExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRemove]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onCancel]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1599003141847</Id>
+					<Name><![CDATA[sink1]]></Name>
+					<X>1520</X><Y>1590</Y>
+					<Label><X>-15</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Sink]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Sink]]></ClassName>
+							<ItemName><![CDATA[1412336242929]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destroyEntity]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -3678,7 +4210,7 @@
 					<SignalStateAnimationVisible>true</SignalStateAnimationVisible>
 
 			<Presentation>
-				<Road SourceId="1598888283566" TargetId="1598887081815">
+				<Road SourceId="1598888283566" TargetId="1599002692970">
 					<Id>1598886863075</Id>
 					<Name><![CDATA[circunvalacion]]></Name>
 					<X>798.334</X><Y>778</Y>
@@ -3701,37 +4233,15 @@
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>111.33233333333337</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>86.33233333333337</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>136.3322169095872</X><Y>0.07629661691978087</Y><Z>0</Z></Point>
-						<Point><X>766.6663333333333</X><Y>2</Y><Z>0</Z></Point>
-						<Point><X>741.6664497570795</X><Y>1.923703383080219</Y><Z>0</Z></Point>
-						<Point><X>741.6663333333333</X><Y>2</Y><Z>0</Z></Point>
+						<Point><X>111.332</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>86.332</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>136.33188177917</X><Y>0.07688320702645107</Y><Z>0</Z></Point>
+						<Point><X>742.9994216048866</X><Y>1.942593872086917</Y><Z>0</Z></Point>
+						<Point><X>717.9995398257166</X><Y>1.8657106650604658</Y><Z>0</Z></Point>
+						<Point><X>767.9993033840566</X><Y>2.019477079113368</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
-				<RoadStopline>
-					<Id>1598887258450</Id>
-					<Name><![CDATA[stopLine4]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>758.6693852051163</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<LeftLane>1</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1598887081815</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-				</RoadStopline>
 				<RoadStopline>
 					<Id>1598888283578</Id>
 					<Name><![CDATA[stopLine2]]></Name>
@@ -3746,6 +4256,28 @@
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
 					<Junction>1598888283566</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1599002692984</Id>
+					<Name><![CDATA[stopLine4]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>735.0027420022194</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1599002692970</Junction>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
 					<SpeedLimitValue Class="UnitValue">
 						<Value Class="Double">40</Value>
@@ -3825,295 +4357,6 @@
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
 					<Junction>1598889428671</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-				</RoadStopline>
-			</Presentation>
-
-				</Road>
-				<RoadJunction>
-					<Id>1598887081815</Id>
-					<Name><![CDATA[intersection2]]></Name>
-					<X>1640</X><Y>780</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>true</FakeNode>
-
-			<Presentation>
-				<LaneConnector SourceId="1598887215707" TargetId="1598887215707">
-					<Id>1598887250681</Id>
-					<Name><![CDATA[laneConnector14]]></Name>
-					<X>1750</X><Y>773</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>14</Y></Point>
-						<Point><X>-10</X><Y>14</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598886863075" TargetId="1598886863075">
-					<Id>1598887258443</Id>
-					<Name><![CDATA[laneConnector11]]></Name>
-					<X>1564.9789702805958</X><Y>786.9999674013511</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>74.99939277214185</X><Y>-6.999934802702228</Y></Point>
-						<Point><X>9.999953430501364</X><Y>0.030518646767859536</Y></Point>
-						<Point><X>0.0427261054749124</X><Y>-13.999934802702228</Y></Point>
-						<Point><X>10.042679535976504</X><Y>-13.969416155934255</Y></Point>
-						<Point><X>74.99939277214185</X><Y>-6.999934802702228</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598886863075" TargetId="1598887215707">
-					<Id>1598887258444</Id>
-					<Name><![CDATA[laneConnector12]]></Name>
-					<X>1564.9789702805958</X><Y>786.9999674013511</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>75.02108915821259</X><Y>-6.999902204053342</Y></Point>
-						<Point><X>9.999953430501364</X><Y>0.030518646767859536</Y></Point>
-						<Point><X>0.02142249154530873</X><Y>9.779594665815239E-5</Y></Point>
-						<Point><X>-9.978577508454691</X><Y>9.779594665815239E-5</Y></Point>
-						<Point><X>0.02142249154530873</X><Y>9.779594665815239E-5</Y></Point>
-						<Point><X>185.02102971940417</X><Y>3.2598648886050796E-5</Y></Point>
-						<Point><X>185.02102971940417</X><Y>3.2598648886050796E-5</Y></Point>
-						<Point><X>75.02108915821259</X><Y>-6.999902204053342</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887215707" TargetId="1598886863075">
-					<Id>1598887258445</Id>
-					<Name><![CDATA[laneConnector13]]></Name>
-					<X>1750</X><Y>773</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-						<Point><X>-36.9956607227864</X><Y>0</Y></Point>
-						<Point><X>-73.99130229164302</X><Y>0.03764603833860747</Y></Point>
-						<Point><X>-36.9956607227864</X><Y>0</Y></Point>
-						<Point><X>-110.98717360922251</X><Y>0.07529231046487439</Y></Point>
-						<Point><X>-110.98717360922251</X><Y>0.07529231046487439</Y></Point>
-						<Point><X>-73.99130229164302</X><Y>0.03764603833860747</Y></Point>
-						<Point><X>-147.98281517807936</X><Y>0.11293834880325448</Y></Point>
-						<Point><X>-184.97830361392926</X><Y>3.2598648886050796E-5</Y></Point>
-						<Point><X>-147.98281517807936</X><Y>0.11293834880336817</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598918680640" TargetId="1598918680640">
-					<Id>1598918685675</Id>
-					<Name><![CDATA[laneConnector18]]></Name>
-					<X>1634.3413556356793</X><Y>724.1206484875734</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-						<Point><X>5.886640696533277</X><Y>8.083777663315459</Y></Point>
-						<Point><X>11.317288728641415</X><Y>-8.241296975146724</Y></Point>
-						<Point><X>17.20392942517492</X><Y>-0.15751931183137913</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598918680640" TargetId="1598886863075">
-					<Id>1598918685677</Id>
-					<Name><![CDATA[laneConnector19]]></Name>
-					<X>1634.3413556356793</X><Y>724.1206484875734</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-						<Point><X>5.886640696533277</X><Y>8.083777663315459</Y></Point>
-						<Point><X>-25.03555922921373</X><Y>49.01523901662404</Y></Point>
-						<Point><X>-15.03560579871214</X><Y>49.045757663391896</Y></Point>
-						<Point><X>-25.03555922921373</X><Y>49.01523901662404</Y></Point>
-						<Point><X>-69.31965924960855</X><Y>48.879384111075524</Y></Point>
-						<Point><X>-69.31965924960855</X><Y>48.879384111075524</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598886863075" TargetId="1598918680640">
-					<Id>1598918685680</Id>
-					<Name><![CDATA[laneConnector20]]></Name>
-					<X>1564.9789702805958</X><Y>786.9999674013511</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>75.02108915821259</X><Y>-6.999902204053342</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>44.284870730562034</X><Y>0.13521707799282012</Y></Point>
-						<Point><X>44.284870730562034</X><Y>0.13521707799282012</Y></Point>
-						<Point><X>54.2848241610634</X><Y>0.16573572476090703</Y></Point>
-						<Point><X>80.67967408372488</X><Y>-71.12061588892448</Y></Point>
-						<Point><X>86.56631478025838</X><Y>-63.03683822560913</Y></Point>
-						<Point><X>75.02108915821259</X><Y>-6.999902204053342</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598918680640" TargetId="1598887215707">
-					<Id>1598918685682</Id>
-					<Name><![CDATA[laneConnector21]]></Name>
-					<X>1634.3413556356793</X><Y>724.1206484875734</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>4.658550175529854</X><Y>6.398992907584784</Y></Point>
-						<Point><X>4.658550175529854</X><Y>6.398992907584784</Y></Point>
-						<Point><X>10.545190872063358</X><Y>14.482770570900243</Y></Point>
-						<Point><X>115.65864436432071</X><Y>62.87935151242664</Y></Point>
-						<Point><X>105.65864436432071</X><Y>62.87935151242664</Y></Point>
-						<Point><X>5.657933092961912</X><Y>55.880054537279875</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887215707" TargetId="1598918680640">
-					<Id>1598918685683</Id>
-					<Name><![CDATA[laneConnector22]]></Name>
-					<X>1750</X><Y>773</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-99.68209418879042</X><Y>-50.722358604841816</Y></Point>
-						<Point><X>-93.79545349225714</X><Y>-42.63858094152647</Y></Point>
-						<Point><X>-99.68209418879042</X><Y>-50.722358604841816</Y></Point>
-						<Point><X>-104.34135563567929</X><Y>-57.12064848757336</Y></Point>
-						<Point><X>-104.34135563567929</X><Y>-57.12064848757336</Y></Point>
-						<Point><X>-110</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-			</Presentation>
-
-				</RoadJunction>
-				<Road TargetId="1598887081815">
-					<Id>1598887215707</Id>
-					<Name><![CDATA[spawners]]></Name>
-					<X>2420</X><Y>780</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<DelimiterWidth Class="UnitValue">
-						<Value Class="Double">0</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</DelimiterWidth>
-					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
-					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
-					<ForwardLanesCount>1</ForwardLanesCount>
-					<Bidirectional>true</Bidirectional>
-					<BackwardLanesCount>1</BackwardLanesCount>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-670</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-645</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-633.745</X><Y>-70.004</Y><Z>0</Z></Point>
-					</Points>
-
-			<Presentation>
-				<RoadStopline>
-					<Id>1598887250692</Id>
-					<Name><![CDATA[stopLine6]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>662.0</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<LeftLane>1</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1598887081815</Junction>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
 					<SpeedLimitValue Class="UnitValue">
 						<Value Class="Double">40</Value>
@@ -4438,10 +4681,110 @@
 			</Presentation>
 
 				</Road>
-				<Road SourceId="1598887081815" TargetId="1598918682507">
+				<RoadJunction>
+					<Id>1599002692970</Id>
+					<Name><![CDATA[intersection2]]></Name>
+					<X>1560</X><Y>780</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>true</FakeNode>
+
+			<Presentation>
+				<LaneConnector SourceId="1598918680640" TargetId="1598918680640">
+					<Id>1599002692980</Id>
+					<Name><![CDATA[laneConnector10]]></Name>
+					<X>1553.1232373920207</X><Y>761.2875821851386</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>6.8767626079793445</X><Y>18.712417814861396</Y></Point>
+						<Point><X>-0.06593850767603726</X><Y>9.999782603297149</Y></Point>
+						<Point><X>13.999695644616168</X><Y>0.09231391074649764</Y></Point>
+						<Point><X>13.933757136939903</X><Y>10.09209651404376</Y></Point>
+						<Point><X>6.8767626079793445</X><Y>18.712417814861396</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598918680640" TargetId="1598886863075">
+					<Id>1599002692981</Id>
+					<Name><![CDATA[laneConnector11]]></Name>
+					<X>1553.1232373920207</X><Y>761.2875821851386</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>6.8767626079793445</X><Y>18.712417814861396</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-11.768288489166707</X><Y>11.655044788780742</Y></Point>
+						<Point><X>-1.768335777498578</X><Y>11.685798071591307</Y></Point>
+						<Point><X>6.8767626079793445</X><Y>18.712417814861396</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598886863075" TargetId="1598918680640">
+					<Id>1599002692982</Id>
+					<Name><![CDATA[laneConnector12]]></Name>
+					<X>1541.3118943069192</X><Y>786.9425607702545</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>18.688105693080843</X><Y>-6.942560770254545</Y></Point>
+						<Point><X>9.999952711667902</X><Y>0.030753282810564997</Y></Point>
+						<Point><X>25.811038729717666</X><Y>-25.562664674369444</Y></Point>
+						<Point><X>25.811038729717666</X><Y>-25.562664674369444</Y></Point>
+						<Point><X>18.688105693080843</X><Y>-6.942560770254545</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598886863075" TargetId="1598886863075">
+					<Id>1599002692983</Id>
+					<Name><![CDATA[laneConnector13]]></Name>
+					<X>1541.3118943069192</X><Y>786.9425607702545</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>18.688105693080843</X><Y>-6.942560770254545</Y></Point>
+						<Point><X>9.999952711667902</X><Y>0.030753282810564997</Y></Point>
+						<Point><X>0.043054595934790996</X><Y>-13.999933796335199</Y></Point>
+						<Point><X>10.04300730760292</X><Y>-13.969180513524634</Y></Point>
+						<Point><X>18.688105693080843</X><Y>-6.942560770254545</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+			</Presentation>
+
+				</RoadJunction>
+				<Road SourceId="1599002692970" TargetId="1598918682507">
 					<Id>1598918680640</Id>
 					<Name><![CDATA[entradaPuerto]]></Name>
-					<X>1640</X><Y>720</Y>
+					<X>1560.1230852143287</X><Y>761.3337391405119</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4459,11 +4802,11 @@
 					<BackwardLanesCount>1</BackwardLanesCount>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-14.716999999999999</X><Y>-20.209</Y><Z>0</Z></Point>
-						<Point><X>-14.716999999999999</X><Y>-20.209</Y><Z>0</Z></Point>
-						<Point><X>-78.89</X><Y>-108.335</Y><Z>0</Z></Point>
-						<Point><X>-64.173</X><Y>-88.126</Y><Z>0</Z></Point>
-						<Point><X>-64.173</X><Y>-88.126</Y><Z>0</Z></Point>
+						<Point><X>-0.16484626919030357</X><Y>24.999456508243014</Y><Z>0</Z></Point>
+						<Point><X>0.16484626919030354</X><Y>-24.999456508243014</Y><Z>0</Z></Point>
+						<Point><X>0.9869147856712399</X><Y>-149.66873914051186</Y><Z>0</Z></Point>
+						<Point><X>0.8220685164809364</X><Y>-124.66928263226885</Y><Z>0</Z></Point>
+						<Point><X>0.8219147856712398</X><Y>-124.66973914051187</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -4476,7 +4819,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>126.01531377047922</Offset>
+					<Offset>141.6719929602889</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -4490,8 +4833,8 @@
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
 				</RoadStopline>
 				<RoadStopline>
-					<Id>1598918682591</Id>
-					<Name><![CDATA[stopLine8]]></Name>
+					<Id>1599002692985</Id>
+					<Name><![CDATA[stopLine6]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -4502,7 +4845,7 @@
 					<OnForwardSide>false</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
-					<Junction>1598887081815</Junction>
+					<Junction>1599002692970</Junction>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
 					<SpeedLimitValue Class="UnitValue">
 						<Value Class="Double">40</Value>
@@ -4552,7 +4895,7 @@
 				<LaneConnector SourceId="1598918680640" TargetId="1598914560153">
 					<Id>1598918685756</Id>
 					<Name><![CDATA[laneConnector3]]></Name>
-					<X>1566.7686443643208</X><Y>607.5443515124266</Y>
+					<X>1568.109847822308</X><Y>611.7111569553733</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4561,14 +4904,14 @@
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-25.43493309296241</X><Y>-27.54505453727984</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-3.0124650683007985</X><Y>-4.138520983491276</Y></Point>
-						<Point><X>-3.0124650683007985</X><Y>-4.138520983491276</Y></Point>
-						<Point><X>-8.899105764834076</X><Y>-12.222298646806735</Y></Point>
-						<Point><X>-62.768644364320835</X><Y>-34.5443515124266</Y></Point>
-						<Point><X>-52.768644364320835</X><Y>-34.5443515124266</Y></Point>
-						<Point><X>-25.43493309296241</X><Y>-27.54505453727984</Y></Point>
+						<Point><X>-26.77613655094956</X><Y>-31.711859980226563</Y></Point>
+						<Point><X>0.06593850767626463</X><Y>-9.999782603297263</Y></Point>
+						<Point><X>-4.353668526287947</X><Y>-8.305326426438</Y></Point>
+						<Point><X>-4.353668526287947</X><Y>-8.305326426438</Y></Point>
+						<Point><X>-10.240309222821224</X><Y>-16.38910408975346</Y></Point>
+						<Point><X>-64.10984782230798</X><Y>-38.711156955373326</Y></Point>
+						<Point><X>-64.10984782230798</X><Y>-38.711156955373326</Y></Point>
+						<Point><X>-26.77613655094956</X><Y>-31.711859980226563</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4587,12 +4930,12 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>48.43833809457442</X><Y>24.647423141034437</Y></Point>
 						<Point><X>42.551697398040915</X><Y>16.563645477719092</Y></Point>
 						<Point><X>48.43833809457442</X><Y>24.647423141034437</Y></Point>
-						<Point><X>51.45135563567919</X><Y>28.78564848757344</Y></Point>
-						<Point><X>51.45135563567919</X><Y>28.78564848757344</Y></Point>
+						<Point><X>50.11015217769204</X><Y>24.618843044626715</Y></Point>
+						<Point><X>50.17609068536808</X><Y>14.619060441329452</Y></Point>
 						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -4602,7 +4945,7 @@
 				<LaneConnector SourceId="1598918680640" TargetId="1598918680640">
 					<Id>1598918685758</Id>
 					<Name><![CDATA[laneConnector9]]></Name>
-					<X>1566.7686443643208</X><Y>607.5443515124266</Y>
+					<X>1568.109847822308</X><Y>611.7111569553733</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4612,9 +4955,9 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-25.43493309296241</X><Y>-27.54505453727984</Y></Point>
-						<Point><X>-5.8866406965335045</X><Y>-8.083777663315345</Y></Point>
-						<Point><X>-11.317288728641643</X><Y>8.241296975146838</Y></Point>
-						<Point><X>-17.20392942517492</X><Y>0.15751931183149281</Y></Point>
+						<Point><X>0.06593850767626463</X><Y>-9.999782603297263</Y></Point>
+						<Point><X>-13.99969564461594</X><Y>-0.09231391074661133</Y></Point>
+						<Point><X>-13.933757136939903</X><Y>-10.092096514043874</Y></Point>
 						<Point><X>-25.43493309296241</X><Y>-27.54505453727984</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -4725,7 +5068,7 @@
 				<Control Type="Window3D">
 					<Id>1598926378121</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>1854</X><Y>886</Y>
+					<X>2160</X><Y>40</Y>
 					<Width>1106</Width>
 					<Height>734</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
@@ -4748,7 +5091,7 @@
 			<Presentation>
 				<Conveyor>
 					<Id>1598927276512</Id>
-					<Name><![CDATA[conveyor]]></Name>
+					<Name><![CDATA[conveyorToTank]]></Name>
 					<X>1065.2</X><Y>426</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -4774,6 +5117,9 @@
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[type]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[CONVEYOR_TYPE_BELT]]></Code>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[maxSpeed]]></Name>
@@ -4927,6 +5273,175 @@
 					<Latitude>0.0</Latitude>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
+				<ConveyorNetwork>
+					<Id>1599002936548</Id>
+					<Name><![CDATA[conveyorNetwork1]]></Name>
+					<X>1280</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+
+			<Presentation>
+				<Conveyor>
+					<Id>1599002913349</Id>
+					<Name><![CDATA[conveyorToShip]]></Name>
+					<X>1280</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+							<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
+								<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
+								<ItemName><![CDATA[1514281812596]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[type]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[CONVEYOR_TYPE_BELT]]></Code>
+								</Value>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[maxSpeed]]></Name>
+								<Value Class="CodeUnitValue">
+									<Code><![CDATA[5]]></Code>
+									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+								</Value>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[initialSpeed]]></Name>
+								<Value Class="CodeUnitValue">
+									<Code><![CDATA[5]]></Code>
+									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+								</Value>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[acceleration]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[deceleration]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[cellSize]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[gap]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[maximumPriority]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[priority]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onLeadingEdgeEnter]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onTrailingEdgeEnter]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onLeadingEdgeExit]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onTrailingEdgeExit]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onStarted]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onStopped]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onFailed]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[onRepaired]]></Name>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+					<Width Class="UnitValue">
+						<Value Class="Double">2.5</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<IsObstacle>true</IsObstacle>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>215</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-31</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-6</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-56</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-95</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>240</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>220</X><Y>-120</Y><Z>0</Z></Point>
+					</Points>
+
+
+				</Conveyor>
+			</Presentation>
+
+					<Z>0</Z>
+				</ConveyorNetwork>
 			</Presentation>
 
 				</Level>
@@ -5336,7 +5851,7 @@
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>2440</Width>
+		<Width>2120</Width>
 		<Height>800</Height>
 	</Frame>
 	<Database>
