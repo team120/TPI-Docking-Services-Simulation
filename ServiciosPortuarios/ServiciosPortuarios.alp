@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241833" AlpVersion="8.5.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241926" AlpVersion="8.5.1">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -493,39 +493,6 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1598914404364</Id>
-					<Name><![CDATA[connector1]]></Name>
-					<X>0</X><Y>480</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carDispose]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarDispose]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[delay]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1590</X><Y>730</Y></Point>
-						<Point><X>1090</X><Y>730</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1598914404365</Id>
 					<Name><![CDATA[connector12]]></Name>
 					<X>0</X><Y>480</Y>
@@ -556,6 +523,72 @@
 					<Points>
 						<Point><X>1050</X><Y>730</Y></Point>
 						<Point><X>960</X><Y>730</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1598917283663</Id>
+					<Name><![CDATA[connector1]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo3]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>1590</X><Y>1210</Y></Point>
+						<Point><X>1180</X><Y>1210</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1598917283666</Id>
+					<Name><![CDATA[connector13]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo3]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[delay]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>1140</X><Y>1210</Y></Point>
+						<Point><X>1090</X><Y>1210</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1078,7 +1111,7 @@
 						<Parameter>
 							<Name><![CDATA[road]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[entrada_puerto]]></Code>
+								<Code><![CDATA[entradaPuerto]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1720,6 +1753,99 @@
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1598917282072</Id>
+					<Name><![CDATA[carMoveTo3]]></Name>
+					<X>1140</X><Y>1200</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadPuerto]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -1761,7 +1887,7 @@
 				<RoundedRectangle>
 					<Id>1598886401614</Id>
 					<Name><![CDATA[roundRectangle]]></Name>
-					<X>859.334</X><Y>80</Y>
+					<X>1020</X><Y>80</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2085,10 +2211,10 @@
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598887080529">
-					<Id>1598914619040</Id>
-					<Name><![CDATA[laneConnector2]]></Name>
-					<X>1653</X><Y>974</Y>
+				<LaneConnector SourceId="1598918680640" TargetId="1598918680640">
+					<Id>1598918685675</Id>
+					<Name><![CDATA[laneConnector18]]></Name>
+					<X>1634.3413556356793</X><Y>1004.1206484875734</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2097,63 +2223,42 @@
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>10</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598887080529">
-					<Id>1598914619041</Id>
-					<Name><![CDATA[laneConnector3]]></Name>
-					<X>1653</X><Y>974</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>14</X><Y>0</Y></Point>
-						<Point><X>14</X><Y>10</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598886863075">
-					<Id>1598914619042</Id>
-					<Name><![CDATA[laneConnector4]]></Name>
-					<X>1639</X><Y>974</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>1</X><Y>86</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>5.247157292926659</Y></Point>
-						<Point><X>0</X><Y>5.247157292926659</Y></Point>
-						<Point><X>0</X><Y>15.247157292926659</Y></Point>
-						<Point><X>-73.97830361392926</X><Y>79.00003259864889</Y></Point>
-						<Point><X>-63.978350183427665</X><Y>79.03055124541675</Y></Point>
-						<Point><X>1</X><Y>86</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
+						<Point><X>5.886640696533277</X><Y>8.083777663315459</Y></Point>
+						<Point><X>11.317288728641415</X><Y>-8.241296975146724</Y></Point>
+						<Point><X>17.20392942517492</X><Y>-0.15751931183137913</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1598886863075" TargetId="1598887080529">
-					<Id>1598914619043</Id>
-					<Name><![CDATA[laneConnector9]]></Name>
+				<LaneConnector SourceId="1598918680640" TargetId="1598886863075">
+					<Id>1598918685677</Id>
+					<Name><![CDATA[laneConnector19]]></Name>
+					<X>1634.3413556356793</X><Y>1004.1206484875734</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
+						<Point><X>5.886640696533277</X><Y>8.083777663315459</Y></Point>
+						<Point><X>-25.034847957854936</X><Y>49.0145359917708</Y></Point>
+						<Point><X>-15.034894527353345</X><Y>49.04505463853866</Y></Point>
+						<Point><X>-25.034847957854936</X><Y>49.0145359917708</Y></Point>
+						<Point><X>-69.31965924960855</X><Y>48.879384111075524</Y></Point>
+						<Point><X>-69.31965924960855</X><Y>48.879384111075524</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598886863075" TargetId="1598918680640">
+					<Id>1598918685680</Id>
+					<Name><![CDATA[laneConnector20]]></Name>
 					<X>1564.9789702805958</X><Y>1066.9999674013511</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2165,20 +2270,20 @@
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>75.02102971940417</X><Y>-6.999967401351114</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.667414931871463</X><Y>0.06917820510420825</Y></Point>
-						<Point><X>22.667414931871463</X><Y>0.06917820510420825</Y></Point>
-						<Point><X>32.66736836237283</X><Y>0.09969685187206778</Y></Point>
-						<Point><X>116.02102971940417</X><Y>-92.99996740135111</Y></Point>
-						<Point><X>116.02102971940417</X><Y>-82.99996740135111</Y></Point>
+						<Point><X>44.28481129175361</X><Y>0.13515188069504802</Y></Point>
+						<Point><X>44.28481129175361</X><Y>0.13515188069504802</Y></Point>
+						<Point><X>54.28476472225498</X><Y>0.16567052746313493</Y></Point>
+						<Point><X>80.67967408372488</X><Y>-71.12061588892448</Y></Point>
+						<Point><X>86.56631478025838</X><Y>-63.03683822560913</Y></Point>
 						<Point><X>75.02102971940417</X><Y>-6.999967401351114</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1598886863075" TargetId="1598887080529">
-					<Id>1598914619044</Id>
-					<Name><![CDATA[laneConnector10]]></Name>
-					<X>1564.9789702805958</X><Y>1066.9999674013511</Y>
+				<LaneConnector SourceId="1598918680640" TargetId="1598887215707">
+					<Id>1598918685682</Id>
+					<Name><![CDATA[laneConnector21]]></Name>
+					<X>1634.3413556356793</X><Y>1004.1206484875734</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2187,45 +2292,21 @@
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>75.02102971940417</X><Y>-6.999967401351114</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>8.710141037346375</X><Y>0.02658229555413527</Y></Point>
-						<Point><X>8.710141037346375</X><Y>0.02658229555413527</Y></Point>
-						<Point><X>18.710094467847966</X><Y>0.05710094232199481</Y></Point>
-						<Point><X>102.02102971940417</X><Y>-92.99996740135111</Y></Point>
-						<Point><X>102.02102971940417</X><Y>-82.99996740135111</Y></Point>
-						<Point><X>75.02102971940417</X><Y>-6.999967401351114</Y></Point>
+						<Point><X>4.6592614468886495</X><Y>6.398289882731547</Y></Point>
+						<Point><X>4.6592614468886495</X><Y>6.398289882731547</Y></Point>
+						<Point><X>10.545902143422154</X><Y>14.482067546047006</Y></Point>
+						<Point><X>115.65864436432071</X><Y>62.87935151242664</Y></Point>
+						<Point><X>105.65864436432071</X><Y>62.87935151242664</Y></Point>
+						<Point><X>5.658644364320708</X><Y>55.87935151242664</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598887215707">
-					<Id>1598914619045</Id>
-					<Name><![CDATA[laneConnector23]]></Name>
-					<X>1653</X><Y>974</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>93</X><Y>93</Y></Point>
-						<Point><X>83</X><Y>93</Y></Point>
-						<Point><X>93</X><Y>93</Y></Point>
-						<Point><X>97</X><Y>93</Y></Point>
-						<Point><X>97</X><Y>93</Y></Point>
-						<Point><X>-13</X><Y>86</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1598887215707" TargetId="1598887080529">
-					<Id>1598914619046</Id>
-					<Name><![CDATA[laneConnector24]]></Name>
+				<LaneConnector SourceId="1598887215707" TargetId="1598918680640">
+					<Id>1598918685683</Id>
+					<Name><![CDATA[laneConnector22]]></Name>
 					<X>1750</X><Y>1053</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2237,11 +2318,11 @@
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-110</X><Y>7</Y></Point>
 						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-69</X><Y>-69</Y></Point>
-						<Point><X>-69</X><Y>-59</Y></Point>
-						<Point><X>-69</X><Y>-69</Y></Point>
-						<Point><X>-69</X><Y>-79</Y></Point>
-						<Point><X>-69</X><Y>-79</Y></Point>
+						<Point><X>-99.68209418879042</X><Y>-50.722358604841816</Y></Point>
+						<Point><X>-93.79545349225714</X><Y>-42.63858094152647</Y></Point>
+						<Point><X>-99.68209418879042</X><Y>-50.722358604841816</Y></Point>
+						<Point><X>-104.34135563567929</X><Y>-57.12064848757336</Y></Point>
+						<Point><X>-104.34135563567929</X><Y>-57.12064848757336</Y></Point>
 						<Point><X>-110</X><Y>7</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -2414,103 +2495,6 @@
 			</Presentation>
 
 				</RoadJunction>
-				<Road SourceId="1598887081815" TargetId="1598915390925">
-					<Id>1598887080529</Id>
-					<Name><![CDATA[entrada_puerto]]></Name>
-					<X>1660</X><Y>974</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<DelimiterWidth Class="UnitValue">
-						<Value Class="Double">0</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</DelimiterWidth>
-					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
-					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
-					<ForwardLanesCount>2</ForwardLanesCount>
-					<Bidirectional>true</Bidirectional>
-					<BackwardLanesCount>2</BackwardLanesCount>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-7.906000000000063</X><Y>23.717</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-26</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-1</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-51</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-84</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-59</Y><Z>0</Z></Point>
-						<Point><X>-16.174</X><Y>-103.063</Y><Z>0</Z></Point>
-					</Points>
-
-			<Presentation>
-				<ParkingLot>
-					<Id>1598887535789</Id>
-					<Name><![CDATA[parkingLot2]]></Name>
-					<X>1686.667</X><Y>960</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>20.0</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<Type>PERPENDICULAR</Type>
-					<ParkingSpaceCount>5</ParkingSpaceCount>
-					<ParkingSpaceLength Class="UnitValue">
-						<Value Class="Double">6</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</ParkingSpaceLength>
-				</ParkingLot>
-				<RoadStopline>
-					<Id>1598888638221</Id>
-					<Name><![CDATA[stopLine5]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>8.0</Offset>
-					<OnForwardSide>false</OnForwardSide>
-					<LeftLane>2</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1598887081815</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-				</RoadStopline>
-				<RoadStopline>
-					<Id>1598915390940</Id>
-					<Name><![CDATA[stopLine7]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>76.0</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<LeftLane>2</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1598915390925</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-				</RoadStopline>
-			</Presentation>
-
-				</Road>
 				<RoadJunction>
 					<Id>1598889428671</Id>
 					<Name><![CDATA[intersection]]></Name>
@@ -2714,206 +2698,10 @@
 			</Presentation>
 
 				</Road>
-				<RoadJunction>
-					<Id>1598915390925</Id>
-					<Name><![CDATA[intersection3]]></Name>
-					<X>1585.333</X><Y>860</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>true</FakeNode>
-
-			<Presentation>
-				<LaneConnector SourceId="1598914560153" TargetId="1598914560153">
-					<Id>1598915390932</Id>
-					<Name><![CDATA[laneConnector18]]></Name>
-					<X>1548.0000000000002</X><Y>867</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-28</Y></Point>
-						<Point><X>10</X><Y>-28</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598914560153" TargetId="1598914560153">
-					<Id>1598915390933</Id>
-					<Name><![CDATA[laneConnector19]]></Name>
-					<X>1548.0000000000002</X><Y>867</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-14</Y></Point>
-						<Point><X>10</X><Y>-14</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598914560153" TargetId="1598887080529">
-					<Id>1598915390934</Id>
-					<Name><![CDATA[laneConnector20]]></Name>
-					<X>1548.0000000000002</X><Y>881</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-21</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>81.99999999999977</X><Y>0</Y></Point>
-						<Point><X>81.99999999999977</X><Y>0</Y></Point>
-						<Point><X>91.99999999999977</X><Y>0</Y></Point>
-						<Point><X>90.99999999999977</X><Y>9</Y></Point>
-						<Point><X>90.99999999999977</X><Y>-1</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-21</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598914560153" TargetId="1598887080529">
-					<Id>1598915390935</Id>
-					<Name><![CDATA[laneConnector21]]></Name>
-					<X>1548.0000000000002</X><Y>867</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>81.99999999999977</X><Y>0</Y></Point>
-						<Point><X>81.99999999999977</X><Y>0</Y></Point>
-						<Point><X>91.99999999999977</X><Y>0</Y></Point>
-						<Point><X>104.99999999999977</X><Y>23</Y></Point>
-						<Point><X>104.99999999999977</X><Y>13</Y></Point>
-						<Point><X>37.332999999999856</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598914560153">
-					<Id>1598915390936</Id>
-					<Name><![CDATA[laneConnector22]]></Name>
-					<X>1681</X><Y>890</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-95.66699999999992</X><Y>-30</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-51</X><Y>-51</Y></Point>
-						<Point><X>-41</X><Y>-51</Y></Point>
-						<Point><X>-51</X><Y>-51</Y></Point>
-						<Point><X>-132.99999999999977</X><Y>-51</Y></Point>
-						<Point><X>-132.99999999999977</X><Y>-51</Y></Point>
-						<Point><X>-95.66699999999992</X><Y>-30</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598914560153">
-					<Id>1598915390937</Id>
-					<Name><![CDATA[laneConnector25]]></Name>
-					<X>1667</X><Y>890</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-37</X><Y>-37</Y></Point>
-						<Point><X>-27</X><Y>-37</Y></Point>
-						<Point><X>-37</X><Y>-37</Y></Point>
-						<Point><X>-118.99999999999977</X><Y>-37</Y></Point>
-						<Point><X>-118.99999999999977</X><Y>-37</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598887080529">
-					<Id>1598915390938</Id>
-					<Name><![CDATA[laneConnector26]]></Name>
-					<X>1667</X><Y>890</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-28</X><Y>0</Y></Point>
-						<Point><X>-28</X><Y>-10</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1598887080529" TargetId="1598887080529">
-					<Id>1598915390939</Id>
-					<Name><![CDATA[laneConnector27]]></Name>
-					<X>1667</X><Y>890</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-14</X><Y>0</Y></Point>
-						<Point><X>-14</X><Y>-10</Y></Point>
-						<Point><X>-81.66699999999992</X><Y>-30</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-			</Presentation>
-
-				</RoadJunction>
-				<Road SourceId="1598915390925">
-					<Id>1598914560153</Id>
-					<Name><![CDATA[road]]></Name>
-					<X>1548.0000000000002</X><Y>860</Y>
+				<Road SourceId="1598887081815" TargetId="1598918682507">
+					<Id>1598918680640</Id>
+					<Name><![CDATA[entradaPuerto]]></Name>
+					<X>1640</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2926,25 +2714,207 @@
 					</DelimiterWidth>
 					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
 					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
-					<ForwardLanesCount>2</ForwardLanesCount>
+					<ForwardLanesCount>1</ForwardLanesCount>
 					<Bidirectional>true</Bidirectional>
-					<BackwardLanesCount>2</BackwardLanesCount>
+					<BackwardLanesCount>1</BackwardLanesCount>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-14.716999999999999</X><Y>-20.209</Y><Z>0</Z></Point>
+						<Point><X>-14.716999999999999</X><Y>-20.209</Y><Z>0</Z></Point>
+						<Point><X>-78.89</X><Y>-108.335</Y><Z>0</Z></Point>
+						<Point><X>-64.173</X><Y>-88.126</Y><Z>0</Z></Point>
+						<Point><X>-64.173</X><Y>-88.126</Y><Z>0</Z></Point>
+					</Points>
+
+			<Presentation>
+				<RoadStopline>
+					<Id>1598918682565</Id>
+					<Name><![CDATA[stopLine7]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>126.01531377047922</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1598918682507</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1598918682591</Id>
+					<Name><![CDATA[stopLine8]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>8.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1598887081815</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+				</RoadStopline>
+			</Presentation>
+
+				</Road>
+				<RoadJunction>
+					<Id>1598918682507</Id>
+					<Name><![CDATA[intersection3]]></Name>
+					<X>1541.333</X><Y>860</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>true</FakeNode>
+
+			<Presentation>
+				<LaneConnector SourceId="1598914560153" TargetId="1598914560153">
+					<Id>1598918682535</Id>
+					<Name><![CDATA[laneConnector2]]></Name>
+					<X>1503.9998412014459</X><Y>867.0004073879009</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-14</Y></Point>
+						<Point><X>10</X><Y>-14</Y></Point>
+						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598918680640" TargetId="1598914560153">
+					<Id>1598918685756</Id>
+					<Name><![CDATA[laneConnector3]]></Name>
+					<X>1566.7686443643208</X><Y>887.5443515124266</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-25.43564436432075</X><Y>-27.5443515124266</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-3.0131763396591396</X><Y>-4.137817958638038</Y></Point>
+						<Point><X>-3.0131763396591396</X><Y>-4.137817958638038</Y></Point>
+						<Point><X>-8.899817036192417</X><Y>-12.221595621953497</Y></Point>
+						<Point><X>-62.768803162874974</X><Y>-34.54394412452575</Y></Point>
+						<Point><X>-52.768803162874974</X><Y>-34.54394412452575</Y></Point>
+						<Point><X>-25.43564436432075</X><Y>-27.5443515124266</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598914560153" TargetId="1598918680640">
+					<Id>1598918685757</Id>
+					<Name><![CDATA[laneConnector4]]></Name>
+					<X>1503.9998412014459</X><Y>867.0004073879009</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>48.43833809457442</X><Y>24.647423141034437</Y></Point>
+						<Point><X>42.551697398040915</X><Y>16.563645477719092</Y></Point>
+						<Point><X>48.43833809457442</X><Y>24.647423141034437</Y></Point>
+						<Point><X>51.45151443423333</X><Y>28.78524109967259</Y></Point>
+						<Point><X>51.45151443423333</X><Y>28.78524109967259</Y></Point>
+						<Point><X>37.33315879855422</X><Y>-7.00040738790085</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1598918680640" TargetId="1598918680640">
+					<Id>1598918685758</Id>
+					<Name><![CDATA[laneConnector9]]></Name>
+					<X>1566.7686443643208</X><Y>887.5443515124266</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-25.43564436432075</X><Y>-27.5443515124266</Y></Point>
+						<Point><X>-5.8866406965335045</X><Y>-8.083777663315345</Y></Point>
+						<Point><X>-11.317288728641643</X><Y>8.241296975146838</Y></Point>
+						<Point><X>-17.20392942517492</X><Y>0.15751931183149281</Y></Point>
+						<Point><X>-25.43564436432075</X><Y>-27.5443515124266</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+			</Presentation>
+
+				</RoadJunction>
+				<Road SourceId="1598918682507">
+					<Id>1598914560153</Id>
+					<Name><![CDATA[roadPuerto]]></Name>
+					<X>1503.9998412014459</X><Y>860.0004073879009</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<DelimiterWidth Class="UnitValue">
+						<Value Class="Double">0</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</DelimiterWidth>
+					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
+					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
+					<ForwardLanesCount>1</ForwardLanesCount>
+					<Bidirectional>true</Bidirectional>
+					<BackwardLanesCount>1</BackwardLanesCount>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-25.000000000000007</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-308.0000000000002</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-283.0000000000002</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-333.0000000000002</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-508.0000000000002</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-483.0000000000002</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-508.0000000000002</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>-508</X><Y>-120</Y><Z>0</Z></Point>
-						<Point><X>-508</X><Y>-95</Y><Z>0</Z></Point>
-						<Point><X>-508</X><Y>-95</Y><Z>0</Z></Point>
-						<Point><X>-508</X><Y>-110</Y><Z>0</Z></Point>
-						<Point><X>-508</X><Y>-135</Y><Z>0</Z></Point>
-						<Point><X>-528</X><Y>-110</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-264</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-239</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-289</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-464</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-438.99999999999994</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-464</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>-464</X><Y>-110</Y><Z>0</Z></Point>
+						<Point><X>-464</X><Y>-85</Y><Z>0</Z></Point>
+						<Point><X>-473.07899999999995</X><Y>-86.70700000000001</Y><Z>0</Z></Point>
+						<Point><X>-464</X><Y>-110</Y><Z>0</Z></Point>
+						<Point><X>-454.92</X><Y>-133.29299999999998</Y><Z>0</Z></Point>
+						<Point><X>-484</X><Y>-110</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -2967,8 +2937,8 @@
 					</ParkingSpaceLength>
 				</ParkingLot>
 				<RoadStopline>
-					<Id>1598915390941</Id>
-					<Name><![CDATA[stopLine8]]></Name>
+					<Id>1598918682564</Id>
+					<Name><![CDATA[stopLine5]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2977,9 +2947,9 @@
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<Offset>8.0</Offset>
 					<OnForwardSide>false</OnForwardSide>
-					<LeftLane>2</LeftLane>
+					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
-					<Junction>1598915390925</Junction>
+					<Junction>1598918682507</Junction>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
 					<SpeedLimitValue Class="UnitValue">
 						<Value Class="Double">40</Value>
@@ -3146,27 +3116,35 @@
 						<Point><X>-80</X><Y>-360</Y><Z>0</Z></Point>
 					</Points>
 
-
-				</Conveyor>
-			</Presentation>
-
-					<Z>0</Z>
-				</ConveyorNetwork>
-				<ConveyorNetwork>
-					<Id>1598915250154</Id>
-					<Name><![CDATA[conveyorNetwork1]]></Name>
-					<X>1050</X><Y>740</Y>
+			<Presentation>
+				<ConveyorSpur>
+					<Id>1598916120766</Id>
+					<Name><![CDATA[conveyorSpur]]></Name>
+					<X>1050</X><Y>710</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor/>
+					<FillColor>-8355712</FillColor>
+					<LineMaterial>null</LineMaterial>
+					<FillMaterial>null</FillMaterial>
+					<Offset>20.0</Offset>
+					<OnRightSide>false</OnRightSide>
+					<LineColor/>
+					<FillColor>-8355712</FillColor>
+					<LineMaterial>null</LineMaterial>
+					<FillMaterial>null</FillMaterial>
+				</ConveyorSpur>
+			</Presentation>
 
-			<Presentation>
-				<Conveyor>
+				</Conveyor>
+				<Conveyor SourceId="1598916120766">
 					<Id>1598915239382</Id>
 					<Name><![CDATA[conveyor1]]></Name>
-					<X>1050</X><Y>740</Y>
+					<X>1043</X><Y>710</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3288,17 +3266,17 @@
 					<IsObstacle>true</IsObstacle>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-0.388</X><Y>-24.997</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-395</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-50</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-20</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-50</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-30</X><Y>-420</Y><Z>0</Z></Point>
-						<Point><X>-70</X><Y>-420</Y><Z>0</Z></Point>
+						<Point><X>-0.3879999999999999</X><Y>-24.997</Y><Z>0</Z></Point>
+						<Point><X>0.4486456874805098</X><Y>-24.99597401677128</Y><Z>0</Z></Point>
+						<Point><X>7</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>6.55135431251949</X><Y>-365.0040259832287</Y><Z>0</Z></Point>
+						<Point><X>-18</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-43</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-18</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-13</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-43</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-23</X><Y>-390</Y><Z>0</Z></Point>
+						<Point><X>-63</X><Y>-390</Y><Z>0</Z></Point>
 					</Points>
 
 
