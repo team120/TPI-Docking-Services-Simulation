@@ -3526,9 +3526,6 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
@@ -3552,7 +3549,7 @@
 						<Parameter>
 							<Name><![CDATA[amountBelow]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[200]]></Code>
+								<Code><![CDATA[100]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
 							</Value>
 						</Parameter>
@@ -4608,7 +4605,7 @@
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 0.5, 1, 2 )]]></Code>
+								<Code><![CDATA[triangular( 3, 4, 5 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -4632,9 +4629,15 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[tankValveOut.open()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[tankValveOut.close()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
