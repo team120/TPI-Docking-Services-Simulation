@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241926" AlpVersion="8.5.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241833" AlpVersion="8.5.1">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -6841,7 +6841,7 @@
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
-					<ScaleType>AUTO</ScaleType>
+					<ScaleType>FIXED</ScaleType>
 					<Bars>
 						<Direction>RIGHT</Direction>
 						<RelativeWidth>0.8</RelativeWidth>
@@ -6900,7 +6900,7 @@
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
-					<ScaleType>AUTO</ScaleType>
+					<ScaleType>FIXED</ScaleType>
 					<Bars>
 						<Direction>UP</Direction>
 						<RelativeWidth>0.81</RelativeWidth>
