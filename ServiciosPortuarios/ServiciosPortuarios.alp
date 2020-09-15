@@ -1052,7 +1052,7 @@
 				<Connector>
 					<Id>1600183879458</Id>
 					<Name><![CDATA[connector34]]></Name>
-					<X>860</X><Y>1210</Y>
+					<X>890</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1060,7 +1060,7 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[queue1]]></ItemName>
+						<ItemName><![CDATA[queueGrossBalance]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1121,7 +1121,7 @@
 				<Connector>
 					<Id>1600185211345</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>960</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1147,8 +1147,8 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>930</X><Y>1210</Y></Point>
-						<Point><X>1000</X><Y>1210</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1222,7 +1222,7 @@
 				<Connector>
 					<Id>1600185474357</Id>
 					<Name><![CDATA[connector15]]></Name>
-					<X>810</X><Y>1210</Y>
+					<X>830</X><Y>1210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1240,7 +1240,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[queue1]]></ItemName>
+						<ItemName><![CDATA[queueGrossBalance]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1249,7 +1249,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>20</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1315,7 +1315,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>30</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -2294,8 +2294,8 @@
 				<EmbeddedObject>
 					<Id>1598925323628</Id>
 					<Name><![CDATA[timeInGrossBalance]]></Name>
-					<X>890</X><Y>1190</Y>
-					<Label><X>-40</X><Y>-30</Y></Label>
+					<X>920</X><Y>1190</Y>
+					<Label><X>-55</X><Y>60</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -5200,8 +5200,8 @@
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1600183876865</Id>
-					<Name><![CDATA[queue1]]></Name>
-					<X>820</X><Y>1190</Y>
+					<Name><![CDATA[queueGrossBalance]]></Name>
+					<X>850</X><Y>1190</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5510,7 +5510,7 @@
 				<EmbeddedObject>
 					<Id>1600185446203</Id>
 					<Name><![CDATA[carExit]]></Name>
-					<X>770</X><Y>1200</Y>
+					<X>790</X><Y>1200</Y>
 					<Label><X>-15</X><Y>45</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5633,7 +5633,7 @@
 				<Rectangle>
 					<Id>1598886833420</Id>
 					<Name><![CDATA[rectangle]]></Name>
-					<X>0</X><Y>410</Y>
+					<X>0</X><Y>280</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5646,8 +5646,8 @@
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>594.667</Width>
-					<Height>350</Height>
+					<Width>590</Width>
+					<Height>400</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-4144960</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -5773,7 +5773,7 @@
 				<Road TargetId="1598888283566">
 					<Id>1598886926735</Id>
 					<Name><![CDATA[uriburu]]></Name>
-					<X>520.0003016747617</X><Y>670.000313546726</Y>
+					<X>540.0003016747617</X><Y>580.000313546726</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5792,19 +5792,19 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-21.2</X><Y>-13.25</Y><Z>0</Z></Point>
-						<Point><X>24.597</X><Y>4.472</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>85.403</X><Y>15.528</Y><Z>0</Z></Point>
-						<Point><X>133.717</X><Y>27.905</Y><Z>0</Z></Point>
-						<Point><X>170</X><Y>40</Y><Z>0</Z></Point>
-						<Point><X>146.283</X><Y>32.094</Y><Z>0</Z></Point>
-						<Point><X>191.437</X><Y>52.862</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>198.562</X><Y>57.137</Y><Z>0</Z></Point>
-						<Point><X>239.658</X><Y>85.445</Y><Z>0</Z></Point>
-						<Point><X>248.278</X><Y>92.217</Y><Z>0</Z></Point>
-						<Point><X>228.62</X><Y>76.772</Y><Z>0</Z></Point>
-						<Point><X>263.278</X><Y>112.217</Y><Z>0</Z></Point>
+						<Point><X>18.582</X><Y>16.724</Y><Z>0</Z></Point>
+						<Point><X>100</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>81.417</X><Y>73.276</Y><Z>0</Z></Point>
+						<Point><X>120.801</X><Y>103.867</Y><Z>0</Z></Point>
+						<Point><X>160</X><Y>130</Y><Z>0</Z></Point>
+						<Point><X>139.199</X><Y>116.132</Y><Z>0</Z></Point>
+						<Point><X>180</X><Y>145</Y><Z>0</Z></Point>
+						<Point><X>200</X><Y>160</Y><Z>0</Z></Point>
+						<Point><X>180</X><Y>145</Y><Z>0</Z></Point>
+						<Point><X>219.658</X><Y>175.445</Y><Z>0</Z></Point>
+						<Point><X>228.278</X><Y>182.21699999999998</Y><Z>0</Z></Point>
+						<Point><X>208.62</X><Y>166.772</Y><Z>0</Z></Point>
+						<Point><X>243.27800000000002</X><Y>202.21699999999998</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -5817,7 +5817,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>261.3201224488457</Offset>
+					<Offset>284.6089174020525</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -5859,7 +5859,7 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>16.121731982172946</X><Y>10.623898995626178</Y></Point>
-						<Point><X>7.863376369493608</X><Y>6.177969898898141</Y></Point>
+						<Point><X>7.863376369493608</X><Y>6.177969898898027</Y></Point>
 						<Point><X>8.649157858457215</X><Y>-11.008726917290915</Y></Point>
 						<Point><X>16.512534227950823</X><Y>-4.830757018392887</Y></Point>
 						<Point><X>16.121731982172946</X><Y>10.623898995626178</Y></Point>
@@ -7104,65 +7104,6 @@
 					<Z>0</Z>
 				</Network>
     			<BarChart>
-					<Id>1599058317777</Id>
-					<Name><![CDATA[chart]]></Name>
-					<X>350</X><Y>690</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1599120000000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>110</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>20</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-16777216</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<DataItem>
-					<Expression><![CDATA[timeInGrossBalance.statsUtilization.mean()]]></Expression>
-					<Color>-256</Color>
-					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Balance Utilization]]></Title>
-					</DataItem>
-					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
-					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
-					<ScaleType>FIXED</ScaleType>
-					<Bars>
-						<Direction>RIGHT</Direction>
-						<RelativeWidth>0.8</RelativeWidth>
-					</Bars>
-    			</BarChart>
-    			<BarChart>
 					<Id>1599058893703</Id>
 					<Name><![CDATA[chart1]]></Name>
 					<X>800</X><Y>400</Y>
@@ -7303,7 +7244,7 @@
 				<Rectangle>
 					<Id>1599661384357</Id>
 					<Name><![CDATA[rectangle2]]></Name>
-					<X>120</X><Y>410</Y>
+					<X>120</X><Y>280</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7317,7 +7258,7 @@
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>474</Width>
-					<Height>220</Height>
+					<Height>250</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-16744320</FillColor>
 					<FillMaterial>grass</FillMaterial>
@@ -7325,7 +7266,7 @@
 				<Group>
 					<Id>1599661236093</Id>
 					<Name><![CDATA[forest]]></Name>
-					<X>550</X><Y>530</Y>
+					<X>550</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8674,13 +8615,13 @@
 				<Figure3D>
 					<Id>1599661957718</Id>
 					<Name><![CDATA[transmission_tower_2]]></Name>
-					<X>30</X><Y>720</Y>
+					<X>30</X><Y>590</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>30</X><Y>720</Y><Z>0</Z>
+					<X>30</X><Y>590</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8711,13 +8652,13 @@
 				<Figure3D>
 					<Id>1599661968622</Id>
 					<Name><![CDATA[transmission_tower_3]]></Name>
-					<X>30</X><Y>440</Y>
+					<X>30</X><Y>350</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>30</X><Y>440</Y><Z>0</Z>
+					<X>30</X><Y>350</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8748,13 +8689,13 @@
 				<Figure3D>
 					<Id>1599661976518</Id>
 					<Name><![CDATA[traffic_cone]]></Name>
-					<X>250</X><Y>730</Y>
+					<X>250</X><Y>640</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>250</X><Y>730</Y><Z>0</Z>
+					<X>250</X><Y>640</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8777,13 +8718,13 @@
 				<Figure3D>
 					<Id>1599661979328</Id>
 					<Name><![CDATA[traffic_cone1]]></Name>
-					<X>250</X><Y>705</Y>
+					<X>250</X><Y>615</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>250</X><Y>705</Y><Z>0</Z>
+					<X>250</X><Y>615</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8913,13 +8854,13 @@
 				<Figure3D>
 					<Id>1599662996744</Id>
 					<Name><![CDATA[tree_50]]></Name>
-					<X>555.5</X><Y>565.5</Y>
+					<X>555.5</X><Y>475.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>555.5</X><Y>565.5</Y><Z>0</Z>
+					<X>555.5</X><Y>475.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8950,13 +8891,13 @@
 				<Figure3D>
 					<Id>1599662996760</Id>
 					<Name><![CDATA[tree_28]]></Name>
-					<X>160</X><Y>565</Y>
+					<X>160</X><Y>475</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>160</X><Y>565</Y><Z>0</Z>
+					<X>160</X><Y>475</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -8987,13 +8928,13 @@
 				<Figure3D>
 					<Id>1599662996775</Id>
 					<Name><![CDATA[tree_30]]></Name>
-					<X>195.5</X><Y>565.5</Y>
+					<X>195.5</X><Y>435.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>195.5</X><Y>565.5</Y><Z>0</Z>
+					<X>195.5</X><Y>435.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9024,13 +8965,13 @@
 				<Figure3D>
 					<Id>1599662996785</Id>
 					<Name><![CDATA[tree_32]]></Name>
-					<X>231</X><Y>566</Y>
+					<X>231</X><Y>476</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>231</X><Y>566</Y><Z>0</Z>
+					<X>231</X><Y>476</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9061,13 +9002,13 @@
 				<Figure3D>
 					<Id>1599662996798</Id>
 					<Name><![CDATA[tree_34]]></Name>
-					<X>265.5</X><Y>565.5</Y>
+					<X>265.5</X><Y>475.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>265.5</X><Y>565.5</Y><Z>0</Z>
+					<X>265.5</X><Y>475.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9098,13 +9039,13 @@
 				<Figure3D>
 					<Id>1599662996817</Id>
 					<Name><![CDATA[tree_36]]></Name>
-					<X>301</X><Y>566</Y>
+					<X>301</X><Y>476</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>301</X><Y>566</Y><Z>0</Z>
+					<X>301</X><Y>476</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9135,13 +9076,13 @@
 				<Figure3D>
 					<Id>1599662996829</Id>
 					<Name><![CDATA[tree_38]]></Name>
-					<X>335.5</X><Y>565.5</Y>
+					<X>335.5</X><Y>475.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>335.5</X><Y>565.5</Y><Z>0</Z>
+					<X>335.5</X><Y>475.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9172,13 +9113,13 @@
 				<Figure3D>
 					<Id>1599662996838</Id>
 					<Name><![CDATA[tree_40]]></Name>
-					<X>371</X><Y>566</Y>
+					<X>371</X><Y>476</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>371</X><Y>566</Y><Z>0</Z>
+					<X>371</X><Y>476</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9209,13 +9150,13 @@
 				<Figure3D>
 					<Id>1599662996849</Id>
 					<Name><![CDATA[tree_42]]></Name>
-					<X>405.5</X><Y>565.5</Y>
+					<X>405.5</X><Y>435.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>405.5</X><Y>565.5</Y><Z>0</Z>
+					<X>405.5</X><Y>435.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9246,13 +9187,13 @@
 				<Figure3D>
 					<Id>1599662996860</Id>
 					<Name><![CDATA[tree_44]]></Name>
-					<X>441</X><Y>566</Y>
+					<X>441</X><Y>476</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>441</X><Y>566</Y><Z>0</Z>
+					<X>441</X><Y>476</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9283,13 +9224,13 @@
 				<Figure3D>
 					<Id>1599662996871</Id>
 					<Name><![CDATA[tree_46]]></Name>
-					<X>480.5</X><Y>565.5</Y>
+					<X>480.5</X><Y>475.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>480.5</X><Y>565.5</Y><Z>0</Z>
+					<X>480.5</X><Y>475.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9320,13 +9261,13 @@
 				<Figure3D>
 					<Id>1599662996882</Id>
 					<Name><![CDATA[tree_48]]></Name>
-					<X>516</X><Y>566</Y>
+					<X>516</X><Y>476</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>516</X><Y>566</Y><Z>0</Z>
+					<X>516</X><Y>476</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9357,13 +9298,13 @@
 				<Figure3D>
 					<Id>1599663001638</Id>
 					<Name><![CDATA[tree_51]]></Name>
-					<X>545.5</X><Y>600.5</Y>
+					<X>545.5</X><Y>470.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>545.5</X><Y>600.5</Y><Z>0</Z>
+					<X>545.5</X><Y>470.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9394,13 +9335,13 @@
 				<Figure3D>
 					<Id>1599663001652</Id>
 					<Name><![CDATA[tree_52]]></Name>
-					<X>150</X><Y>600</Y>
+					<X>150</X><Y>510</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>150</X><Y>600</Y><Z>0</Z>
+					<X>150</X><Y>510</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9431,13 +9372,13 @@
 				<Figure3D>
 					<Id>1599663001665</Id>
 					<Name><![CDATA[tree_53]]></Name>
-					<X>185.5</X><Y>600.5</Y>
+					<X>185.5</X><Y>470.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>185.5</X><Y>600.5</Y><Z>0</Z>
+					<X>185.5</X><Y>470.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9468,13 +9409,13 @@
 				<Figure3D>
 					<Id>1599663001681</Id>
 					<Name><![CDATA[tree_54]]></Name>
-					<X>221</X><Y>601</Y>
+					<X>221</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>221</X><Y>601</Y><Z>0</Z>
+					<X>221</X><Y>511</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9505,13 +9446,13 @@
 				<Figure3D>
 					<Id>1599663001692</Id>
 					<Name><![CDATA[tree_55]]></Name>
-					<X>255.5</X><Y>600.5</Y>
+					<X>255.5</X><Y>470.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>255.5</X><Y>600.5</Y><Z>0</Z>
+					<X>255.5</X><Y>470.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9542,13 +9483,13 @@
 				<Figure3D>
 					<Id>1599663001702</Id>
 					<Name><![CDATA[tree_56]]></Name>
-					<X>291</X><Y>601</Y>
+					<X>291</X><Y>471</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>291</X><Y>601</Y><Z>0</Z>
+					<X>291</X><Y>471</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9579,13 +9520,13 @@
 				<Figure3D>
 					<Id>1599663001713</Id>
 					<Name><![CDATA[tree_57]]></Name>
-					<X>325.5</X><Y>600.5</Y>
+					<X>325.5</X><Y>470.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>325.5</X><Y>600.5</Y><Z>0</Z>
+					<X>325.5</X><Y>470.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9616,13 +9557,13 @@
 				<Figure3D>
 					<Id>1599663001723</Id>
 					<Name><![CDATA[tree_58]]></Name>
-					<X>361</X><Y>601</Y>
+					<X>361</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>361</X><Y>601</Y><Z>0</Z>
+					<X>361</X><Y>511</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9653,13 +9594,13 @@
 				<Figure3D>
 					<Id>1599663001735</Id>
 					<Name><![CDATA[tree_59]]></Name>
-					<X>395.5</X><Y>600.5</Y>
+					<X>395.5</X><Y>510.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>395.5</X><Y>600.5</Y><Z>0</Z>
+					<X>395.5</X><Y>510.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9690,13 +9631,13 @@
 				<Figure3D>
 					<Id>1599663001745</Id>
 					<Name><![CDATA[tree_60]]></Name>
-					<X>431</X><Y>601</Y>
+					<X>431</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>431</X><Y>601</Y><Z>0</Z>
+					<X>431</X><Y>511</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9727,13 +9668,13 @@
 				<Figure3D>
 					<Id>1599663001756</Id>
 					<Name><![CDATA[tree_61]]></Name>
-					<X>470.5</X><Y>600.5</Y>
+					<X>470.5</X><Y>470.5</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>470.5</X><Y>600.5</Y><Z>0</Z>
+					<X>470.5</X><Y>470.5</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9764,13 +9705,13 @@
 				<Figure3D>
 					<Id>1599663001766</Id>
 					<Name><![CDATA[tree_62]]></Name>
-					<X>506</X><Y>601</Y>
+					<X>506</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<X>506</X><Y>601</Y><Z>0</Z>
+					<X>506</X><Y>511</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -9884,7 +9825,7 @@
 				<Road>
 					<Id>1598885932007</Id>
 					<Name><![CDATA[playa_perez]]></Name>
-					<X>80</X><Y>410</Y>
+					<X>80</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9958,13 +9899,13 @@
 				<Figure3D>
 					<Id>1600184935438</Id>
 					<Name><![CDATA[hangar_2]]></Name>
-					<X>510</X><Y>670</Y>
+					<X>510</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>510</X><Y>670</Y><Z>0</Z>
+					<X>510</X><Y>580</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -10006,7 +9947,7 @@
 				<Path>
 					<Id>1600185089058</Id>
 					<Name><![CDATA[path]]></Name>
-					<X>280</X><Y>670</Y>
+					<X>280</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10049,7 +9990,7 @@
 				<PointNode>
 					<Id>1600185136341</Id>
 					<Name><![CDATA[grossWeightBalance]]></Name>
-					<X>510</X><Y>670</Y>
+					<X>510</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10066,6 +10007,116 @@
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</SpeedLimitValue>
 				</PointNode>
+    			<PieChart>
+					<Id>1600187559922</Id>
+					<Name><![CDATA[chart]]></Name>
+					<X>550</X><Y>500</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1600243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>180</Width>
+					<Height>150</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>60</XOffset>
+						<YOffset>10</YOffset>
+						<Width>60</Width>
+						<Height>80</Height>
+						<BorderColor/>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[timeInGrossBalance.statsUtilization.mean()]]></Expression>
+					<Color>-4565549</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Balance Utilization]]></Title>
+					</DataItem>
+    			</PieChart>
+    			<BarChart>
+					<Id>1600187686954</Id>
+					<Name><![CDATA[chart3]]></Name>
+					<X>290</X><Y>600</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1600243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>190</Width>
+					<Height>90</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>10</XOffset>
+						<YOffset>10</YOffset>
+						<Width>170</Width>
+						<Height>20</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[queueGrossBalance.statsSize.mean()]]></Expression>
+					<Color>-16776961</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Avg Queue Length]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>RIGHT</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
 			</Presentation>
 
 				</Level>
@@ -10669,7 +10720,7 @@
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
 		<Width>1830</Width>
-		<Height>800</Height>
+		<Height>810</Height>
 	</Frame>
 	<Database>
 		<Logging>false</Logging>
