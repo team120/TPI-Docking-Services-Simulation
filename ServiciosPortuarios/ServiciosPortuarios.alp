@@ -7293,7 +7293,7 @@
 				</Polyline>
 				<RoadNetwork>
 					<Id>1598886907857</Id>
-					<Name><![CDATA[roadNetwork1]]></Name>
+					<Name><![CDATA[roadNetwork]]></Name>
 					<X>1185.333</X><Y>937</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -9391,7 +9391,7 @@
 				<PointNode>
 					<Id>1599014887125</Id>
 					<Name><![CDATA[nodeDock]]></Name>
-					<X>3400</X><Y>900</Y>
+					<X>3400</X><Y>700</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9411,7 +9411,7 @@
 				<Path SourceId="1599014887125" TargetId="1599014609221">
 					<Id>1599014888778</Id>
 					<Name><![CDATA[departureShipPath]]></Name>
-					<X>3400</X><Y>890</Y>
+					<X>3400</X><Y>690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9431,15 +9431,15 @@
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-470</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-445</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-495</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-530</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-505</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-555</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-1050</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-1025</Y><Z>0</Z></Point>
-						<Point><X>-20</X><Y>-1050</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-270</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-245</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-295</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-330</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-305</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-355</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-850</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-825</Y><Z>0</Z></Point>
+						<Point><X>-20</X><Y>-850</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -9472,10 +9472,13 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-15.569</X><Y>-19.561</Y><Z>0</Z></Point>
-						<Point><X>-780</X><Y>-980</Y><Z>0</Z></Point>
-						<Point><X>-764.431</X><Y>-960.439</Y><Z>0</Z></Point>
-						<Point><X>-805</X><Y>-980</Y><Z>0</Z></Point>
+						<Point><X>-15.864</X><Y>-19.322</Y><Z>0</Z></Point>
+						<Point><X>-780</X><Y>-950</Y><Z>0</Z></Point>
+						<Point><X>-764.136</X><Y>-930.678</Y><Z>0</Z></Point>
+						<Point><X>-780</X><Y>-975</Y><Z>0</Z></Point>
+						<Point><X>-780</X><Y>-1180</Y><Z>0</Z></Point>
+						<Point><X>-780</X><Y>-1155</Y><Z>0</Z></Point>
+						<Point><X>-805</X><Y>-1180</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -13222,17 +13225,17 @@
 					<IsObstacle>true</IsObstacle>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>13.053846490963245</X><Y>21.32128260190663</Y><Z>0</Z></Point>
+						<Point><X>11.805535312885475</X><Y>22.036999250719553</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>210</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>185</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>210.51</X><Y>24.995</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>490</Y><Z>0</Z></Point>
-						<Point><X>219.49</X><Y>465.005</Y><Z>0</Z></Point>
-						<Point><X>245</X><Y>490</Y><Z>0</Z></Point>
-						<Point><X>300</X><Y>490</Y><Z>0</Z></Point>
-						<Point><X>275</X><Y>490</Y><Z>0</Z></Point>
-						<Point><X>286.946</X><Y>468.679</Y><Z>0</Z></Point>
+						<Point><X>210.446</X><Y>24.996</Y><Z>0</Z></Point>
+						<Point><X>220</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>219.554</X><Y>535.004</Y><Z>0</Z></Point>
+						<Point><X>245</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>300</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>275</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>288.194</X><Y>537.963</Y><Z>0</Z></Point>
 					</Points>
 
 
