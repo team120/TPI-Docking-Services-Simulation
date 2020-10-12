@@ -122,72 +122,6 @@
 			<ConnectionsId>1598843002681</ConnectionsId>
 			<Connectors>
 				<Connector>
-					<Id>1598964418782</Id>
-					<Name><![CDATA[connector1]]></Name>
-					<X>239</X><Y>2390</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[grainUnload]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Source]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyToTank]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1</X><Y>0</Y></Point>
-						<Point><X>51</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1598991877850</Id>
-					<Name><![CDATA[connector21]]></Name>
-					<X>586</X><Y>2390</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tank]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Tank]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tankValveIn]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-68</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1598992784876</Id>
 					<Name><![CDATA[connector23]]></Name>
 					<X>690</X><Y>2440</Y>
@@ -218,105 +152,6 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-74</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599004103958</Id>
-					<Name><![CDATA[connector24]]></Name>
-					<X>840</X><Y>2440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[fluidToAgent]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidToAgent]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyToShip]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599004107302</Id>
-					<Name><![CDATA[connector25]]></Name>
-					<X>940</X><Y>2440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyToShip]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[sink1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Sink]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599013027725</Id>
-					<Name><![CDATA[connector22]]></Name>
-					<X>710</X><Y>2440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tankValveOut]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[fluidToAgent]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidToAgent]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>90</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -416,72 +251,6 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-70</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599534750616</Id>
-					<Name><![CDATA[connector18]]></Name>
-					<X>-920</X><Y>920</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tankValveIn]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[agentToFluid]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[AgentToFluid]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1418</X><Y>1470</Y></Point>
-						<Point><X>1350</X><Y>1470</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599534750619</Id>
-					<Name><![CDATA[connector19]]></Name>
-					<X>-920</X><Y>920</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[agentToFluid]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[AgentToFluid]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[conveyToTank]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1310</X><Y>1470</Y></Point>
-						<Point><X>1250</X><Y>1470</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1309,6 +1078,138 @@
 						<Point><X>-30</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1602515042961</Id>
+					<Name><![CDATA[connector1]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[bulkConveyor]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[tank]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Tank]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>520</X><Y>2390</Y></Point>
+						<Point><X>586</X><Y>2390</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1602515047615</Id>
+					<Name><![CDATA[connector11]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[fluidEnter]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidEnter]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[bulkConveyor]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>400</X><Y>2390</Y></Point>
+						<Point><X>470</X><Y>2390</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1602515060355</Id>
+					<Name><![CDATA[connector14]]></Name>
+					<X>810</X><Y>2440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[bulkConveyor1]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[tankValveOut]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-100</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1602515082850</Id>
+					<Name><![CDATA[connector15]]></Name>
+					<X>930</X><Y>2440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[fluidDispose]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[bulkConveyor1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<AgentLinks>
 				<AgentLink>
@@ -1432,10 +1333,10 @@
 									</GenericParameterSubstitute>
 									<Parameters>
 										<Parameter>
-											<Name><![CDATA[cargo]]></Name>
+											<Name><![CDATA[grainType]]></Name>
 										</Parameter>
 										<Parameter>
-											<Name><![CDATA[grain_type]]></Name>
+											<Name><![CDATA[capacity]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -1712,414 +1613,6 @@
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1598927539974</Id>
-					<Name><![CDATA[conveyToTank]]></Name>
-					<X>290</X><Y>2380</Y>
-					<Label><X>-43.5</X><Y>41</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[Convey]]></ClassName>
-							<ItemName><![CDATA[1504168429638]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[sourceType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourcePositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceConveyor]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[conveyorToTank]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetConveyor]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[conveyorToTank]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetCustomStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[routeIs]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.ROUTE_LIST_OF_CONVEYORS]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorsToAvoid]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorsToInclude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorSequence]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[removeFromConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[removeFromSpace]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onCancel]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1598927549917</Id>
-					<Name><![CDATA[grainUnload]]></Name>
-					<X>210</X><Y>2380</Y>
-					<Label><X>-25</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Source]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Source]]></ClassName>
-							<ItemName><![CDATA[1412336242928]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.MANUAL]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[rate]]></Name>
-							<Value Class="CodeUnitValue">
-								<Code><![CDATA[20]]></Code>
-								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[interarrivalTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[firstArrivalMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[firstArrivalTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[rateSchedule]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[modifyRate]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[rateExpression]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[arrivalSchedule]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[setAgentParametersFromDB]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[databaseTable]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[arrivalDate]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[multipleEntitiesPerArrival]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entitiesPerArrival]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[limitArrivals]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maxArrivals]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationLatitude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationLongitude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationGeoPlaceName]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationXYZInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[speed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[newEntity]]></Name>
-							<Value Class="EntityCodeValue">
-								<IsAgentEntity>true</IsAgentEntity>
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-										<ClassName><![CDATA[BulkCargo]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-											<ClassName><![CDATA[BulkCargo]]></ClassName>
-											<ItemName><![CDATA[1599062012405]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeDimensions]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[length]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[width]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[height]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableCustomStartTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[startTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[addToCustomPopulation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[population]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pushProtocol]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[false]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[discardHangingEntities]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[false]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onBeforeArrival]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDiscard]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1598929274632</Id>
 					<Name><![CDATA[timeUnloading]]></Name>
 					<X>1557.707</X><Y>2225</Y>
@@ -2145,7 +1638,7 @@
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[150]]></Code>
+								<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -2175,109 +1668,16 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.bulkExit.connect(fluidEnter);
+agent.valve.open()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[grainUnload.inject(agent.cargo)]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1598991851884</Id>
-					<Name><![CDATA[tankValveIn]]></Name>
-					<X>498</X><Y>2380.5</Y>
-					<Label><X>-8</X><Y>-15.5</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-							<ClassName><![CDATA[Valve]]></ClassName>
-							<ItemName><![CDATA[1412618001593]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[maxOpenRate]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[openRate]]></Name>
-							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[closed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[showBatchesInFlowchart]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[actionOnPortion]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[portionSize]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onPortion]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDispensed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onNewBatchIn]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRateChange]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -2538,402 +1938,6 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRateChange]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1599003116939</Id>
-					<Name><![CDATA[conveyToShip]]></Name>
-					<X>900</X><Y>2430</Y>
-					<Label><X>-15</X><Y>45</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[Convey]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[Convey]]></ClassName>
-							<ItemName><![CDATA[1504168429638]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[sourceType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourcePositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceConveyor]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[conveyorToShip]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sourceOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetConveyor]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[conveyorToShip]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[targetCustomStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[routeIs]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.ROUTE_LIST_OF_CONVEYORS]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorsToAvoid]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorsToInclude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[conveyorSequence]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[removeFromConveyor]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[removeFromSpace]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onCancel]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1599003141847</Id>
-					<Name><![CDATA[sink1]]></Name>
-					<X>1010</X><Y>2430</Y>
-					<Label><X>-15</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Sink]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Sink]]></ClassName>
-							<ItemName><![CDATA[1412336242929]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destroyEntity]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1599011507130</Id>
-					<Name><![CDATA[fluidToAgent]]></Name>
-					<X>800</X><Y>2420</Y>
-					<Label><X>-40</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidToAgent]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-							<ClassName><![CDATA[FluidToAgent]]></ClassName>
-							<ItemName><![CDATA[1412942478531]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[agentPerAmount]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fluidInAgent]]></Name>
-							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[newAgent]]></Name>
-							<Value Class="EntityCodeValue">
-								<IsAgentEntity>true</IsAgentEntity>
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-										<ClassName><![CDATA[BulkCargo]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-											<ClassName><![CDATA[BulkCargo]]></ClassName>
-											<ItemName><![CDATA[1599062012405]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationLatitude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationLongitude]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationGeoPlaceName]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationXYZInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[speed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[storageTank]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[showBatchesInFlowchart]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[addToCustomPopulation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[population]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -3721,112 +2725,6 @@
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1599534747185</Id>
-					<Name><![CDATA[agentToFluid]]></Name>
-					<X>390</X><Y>2370</Y>
-					<Label><X>-35</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[AgentToFluid]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-							<ClassName><![CDATA[AgentToFluid]]></ClassName>
-							<ItemName><![CDATA[1412627758419]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[fluidInAgent]]></Name>
-							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[rate]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priorityOutCustom]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[modeBatchCustom]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customBatch]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customBatchColor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[batchColor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[agentLocation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[storageTank]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[showBatchesInFlowchart]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAgentDone]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRateChange]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1599539328156</Id>
 					<Name><![CDATA[queue]]></Name>
 					<X>520</X><Y>2570</Y>
@@ -3969,7 +2867,7 @@
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[150]]></Code>
+								<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -6446,6 +5344,348 @@
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515031102</Id>
+					<Name><![CDATA[fluidEnter]]></Name>
+					<X>370</X><Y>2380</Y>
+					<Label><X>-25</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidEnter]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[FluidEnter]]></ClassName>
+							<ItemName><![CDATA[1414749060515]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[limitRateOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxRateOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515040696</Id>
+					<Name><![CDATA[bulkConveyor]]></Name>
+					<X>470</X><Y>2370</Y>
+					<Label><X>-40</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[BulkConveyor]]></ClassName>
+							<ItemName><![CDATA[1414355720595]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[lengthDefinedByPath]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[speed]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxInputRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopped]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customPriority]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[priorityOutCustom]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[bulkConveyorBelt]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[bulkConveyorBelt]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515057588</Id>
+					<Name><![CDATA[bulkConveyor1]]></Name>
+					<X>810</X><Y>2420</Y>
+					<Label><X>-40</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[BulkConveyor]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[BulkConveyor]]></ClassName>
+							<ItemName><![CDATA[1414355720595]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[lengthDefinedByPath]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[speed]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxInputRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopped]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customPriority]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[priorityOutCustom]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[bulkConveyorBelt]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[bulkConveyorBelt1]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515080293</Id>
+					<Name><![CDATA[fluidDispose]]></Name>
+					<X>930</X><Y>2420</Y>
+					<Label><X>-50</X><Y>-15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidDispose]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[FluidDispose]]></ClassName>
+							<ItemName><![CDATA[1412618001589]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -6499,6 +5739,37 @@
 					</Points>
 					<Closed>false</Closed>
 				</Polyline>
+				<Polyline>
+					<Id>1601508790360</Id>
+					<Name><![CDATA[perez_truck_park]]></Name>
+					<X>160</X><Y>1240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>0.5</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-4144960</FillColor>
+					<FillMaterial>gravel</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-580</Y><Z>0</Z></Point>
+					   <Point><X>720</X><Y>-580</Y><Z>0</Z></Point>
+					   <Point><X>880</X><Y>40</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>40</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>false</Closed>
+				</Polyline>
 				<Network>
 					<Id>1601534052116</Id>
 					<Name><![CDATA[networkDock]]></Name>
@@ -6533,7 +5804,7 @@
 				<PointNode>
 					<Id>1600905722071</Id>
 					<Name><![CDATA[startNetQueue]]></Name>
-					<X>2825</X><Y>640</Y>
+					<X>2780</X><Y>635</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6553,7 +5824,7 @@
 				<Path SourceId="1600905722071" TargetId="1600897965566">
 					<Id>1601534263440</Id>
 					<Name><![CDATA[netBalanceQueuePath]]></Name>
-					<X>2825</X><Y>640</Y>
+					<X>2780</X><Y>635</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6571,11 +5842,11 @@
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>4.109974682633933</X><Y>-24.659848095803596</Y><Z>0</Z></Point>
-						<Point><X>4.109974682633933</X><Y>-24.659848095803596</Y><Z>0</Z></Point>
-						<Point><X>35</X><Y>-210</Y><Z>0</Z></Point>
-						<Point><X>30.890025317366067</X><Y>-185.3401519041964</Y><Z>0</Z></Point>
-						<Point><X>30.890025317366067</X><Y>-185.3401519041964</Y><Z>0</Z></Point>
+						<Point><X>2.887521454364109</X><Y>-24.83268450753134</Y><Z>0</Z></Point>
+						<Point><X>2.887521454364109</X><Y>-24.83268450753134</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>-215</Y><Z>0</Z></Point>
+						<Point><X>22.11247854563589</X><Y>-190.16731549246867</Y><Z>0</Z></Point>
+						<Point><X>22.11247854563589</X><Y>-190.16731549246867</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -6589,7 +5860,7 @@
 				<PointNode>
 					<Id>1600897965566</Id>
 					<Name><![CDATA[netBalance]]></Name>
-					<X>2860</X><Y>430</Y>
+					<X>2805</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6609,7 +5880,7 @@
 				<Path SourceId="1600897965566" TargetId="1600786744987">
 					<Id>1600786844452</Id>
 					<Name><![CDATA[unloadQueuePath]]></Name>
-					<X>2860</X><Y>430</Y>
+					<X>2805</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6628,10 +5899,10 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>5.791</X><Y>-24.32</Y><Z>0</Z></Point>
-						<Point><X>50</X><Y>-210</Y><Z>0</Z></Point>
-						<Point><X>44.209</X><Y>-185.68</Y><Z>0</Z></Point>
-						<Point><X>40.715</X><Y>-233.212</Y><Z>0</Z></Point>
+						<Point><X>3.5355339059327378</X><Y>-24.74873734152916</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-210</Y><Z>0</Z></Point>
+						<Point><X>26.464466094067262</X><Y>-185.25126265847084</Y><Z>0</Z></Point>
+						<Point><X>20.715000000000003</X><Y>-233.212</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -6665,15 +5936,15 @@
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>85</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>-105</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>-80</Y><Z>0</Z></Point>
-						<Point><X>114.39476596209144</X><Y>-129.61068938771206</Y><Z>0</Z></Point>
-						<Point><X>135</X><Y>-245</Y><Z>0</Z></Point>
-						<Point><X>130.60523403790856</X><Y>-220.38931061228794</Y><Z>0</Z></Point>
-						<Point><X>132.07896881081524</X><Y>-220.17123489192807</Y><Z>0</Z></Point>
+						<Point><X>70</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>45</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>71.135</X><Y>-24.974</Y><Z>0</Z></Point>
+						<Point><X>75</X><Y>-110</Y><Z>0</Z></Point>
+						<Point><X>73.865</X><Y>-85.026</Y><Z>0</Z></Point>
+						<Point><X>77.66332809085664</X><Y>-134.85772884799522</Y><Z>0</Z></Point>
+						<Point><X>90</X><Y>-250</Y><Z>0</Z></Point>
+						<Point><X>87.33667190914336</X><Y>-225.14227115200478</Y><Z>0</Z></Point>
+						<Point><X>87.07900000000001</X><Y>-225.171</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -6687,7 +5958,7 @@
 				<PointNode>
 					<Id>1600786744987</Id>
 					<Name><![CDATA[unloadArea]]></Name>
-					<X>2910</X><Y>220</Y>
+					<X>2835</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6707,7 +5978,7 @@
 				<Path SourceId="1600786744987" TargetId="1601534772914">
 					<Id>1601534722837</Id>
 					<Name><![CDATA[secondBalance]]></Name>
-					<X>2910</X><Y>220</Y>
+					<X>2835</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6726,16 +5997,16 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>45</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>280</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>255</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>280</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>280</Y><Z>0</Z></Point>
-						<Point><X>280</X><Y>280</Y><Z>0</Z></Point>
-						<Point><X>260</X><Y>280</Y><Z>0</Z></Point>
+						<Point><X>24.959</X><Y>1.426</Y><Z>0</Z></Point>
+						<Point><X>175</X><Y>10</Y><Z>0</Z></Point>
+						<Point><X>150.041</X><Y>8.574</Y><Z>0</Z></Point>
+						<Point><X>172.737</X><Y>34.897</Y><Z>0</Z></Point>
+						<Point><X>155</X><Y>230</Y><Z>0</Z></Point>
+						<Point><X>157.263</X><Y>205.103</Y><Z>0</Z></Point>
+						<Point><X>150.097</X><Y>254.515</Y><Z>0</Z></Point>
+						<Point><X>145</X><Y>280</Y><Z>0</Z></Point>
+						<Point><X>149.903</X><Y>255.485</Y><Z>0</Z></Point>
+						<Point><X>125</X><Y>280</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -6749,7 +6020,7 @@
 				<PointNode>
 					<Id>1601534772914</Id>
 					<Name><![CDATA[taraBalance]]></Name>
-					<X>3190</X><Y>500</Y>
+					<X>2980</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6769,7 +6040,7 @@
 				<Path SourceId="1601534772914" TargetId="1601535462790">
 					<Id>1601535388790</Id>
 					<Name><![CDATA[outWay]]></Name>
-					<X>3190</X><Y>500</Y>
+					<X>2980</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6788,19 +6059,19 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>335</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-372</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-347</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-397</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-500</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-475</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-500</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-500</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-500</X><Y>360</Y><Z>0</Z></Point>
-						<Point><X>-520</X><Y>350</Y><Z>0</Z></Point>
+						<Point><X>-5.67</X><Y>24.348</Y><Z>0</Z></Point>
+						<Point><X>-85</X><Y>365</Y><Z>0</Z></Point>
+						<Point><X>-79.33</X><Y>340.652</Y><Z>0</Z></Point>
+						<Point><X>-109.947</X><Y>366.62</Y><Z>0</Z></Point>
+						<Point><X>-162</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-137.053</X><Y>368.38</Y><Z>0</Z></Point>
+						<Point><X>-187</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-290</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-265</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-290</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-290</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-290</X><Y>370</Y><Z>0</Z></Point>
+						<Point><X>-310</X><Y>360</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -6834,367 +6105,6 @@
 			</Presentation>
 
 					<Z>1</Z>
-				</Network>
-				<Polyline>
-					<Id>1601508790360</Id>
-					<Name><![CDATA[perez_truck_park]]></Name>
-					<X>160</X><Y>1240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>0.5</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-4144960</FillColor>
-					<FillMaterial>gravel</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-580</Y><Z>0</Z></Point>
-					   <Point><X>720</X><Y>-580</Y><Z>0</Z></Point>
-					   <Point><X>880</X><Y>40</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>40</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>false</Closed>
-				</Polyline>
-				<Network>
-					<Id>1601510584819</Id>
-					<Name><![CDATA[perezNetwork]]></Name>
-					<X>160</X><Y>1100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-
-			<Presentation>
-				<PointNode>
-					<Id>1601508911623</Id>
-					<Name><![CDATA[perezEnter]]></Name>
-					<X>160</X><Y>1100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>false</FakeNode>	
-					<Lock>false</Lock>
-					<Color>-14774017</Color>
-					<Radius>10</Radius>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">10</Value>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-				</PointNode>
-				<Path SourceId="1601508911623" TargetId="1601510606230">
-					<Id>1601510570126</Id>
-					<Name><![CDATA[perezRoute1]]></Name>
-					<X>160</X><Y>1100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-14774017</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineWidth>1</LineWidth>
-					<PathType>road</PathType>
-					
-					<Width Class="UnitValue">
-						<Value Class="Double">4</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>35</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-48</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-23</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-73</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-95</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
-						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
-						<Point><X>40</X><Y>-120</Y><Z>0</Z></Point>
-					</Points>
-					<Bidirectional>false</Bidirectional>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="CodeUnitValue">
-						<Code><![CDATA[10.0]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
-					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
-				</Path>
-				<PointNode>
-					<Id>1601510606230</Id>
-					<Name><![CDATA[perezJunction1]]></Name>
-					<X>220</X><Y>980</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>false</FakeNode>	
-					<Lock>false</Lock>
-					<Color>-14774017</Color>
-					<Radius>10</Radius>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">10</Value>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-				</PointNode>
-				<Path SourceId="1601510606230" TargetId="1601527399157">
-					<Id>1601510651144</Id>
-					<Name><![CDATA[perezRoute2]]></Name>
-					<X>220</X><Y>980</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-14774017</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineWidth>1</LineWidth>
-					<PathType>road</PathType>
-					
-					<Width Class="UnitValue">
-						<Value Class="Double">4</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>580</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>555</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>605</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-					<Bidirectional>false</Bidirectional>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="CodeUnitValue">
-						<Code><![CDATA[10.0]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
-					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
-				</Path>
-				<PointNode>
-					<Id>1601527399157</Id>
-					<Name><![CDATA[perezJuction2]]></Name>
-					<X>800</X><Y>980</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>false</FakeNode>	
-					<Lock>false</Lock>
-					<Color>-14774017</Color>
-					<Radius>10</Radius>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">10</Value>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-				</PointNode>
-				<Path SourceId="1601510606230" TargetId="1601527399157">
-					<Id>1601529194411</Id>
-					<Name><![CDATA[perezRoute3]]></Name>
-					<X>220</X><Y>980</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-14774017</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineWidth>1</LineWidth>
-					<PathType>road</PathType>
-					
-					<Width Class="UnitValue">
-						<Value Class="Double">4</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-200</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-175</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>-200</Y><Z>0</Z></Point>
-						<Point><X>580</X><Y>-200</Y><Z>0</Z></Point>
-						<Point><X>555</X><Y>-200</Y><Z>0</Z></Point>
-						<Point><X>580</X><Y>-175</Y><Z>0</Z></Point>
-						<Point><X>580</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>580</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>539.497</X><Y>-179.497</Y><Z>0</Z></Point>
-					</Points>
-					<Bidirectional>false</Bidirectional>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="CodeUnitValue">
-						<Code><![CDATA[10.0]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
-					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
-				</Path>
-				<Path SourceId="1601527399157" TargetId="1601508944704">
-					<Id>1601510766249</Id>
-					<Name><![CDATA[perezRoute4]]></Name>
-					<X>800</X><Y>980</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-14774017</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineWidth>1</LineWidth>
-					<PathType>road</PathType>
-					
-					<Width Class="UnitValue">
-						<Value Class="Double">4</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>44</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>19</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>69</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>215</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-100</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-75</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-125</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-590</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-565</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-615</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-640</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-615</X><Y>240</Y><Z>0</Z></Point>
-						<Point><X>-20</X><Y>240</Y><Z>0</Z></Point>
-					</Points>
-					<Bidirectional>false</Bidirectional>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="CodeUnitValue">
-						<Code><![CDATA[10.0]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
-					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
-				</Path>
-				<PointNode>
-					<Id>1601508944704</Id>
-					<Name><![CDATA[perezExit]]></Name>
-					<X>160</X><Y>1220</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>false</FakeNode>	
-					<Lock>false</Lock>
-					<Color>-14774017</Color>
-					<Radius>10</Radius>
-					<SpeedLimit>false</SpeedLimit>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">10</Value>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</SpeedLimitValue>
-				</PointNode>
-  				<PalletRack TargetId="1601529194411">
-					<Id>1601539125567</Id>
-					<Name><![CDATA[perezPalletRack2]]></Name>
-					<X>300</X><Y>900</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-1</LineColor>
-					<FillColor>-4144960</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Width>440</Width>
-					<Height>60</Height>	
-					<RightHeight>60</RightHeight>
-					<AisleHeight>40</AisleHeight>
-					<RightAisleHeight>40</RightAisleHeight>
-					<Rotation>0</Rotation>
-					<CellsDefinitionType>NUMBER_OF_CELLS</CellsDefinitionType>
-					<NumberOfCells>15</NumberOfCells>
-					<NumberOfDeepPositions>1</NumberOfDeepPositions>
-					<NumberOfLevels>1</NumberOfLevels>
-					<LevelHeight>50</LevelHeight>
-					<CellWidth>20</CellWidth>
-					<Type>twoStorages</Type>
-					<Direction>noDirection</Direction>
-					<AisleBelow>true</AisleBelow>
-					<DrawLegs>true</DrawLegs>
-					<CellsBetweenLegs>2</CellsBetweenLegs>
-					<IsObstacle>true</IsObstacle>
-				</PalletRack>
-  				<PalletRack TargetId="1601529194411">
-					<Id>1601539272063</Id>
-					<Name><![CDATA[perezPalletRack1]]></Name>
-					<X>300</X><Y>700</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-1</LineColor>
-					<FillColor>-4144960</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Width>440</Width>
-					<Height>60</Height>	
-					<RightHeight>60</RightHeight>
-					<AisleHeight>40</AisleHeight>
-					<RightAisleHeight>40</RightAisleHeight>
-					<Rotation>0</Rotation>
-					<CellsDefinitionType>NUMBER_OF_CELLS</CellsDefinitionType>
-					<NumberOfCells>15</NumberOfCells>
-					<NumberOfDeepPositions>1</NumberOfDeepPositions>
-					<NumberOfLevels>1</NumberOfLevels>
-					<LevelHeight>50</LevelHeight>
-					<CellWidth>20</CellWidth>
-					<Type>twoStorages</Type>
-					<Direction>noDirection</Direction>
-					<AisleBelow>true</AisleBelow>
-					<DrawLegs>true</DrawLegs>
-					<CellsBetweenLegs>2</CellsBetweenLegs>
-					<IsObstacle>true</IsObstacle>
-				</PalletRack>
-			</Presentation>
-
-					<Z>0</Z>
 				</Network>
 				<Polyline>
 					<Id>1601532360146</Id>
@@ -11872,13 +10782,13 @@
 				<Figure3D>
 					<Id>1600897952825</Id>
 					<Name><![CDATA[balanceIn]]></Name>
-					<X>2860</X><Y>430</Y>
+					<X>2805</X><Y>420</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>2860</X><Y>430</Y><Z>1</Z>
+					<X>2805</X><Y>420</Y><Z>1</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -11909,13 +10819,13 @@
 				<Figure3D>
 					<Id>1601534931260</Id>
 					<Name><![CDATA[balanceOut]]></Name>
-					<X>3190</X><Y>500</Y>
+					<X>2980</X><Y>490</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>3190</X><Y>500</Y><Z>1</Z>
+					<X>2980</X><Y>490</Y><Z>1</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -11943,189 +10853,16 @@
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
 				</Figure3D>
-				<ConveyorNetwork>
-					<Id>1598927287315</Id>
-					<Name><![CDATA[conveyorNetwork]]></Name>
-					<X>1240</X><Y>490</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-
-			<Presentation>
-				<Conveyor>
-					<Id>1598927276512</Id>
-					<Name><![CDATA[conveyorToTank]]></Name>
-					<X>2890</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>1</Z>
-					<EmbeddedObject>
-						<ActiveObjectClass>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
-						</ActiveObjectClass>
-						<GenericParameterSubstitute>
-							<GenericParameterSubstituteReference>
-								<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-								<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
-								<ItemName><![CDATA[1514281812596]]></ItemName>
-							</GenericParameterSubstituteReference>
-							<GenericParameterSubstituteValue Class="CodeValue">
-								<Code><![CDATA[BulkCargo]]></Code>
-							</GenericParameterSubstituteValue>
-						</GenericParameterSubstitute>
-						<Parameters>
-							<Parameter>
-								<Name><![CDATA[type]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[CONVEYOR_TYPE_BELT]]></Code>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[maxSpeed]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[5]]></Code>
-									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[initialSpeed]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[5]]></Code>
-									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[acceleration]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[deceleration]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[cellSize]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[gap]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[1]]></Code>
-									<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[maximumPriority]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[priority]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onLeadingEdgeEnter]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onTrailingEdgeEnter]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onLeadingEdgeExit]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onTrailingEdgeExit]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onStarted]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onStopped]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onFailed]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onRepaired]]></Name>
-							</Parameter>
-						</Parameters>
-						<ReplicationFlag>false</ReplicationFlag>
-						<Replication Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
-						</Replication>
-						<CollectionType>ARRAY_LIST_BASED</CollectionType>
-						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-						<XCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</XCode>
-						<YCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</YCode>
-						<ZCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ZCode>
-						<ColumnCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ColumnCode>
-						<RowCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</RowCode>
-						<LatitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LatitudeCode>
-						<LongitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LongitudeCode>
-						<LocationNameCode Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</LocationNameCode>
-						<InitializationType>SPECIFIED_NUMBER</InitializationType>
-						<InitializationDatabaseTableQuery>
-							<TableReference>
-							</TableReference>
-						</InitializationDatabaseTableQuery>
-						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-						<QuantityColumn>
-						</QuantityColumn>
-					</EmbeddedObject>
-					<Width Class="UnitValue">
-						<Value Class="Double">2.5</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<DrawStands>true</DrawStands>
-					<StandsLevel>0.0</StandsLevel>
-					<IsObstacle>true</IsObstacle>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>23.334000000000003</X><Y>-8.973999999999997</Y><Z>0</Z></Point>
-						<Point><X>4.9030000000000005</X><Y>-24.515</Y><Z>0</Z></Point>
-						<Point><X>10</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>5.0969999999999995</X><Y>-25.485</Y><Z>0</Z></Point>
-						<Point><X>35</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>5</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>55</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>130</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>105</X><Y>-50</Y><Z>0</Z></Point>
-						<Point><X>106.6663598449235</X><Y>-41.025523017278275</Y><Z>0</Z></Point>
-					</Points>
-
-
-				</Conveyor>
-			</Presentation>
-
-					<Z>1</Z>
-				</ConveyorNetwork>
 				<Figure3D>
 					<Id>1600786736237</Id>
 					<Name><![CDATA[hangar_open]]></Name>
-					<X>2905</X><Y>215</Y>
+					<X>2835</X><Y>210</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>2905</X><Y>215</Y><Z>1</Z>
+					<X>2835</X><Y>210</Y><Z>1</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
@@ -12153,176 +10890,6 @@
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
 				</Figure3D>
-				<ConveyorNetwork>
-					<Id>1599002936548</Id>
-					<Name><![CDATA[conveyorNetwork1]]></Name>
-					<X>860</X><Y>160</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-
-			<Presentation>
-				<Conveyor>
-					<Id>1599002913349</Id>
-					<Name><![CDATA[conveyorToShip]]></Name>
-					<X>3060</X><Y>140</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>1</Z>
-					<EmbeddedObject>
-						<ActiveObjectClass>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
-						</ActiveObjectClass>
-						<GenericParameterSubstitute>
-							<GenericParameterSubstituteReference>
-								<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-								<ClassName><![CDATA[ConveyorPathDescriptor]]></ClassName>
-								<ItemName><![CDATA[1514281812596]]></ItemName>
-							</GenericParameterSubstituteReference>
-						</GenericParameterSubstitute>
-						<Parameters>
-							<Parameter>
-								<Name><![CDATA[type]]></Name>
-								<Value Class="CodeValue">
-									<Code><![CDATA[CONVEYOR_TYPE_BELT]]></Code>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[maxSpeed]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[5]]></Code>
-									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[initialSpeed]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[5]]></Code>
-									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[acceleration]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[deceleration]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[cellSize]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[gap]]></Name>
-								<Value Class="CodeUnitValue">
-									<Code><![CDATA[0.2]]></Code>
-									<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-								</Value>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[maximumPriority]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[priority]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onLeadingEdgeEnter]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onTrailingEdgeEnter]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onLeadingEdgeExit]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onTrailingEdgeExit]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onStarted]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onStopped]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onFailed]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[onRepaired]]></Name>
-							</Parameter>
-						</Parameters>
-						<ReplicationFlag>false</ReplicationFlag>
-						<Replication Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
-						</Replication>
-						<CollectionType>ARRAY_LIST_BASED</CollectionType>
-						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-						<XCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</XCode>
-						<YCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</YCode>
-						<ZCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ZCode>
-						<ColumnCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ColumnCode>
-						<RowCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</RowCode>
-						<LatitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LatitudeCode>
-						<LongitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LongitudeCode>
-						<LocationNameCode Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</LocationNameCode>
-						<InitializationType>SPECIFIED_NUMBER</InitializationType>
-						<InitializationDatabaseTableQuery>
-							<TableReference>
-							</TableReference>
-						</InitializationDatabaseTableQuery>
-						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-						<QuantityColumn>
-						</QuantityColumn>
-					</EmbeddedObject>
-					<Width Class="UnitValue">
-						<Value Class="Double">2.5</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</Width>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<DrawStands>true</DrawStands>
-					<StandsLevel>-15.0</StandsLevel>
-					<IsObstacle>true</IsObstacle>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>11.805535312885475</X><Y>22.036999250719553</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>210</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>185</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>210.446</X><Y>24.996</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>560</Y><Z>0</Z></Point>
-						<Point><X>219.554</X><Y>535.004</Y><Z>0</Z></Point>
-						<Point><X>245</X><Y>560</Y><Z>0</Z></Point>
-						<Point><X>300</X><Y>560</Y><Z>0</Z></Point>
-						<Point><X>275</X><Y>560</Y><Z>0</Z></Point>
-						<Point><X>288.194</X><Y>537.963</Y><Z>0</Z></Point>
-					</Points>
-
-
-				</Conveyor>
-			</Presentation>
-
-					<Z>1</Z>
-				</ConveyorNetwork>
 				<StorageTank>
 					<Id>1598886658352</Id>
 					<Name><![CDATA[storageTank]]></Name>
@@ -12371,6 +10938,399 @@
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
 				</Figure3D>
+				<BulkConveyorBelt>
+					<Id>1602514973686</Id>
+					<Name><![CDATA[bulkConveyorBelt]]></Name>
+					<X>2850</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>2</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-4.11</X><Y>24.66</Y><Z>0</Z></Point>
+						<Point><X>4.11</X><Y>-24.66</Y><Z>0</Z></Point>
+						<Point><X>10</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>5.89</X><Y>-35.34</Y><Z>0</Z></Point>
+						<Point><X>35</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>160</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>135</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>160</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>160</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>160</X><Y>-60</Y><Z>0</Z></Point>
+						<Point><X>140</X><Y>-60</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1602514948035</Id>
+					<Name><![CDATA[bulkConveyorBelt1]]></Name>
+					<X>3060</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>2</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>210</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>185</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>210.446</X><Y>24.996</Y><Z>0</Z></Point>
+						<Point><X>220</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>219.554</X><Y>535.004</Y><Z>0</Z></Point>
+						<Point><X>245</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>290</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>265</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>315</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>300</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>275</X><Y>560</Y><Z>0</Z></Point>
+						<Point><X>280</X><Y>560</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<Network>
+					<Id>1601510584819</Id>
+					<Name><![CDATA[perezNetwork]]></Name>
+					<X>160</X><Y>1100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+
+			<Presentation>
+				<PointNode>
+					<Id>1601508911623</Id>
+					<Name><![CDATA[perezEnter]]></Name>
+					<X>160</X><Y>1100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>false</FakeNode>	
+					<Lock>false</Lock>
+					<Color>-14774017</Color>
+					<Radius>10</Radius>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+				</PointNode>
+				<Path SourceId="1601508911623" TargetId="1601510606230">
+					<Id>1601510570126</Id>
+					<Name><![CDATA[perezRoute1]]></Name>
+					<X>160</X><Y>1100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>road</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">4</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>35</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-48</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-23</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-73</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-95</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>60</X><Y>-120</Y><Z>0</Z></Point>
+						<Point><X>40</X><Y>-120</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<PointNode>
+					<Id>1601510606230</Id>
+					<Name><![CDATA[perezJunction1]]></Name>
+					<X>220</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>false</FakeNode>	
+					<Lock>false</Lock>
+					<Color>-14774017</Color>
+					<Radius>10</Radius>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+				</PointNode>
+				<Path SourceId="1601510606230" TargetId="1601527399157">
+					<Id>1601510651144</Id>
+					<Name><![CDATA[perezRoute2]]></Name>
+					<X>220</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>road</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">4</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>580</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>555</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>605</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<PointNode>
+					<Id>1601527399157</Id>
+					<Name><![CDATA[perezJuction2]]></Name>
+					<X>800</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>false</FakeNode>	
+					<Lock>false</Lock>
+					<Color>-14774017</Color>
+					<Radius>10</Radius>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+				</PointNode>
+				<Path SourceId="1601510606230" TargetId="1601527399157">
+					<Id>1601529194411</Id>
+					<Name><![CDATA[perezRoute3]]></Name>
+					<X>220</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>road</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">4</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-200</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-175</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>-200</Y><Z>0</Z></Point>
+						<Point><X>580</X><Y>-200</Y><Z>0</Z></Point>
+						<Point><X>555</X><Y>-200</Y><Z>0</Z></Point>
+						<Point><X>580</X><Y>-175</Y><Z>0</Z></Point>
+						<Point><X>580</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>580</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>539.497</X><Y>-179.497</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<Path SourceId="1601527399157" TargetId="1601508944704">
+					<Id>1601510766249</Id>
+					<Name><![CDATA[perezRoute4]]></Name>
+					<X>800</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>road</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">4</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>44</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>19</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>69</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>215</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-100</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-75</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-125</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-590</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-565</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-615</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-640</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-615</X><Y>240</Y><Z>0</Z></Point>
+						<Point><X>-20</X><Y>240</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<PointNode>
+					<Id>1601508944704</Id>
+					<Name><![CDATA[perezExit]]></Name>
+					<X>160</X><Y>1220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>false</FakeNode>	
+					<Lock>false</Lock>
+					<Color>-14774017</Color>
+					<Radius>10</Radius>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+				</PointNode>
+  				<PalletRack TargetId="1601529194411">
+					<Id>1601539125567</Id>
+					<Name><![CDATA[perezPalletRack2]]></Name>
+					<X>300</X><Y>900</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-1</LineColor>
+					<FillColor>-4144960</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Width>440</Width>
+					<Height>60</Height>	
+					<RightHeight>60</RightHeight>
+					<AisleHeight>40</AisleHeight>
+					<RightAisleHeight>40</RightAisleHeight>
+					<Rotation>0</Rotation>
+					<CellsDefinitionType>NUMBER_OF_CELLS</CellsDefinitionType>
+					<NumberOfCells>15</NumberOfCells>
+					<NumberOfDeepPositions>1</NumberOfDeepPositions>
+					<NumberOfLevels>1</NumberOfLevels>
+					<LevelHeight>50</LevelHeight>
+					<CellWidth>20</CellWidth>
+					<Type>twoStorages</Type>
+					<Direction>noDirection</Direction>
+					<AisleBelow>true</AisleBelow>
+					<DrawLegs>true</DrawLegs>
+					<CellsBetweenLegs>2</CellsBetweenLegs>
+					<IsObstacle>true</IsObstacle>
+				</PalletRack>
+  				<PalletRack TargetId="1601529194411">
+					<Id>1601539272063</Id>
+					<Name><![CDATA[perezPalletRack1]]></Name>
+					<X>300</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-1</LineColor>
+					<FillColor>-4144960</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Width>440</Width>
+					<Height>60</Height>	
+					<RightHeight>60</RightHeight>
+					<AisleHeight>40</AisleHeight>
+					<RightAisleHeight>40</RightAisleHeight>
+					<Rotation>0</Rotation>
+					<CellsDefinitionType>NUMBER_OF_CELLS</CellsDefinitionType>
+					<NumberOfCells>15</NumberOfCells>
+					<NumberOfDeepPositions>1</NumberOfDeepPositions>
+					<NumberOfLevels>1</NumberOfLevels>
+					<LevelHeight>50</LevelHeight>
+					<CellWidth>20</CellWidth>
+					<Type>twoStorages</Type>
+					<Direction>noDirection</Direction>
+					<AisleBelow>true</AisleBelow>
+					<DrawLegs>true</DrawLegs>
+					<CellsBetweenLegs>2</CellsBetweenLegs>
+					<IsObstacle>true</IsObstacle>
+				</PalletRack>
+			</Presentation>
+
+					<Z>1</Z>
+				</Network>
 			</Presentation>
 
 				</Level>
@@ -12475,10 +11435,25 @@
 			<CurrentLevel>1598911880850</CurrentLevel>
 			<ConnectionsId>1598911880846</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1602515428642</Id>
+					<Name><![CDATA[grainBatchColor]]></Name>
+					<X>20</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Color[]]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[{yellow, green}]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
-					<Id>1598914033109</Id>
-					<Name><![CDATA[cargo]]></Name>
-					<X>30</X><Y>50</Y>
+					<Id>1602515272115</Id>
+					<Name><![CDATA[grainType]]></Name>
+					<X>20</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12488,10 +11463,10 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[uniform_discr(1, 20)]]></Code>
+							<Code><![CDATA[uniform_discr(1)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1598914033107</Id>
+							<Id>1602515272113</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -12500,19 +11475,22 @@
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1598914232695</Id>
-					<Name><![CDATA[grain_type]]></Name>
-					<X>30</X><Y>80</Y>
+					<Id>1602515272133</Id>
+					<Name><![CDATA[capacity]]></Name>
+					<X>20</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[String]]></Type>
+						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
-							<Id>1598914232693</Id>
+							<Id>1602515272131</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -12521,6 +11499,92 @@
 					</Properties>                 
 				</Variable>
 			</Variables>
+			<Connectors>
+				<Connector>
+					<Id>1602515369287</Id>
+					<Name><![CDATA[connector]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Truck]]></ClassName>
+						<ItemName><![CDATA[valve]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Truck]]></ClassName>
+						<ItemName><![CDATA[tank]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Tank]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>250</X><Y>180</Y></Point>
+						<Point><X>210</X><Y>180</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1602515379920</Id>
+					<Name><![CDATA[connector1]]></Name>
+					<X>320</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Truck]]></ClassName>
+						<ItemName><![CDATA[bulkExit]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidExit]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Truck]]></ClassName>
+						<ItemName><![CDATA[valve]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+			</Connectors>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Color]]></ReturnType>
+					<Id>1602515428634</Id>
+					<Name><![CDATA[getColor]]></Name>
+					<X>20</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[type]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[return grainBatchColor[type];]]></Body>
+				</Function>
+			</Functions>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1598911880846</Id>
@@ -12543,6 +11607,330 @@
 				</AgentLink>
 			</AgentLinks>
 
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1602515341905</Id>
+					<Name><![CDATA[tank]]></Name>
+					<X>180</X><Y>120</Y>
+					<Label><X>-5</X><Y>-15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Tank]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[Tank]]></ClassName>
+							<ItemName><![CDATA[1412618001571]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1000]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[limitRateOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxRateOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customPriority]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[priorityOutCustom]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customInitialBatch]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initialBatch]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[new BulkBatch(grainType, capacity)]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customInitialBatchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initialBatchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[getColor(grainType)]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modeOutputBatch]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[outputBatch]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customOutputBatchColor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[outputBatchColor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[storageTank]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onFull]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEmpty]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[actionOnAbove]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[amountAbove]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAbove]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[actionOnBelow]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[amountBelow]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onBelow]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515367959</Id>
+					<Name><![CDATA[valve]]></Name>
+					<X>250</X><Y>170</Y>
+					<Label><X>-15</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[Valve]]></ClassName>
+							<ItemName><![CDATA[1412618001593]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[maxOpenRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[openRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[closed]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[actionOnPortion]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[portionSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onPortion]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onDispensed]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1602515378616</Id>
+					<Name><![CDATA[bulkExit]]></Name>
+					<X>320</X><Y>170</Y>
+					<Label><X>-30</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidExit]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[FluidExit]]></ClassName>
+							<ItemName><![CDATA[1414747502602]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[fluidEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
 
 			<Presentation>
 				<Level>
@@ -12796,19 +12184,19 @@
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
-			<Id>1599062012407</Id>
-			<Name><![CDATA[BulkCargo]]></Name>
+			<Id>1602515486960</Id>
+			<Name><![CDATA[BulkBatch]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
-				<Id>1599062012405</Id>
-				<Name><![CDATA[1599062012405]]></Name>
+				<Id>1602515486958</Id>
+				<Name><![CDATA[1602515486958]]></Name>
 				<GenericParameterValue Class="CodeValue">
 					<Code><![CDATA[T extends Agent]]></Code>
 				</GenericParameterValue>
 				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
 			</GenericParameter>
-			<FlowChartsUsage>MATERIAL_ITEM</FlowChartsUsage>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
 			<SamplesToKeep>100</SamplesToKeep>
 			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
 			<ElementsLimitValue>100</ElementsLimitValue>
@@ -12820,7 +12208,7 @@
 	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
-				<RotateAnimationVertically>true</RotateAnimationVertically>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -12863,7 +12251,7 @@
 			<DatasetsCreationProperties>
 				<AutoCreate>true</AutoCreate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1599120000000</OccurrenceDate>
+					<OccurrenceDate>1602576000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -12874,7 +12262,7 @@
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
-				<Id>1599062012403</Id>
+				<Id>1602515486956</Id>
 				<Name><![CDATA[scale]]></Name>
 				<X>0</X><Y>-150</Y>
 				<PublicFlag>false</PublicFlag>
@@ -12889,11 +12277,61 @@
 				<Scale>10</Scale>
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
-			<CurrentLevel>1599062012406</CurrentLevel>
-			<ConnectionsId>1599062012402</ConnectionsId>
+			<CurrentLevel>1602515486959</CurrentLevel>
+			<ConnectionsId>1602515486955</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1602515501469</Id>
+					<Name><![CDATA[grainType]]></Name>
+					<X>30</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602515501467</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602515501483</Id>
+					<Name><![CDATA[size]]></Name>
+					<X>30</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602515501481</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<AgentLinks>
 				<AgentLink>
-					<Id>1599062012402</Id>
+					<Id>1602515486955</Id>
 					<Name><![CDATA[connections]]></Name>
 					<X>50</X><Y>-50</Y>
 					<Label><X>15</X><Y>0</Y></Label>
@@ -12916,7 +12354,7 @@
 
 			<Presentation>
 				<Level>
-					<Id>1599062012406</Id>
+					<Id>1602515486959</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -12927,38 +12365,6 @@
 					<Z>0</Z>
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
-			<Presentation>
-				<Figure3D>
-					<Id>1599062012421</Id>
-					<Name><![CDATA[cone]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>0</X><Y>0</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<ResourceReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[3d/cone.dae]]></ClassName>
-					</ResourceReference>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[MA_material_27]]></Name>
-							<OriginalColor>-16764597</OriginalColor>
-							<Color>-989556</Color>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-					<InternalLighting>OFF</InternalLighting>
-					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
-			</Presentation>
 
 				</Level>
 			</Presentation>
@@ -13072,10 +12478,6 @@
 	<ModelResources>
 		<Resource>
 			<Path><![CDATA[3d/truck.dae]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
-		<Resource>
-			<Path><![CDATA[3d/cone.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
