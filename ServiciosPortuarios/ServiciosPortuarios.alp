@@ -121,6 +121,126 @@
 			<CurrentLevel>1598843002685</CurrentLevel>
 			<ConnectionsId>1598843002681</ConnectionsId>
 			<Variables>
+				<Variable Class="Parameter">
+					<Id>1602641751835</Id>
+					<Name><![CDATA[conveyorSpeed]]></Name>
+					<X>-230</X><Y>1170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602641751833</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602641782382</Id>
+					<Name><![CDATA[siloCapacity]]></Name>
+					<X>-230</X><Y>1200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[5000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602641782380</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602641850661</Id>
+					<Name><![CDATA[maxRate]]></Name>
+					<X>-230</X><Y>1230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[50]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602641850659</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602642345448</Id>
+					<Name><![CDATA[silosPerRow]]></Name>
+					<X>-230</X><Y>1260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[6]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602642345446</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602643193655</Id>
+					<Name><![CDATA[truckCapacity]]></Name>
+					<X>-230</X><Y>1290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602643193653</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1602546213850</Id>
 					<Name><![CDATA[storageTanks]]></Name>
@@ -1191,7 +1311,9 @@
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
-	silos.get(i).loadExit.connect(silos.get(i + 1).loadEnter);
+	if (i % silosPerRow != silosPerRow - 1) {
+		silos.get(i).loadExit.connect(silos.get(i + 1).loadEnter);
+	}
 }]]></Action>
 				</Event>
 				<Event>
@@ -1224,7 +1346,9 @@
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
-	silos.get(i).unloadExit.connect(silos.get(i + 1).unloadEnter);
+	if (i % silosPerRow != silosPerRow - 1) {
+		silos.get(i).unloadExit.connect(silos.get(i + 1).unloadEnter);
+	}
 }]]></Action>
 				</Event>
 			</Events>
@@ -4983,6 +5107,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[sendResources]]></Name>
@@ -14525,12 +14652,24 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[beltIn.length()]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.conveyorSpeed]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[stopped]]></Name>
@@ -14629,12 +14768,24 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[beltOut.length()]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.conveyorSpeed]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[stopped]]></Name>
@@ -15290,7 +15441,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
+							<Code><![CDATA[main.truckCapacity]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602601268046</Id>
@@ -15470,9 +15621,16 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxRateOut]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate / 4]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[customPriority]]></Name>
@@ -15623,6 +15781,10 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[openRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate / 2]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[closed]]></Name>
@@ -16009,7 +16171,7 @@
 				<Connector>
 					<Id>1602627646849</Id>
 					<Name><![CDATA[connector20]]></Name>
-					<X>220</X><Y>190</Y>
+					<X>180</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16036,13 +16198,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-120</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1602627646852</Id>
 					<Name><![CDATA[connector22]]></Name>
-					<X>-260</X><Y>-2200</Y>
+					<X>300</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16068,8 +16230,8 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>600</X><Y>2390</Y></Point>
-						<Point><X>530</X><Y>2390</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -16189,7 +16351,7 @@
 				<EmbeddedObject>
 					<Id>1602627646806</Id>
 					<Name><![CDATA[bulkConveyor]]></Name>
-					<X>220</X><Y>170</Y>
+					<X>180</X><Y>170</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16211,12 +16373,24 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[conveyor.length()]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.conveyorSpeed]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[stopped]]></Name>
@@ -16288,7 +16462,7 @@
 				<EmbeddedObject>
 					<Id>1602627646831</Id>
 					<Name><![CDATA[loadExit]]></Name>
-					<X>340</X><Y>180</Y>
+					<X>300</X><Y>180</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16466,6 +16640,21 @@
 			</Presentation>
 
 			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[conveyorSpeed]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[siloCapacity]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[maxRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[silosPerRow]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[truckCapacity]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
