@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201530" AlpVersion="8.5.7">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -1314,7 +1314,7 @@
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
-	if (i % silosPerRow != silosPerRow - 1) {
+	if ((i % silosPerRow) != (silosPerRow - 1)) {
 		silos.get(i).loadExit.connect(silos.get(i + 1).loadEnter);
 	}
 }]]></Action>
@@ -1349,7 +1349,7 @@
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
-	if (i % silosPerRow != silosPerRow - 1) {
+	if ((i % silosPerRow) != (silosPerRow - 1)) {
 		silos.get(i).unloadExit.connect(silos.get(i + 1).unloadEnter);
 	}
 }]]></Action>
@@ -5022,6 +5022,9 @@ else return 1;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[siloCapacity]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[storage]]></Name>
@@ -5957,6 +5960,9 @@ else return 1;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[truckCapacity]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -8204,6 +8210,7 @@ else return 1;]]></Body>
 					<FollowCamera>false</FollowCamera>
 					<NavigationType>full</NavigationType>
 					<FarClippingDistance>2000</FarClippingDistance>
+					<Camera>cameraPerez</Camera>
 				</Control>
 				<Network>
 					<Id>1599013520927</Id>
@@ -13195,96 +13202,6 @@ else return 1;]]></Body>
 						<Point><X>365</X><Y>5</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
-				<BulkConveyorBelt>
-					<Id>1602645391625</Id>
-					<Name><![CDATA[bulkConveyorBelt]]></Name>
-					<X>3160</X><Y>930</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-12566464</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<Width>10</Width>
-					<DrawStands>true</DrawStands>
-					<StandsLevel>0.0</StandsLevel>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
-						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>18.82</X><Y>37.639</Y><Z>0</Z></Point>
-						<Point><X>52.361</X><Y>71.18</Y><Z>0</Z></Point>
-						<Point><X>90</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>67.639</X><Y>78.82</Y><Z>0</Z></Point>
-						<Point><X>107.678</X><Y>72.322</Y><Z>0</Z></Point>
-						<Point><X>120</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>102.322</X><Y>77.678</Y><Z>0</Z></Point>
-						<Point><X>70</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>120</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>100</X><Y>60</Y><Z>0</Z></Point>
-					</Points>
-				</BulkConveyorBelt>
-				<BulkConveyorBelt>
-					<Id>1602645491219</Id>
-					<Name><![CDATA[bulkConveyorBelt1]]></Name>
-					<X>3140</X><Y>930</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-12566464</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<Width>10</Width>
-					<DrawStands>true</DrawStands>
-					<StandsLevel>0.0</StandsLevel>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
-						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
-						<Point><X>40</X><Y>80</Y><Z>0</Z></Point>
-						<Point><X>28.82</X><Y>57.639</Y><Z>0</Z></Point>
-						<Point><X>62.979</X><Y>89.848</Y><Z>0</Z></Point>
-						<Point><X>110</X><Y>110</Y><Z>0</Z></Point>
-						<Point><X>87.021</X><Y>100.152</Y><Z>0</Z></Point>
-						<Point><X>122.862</X><Y>88.563</Y><Z>0</Z></Point>
-						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>127.138</X><Y>81.437</Y><Z>0</Z></Point>
-						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
-					</Points>
-				</BulkConveyorBelt>
-				<BulkConveyorBelt>
-					<Id>1602645516019</Id>
-					<Name><![CDATA[bulkConveyorBelt2]]></Name>
-					<X>3280</X><Y>990</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-12566464</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<Width>10</Width>
-					<DrawStands>true</DrawStands>
-					<StandsLevel>0.0</StandsLevel>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-9.848</X><Y>22.979</Y><Z>0</Z></Point>
-						<Point><X>9.848</X><Y>-22.979</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-70</Y><Z>0</Z></Point>
-						<Point><X>20.152</X><Y>-47.021</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-95</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-290</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-265</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-290</Y><Z>0</Z></Point>
-					</Points>
-				</BulkConveyorBelt>
 				<Group>
 					<Id>1602547384968</Id>
 					<Name><![CDATA[autoUnloadPoint]]></Name>
@@ -13614,6 +13531,96 @@ Unloading]]></Text>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<BulkConveyorBelt>
+					<Id>1602645491219</Id>
+					<Name><![CDATA[bulkConveyorBelt1]]></Name>
+					<X>3140</X><Y>930</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
+						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
+						<Point><X>40</X><Y>80</Y><Z>0</Z></Point>
+						<Point><X>28.82</X><Y>57.639</Y><Z>0</Z></Point>
+						<Point><X>62.979</X><Y>89.848</Y><Z>0</Z></Point>
+						<Point><X>110</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>87.021</X><Y>100.152</Y><Z>0</Z></Point>
+						<Point><X>122.862</X><Y>88.563</Y><Z>0</Z></Point>
+						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>127.138</X><Y>81.437</Y><Z>0</Z></Point>
+						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1602645391625</Id>
+					<Name><![CDATA[bulkConveyorBelt]]></Name>
+					<X>3160</X><Y>930</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
+						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>18.82</X><Y>37.639</Y><Z>0</Z></Point>
+						<Point><X>52.361</X><Y>71.18</Y><Z>0</Z></Point>
+						<Point><X>90</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>67.639</X><Y>78.82</Y><Z>0</Z></Point>
+						<Point><X>107.678</X><Y>72.322</Y><Z>0</Z></Point>
+						<Point><X>120</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>102.322</X><Y>77.678</Y><Z>0</Z></Point>
+						<Point><X>70</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>120</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>140</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>100</X><Y>60</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1602645516019</Id>
+					<Name><![CDATA[bulkConveyorBelt2]]></Name>
+					<X>3280</X><Y>990</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>true</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-9.848</X><Y>22.979</Y><Z>0</Z></Point>
+						<Point><X>9.848</X><Y>-22.979</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-70</Y><Z>0</Z></Point>
+						<Point><X>20.152</X><Y>-47.021</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-95</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-290</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-265</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-290</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
 			</Presentation>
 
 				</Level>
@@ -14214,7 +14221,7 @@ Unloading]]></Text>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1000]]></Code>
+							<Code><![CDATA[main.siloCapacity]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602546677227</Id>
@@ -14744,9 +14751,17 @@ Unloading]]></Text>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[capacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -14795,9 +14810,6 @@ Unloading]]></Text>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[valve.open();]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -14891,12 +14903,13 @@ Unloading]]></Text>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[maxOpenRate]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[openRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[closed]]></Name>
@@ -15034,7 +15047,9 @@ Unloading]]></Text>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[if(((BulkBatch)batch).destinationSiloId == id) {
-  fluidSelectOutput.set_selectOutput1(false);
+  fluidSelectOutput.select(2);
+} else {
+  fluidSelectOutput.select(1);
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -15609,7 +15624,7 @@ Unloading]]></Text>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
+					<Title><![CDATA[[viewSilos]]]></Title>
 					<Width>760</Width>
 					<Height>300</Height>
 				</Area>
@@ -15983,14 +15998,14 @@ return availableSilos.get(0).id;]]></Body>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.truckCapacity]]></Code>
+								<Code><![CDATA[capacity]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.truckCapacity]]></Code>
+								<Code><![CDATA[capacity]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
 							</Value>
 						</Parameter>
