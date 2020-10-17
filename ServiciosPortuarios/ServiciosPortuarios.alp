@@ -373,6 +373,21 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1602971890422</Id>
+					<Name><![CDATA[unallocatedCargo]]></Name>
+					<X>-230</X><Y>1190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[TreeMap]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[Double]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Connectors>
 				<Connector>
@@ -1497,6 +1512,37 @@
 if (id <= 6 && id >= 11) return 1;
 else return 1;]]></Body>
 				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1602975207116</Id>
+					<Name><![CDATA[getBatchDestination]]></Name>
+					<X>-230</X><Y>1230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[grainType]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[capacity]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Body><![CDATA[List<Silo> availableSilos = filter(silos,
+	e -> (e.capacity - e.reservedSpace) > capacity
+	&& e.grainType == grainType);
+	if (availableSilos.isEmpty()) {
+		unallocatedCargo.put(grainType, capacity);
+		traceln(unallocatedCargo);
+		return -1;
+	} else {
+		int selectedSiloId = availableSilos.get(0).id;
+		silos.findFirst(e -> e.id == selectedSiloId).reservedSpace += capacity;
+		return selectedSiloId;
+	}]]></Body>
+				</Function>
 			</Functions>
 			<AgentLinks>
 				<AgentLink>
@@ -1956,7 +2002,13 @@ else return 1;]]></Body>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.valve.open()]]></Code>
+								<Code><![CDATA[int destinationSiloId = getBatchDestination(agent.grainType, agent.capacity);
+if (destinationSiloId != -1){
+	agent.setDestinationSilo(destinationSiloId);
+	agent.valve.open();
+} else {
+	timeUnloading.stopDelay(agent);
+}]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -16191,7 +16243,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Variable Class="PlainVariable">
 					<Id>1602601267994</Id>
 					<Name><![CDATA[grainBatchColor]]></Name>
-					<X>20</X><Y>140</Y>
+					<X>20</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16206,7 +16258,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Variable Class="PlainVariable">
 					<Id>1602601268005</Id>
 					<Name><![CDATA[unloadPoint]]></Name>
-					<X>20</X><Y>230</Y>
+					<X>20</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16218,7 +16270,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Variable Class="PlainVariable">
 					<Id>1602601268015</Id>
 					<Name><![CDATA[rows]]></Name>
-					<X>20</X><Y>200</Y>
+					<X>20</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16227,6 +16279,21 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<Type><![CDATA[int[]]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[{0, 1}]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1602975894473</Id>
+					<Name><![CDATA[batch]]></Name>
+					<X>20</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[BulkBatch]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new BulkBatch(grainType, capacity)]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -16353,7 +16420,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<ReturnType><![CDATA[Color]]></ReturnType>
 					<Id>1602601267974</Id>
 					<Name><![CDATA[getColor]]></Name>
-					<X>20</X><Y>110</Y>
+					<X>20</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16369,7 +16436,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602601267985</Id>
 					<Name><![CDATA[getUnloadRow]]></Name>
-					<X>20</X><Y>170</Y>
+					<X>20</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16377,24 +16444,20 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Body><![CDATA[return this.grainType;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[int]]></ReturnType>
-					<Id>1602645805629</Id>
-					<Name><![CDATA[getBatchDestination]]></Name>
-					<X>20</X><Y>260</Y>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1602975776899</Id>
+					<Name><![CDATA[setDestinationSilo]]></Name>
+					<X>20</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[System.out.println("available: " + main.silos);
-List<Silo> availableSilos = filter(main.silos,
-	e -> (e.capacity - e.reservedSpace) > this.capacity
-	&& e.grainType == this.grainType);
-	int selectedSiloId = availableSilos.get(0).id;
-	main.silos.findFirst(e -> e.id == selectedSiloId).reservedSpace += this.capacity;
-	System.out.println("\nnow: " + availableSilos);
-	System.out.println("\nthe chosen: " + availableSilos.get(0) + availableSilos.get(0).reservedSpace);
-return selectedSiloId;]]></Body>
+					<Parameter>
+						<Name><![CDATA[destinationSiloId]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[batch.destinationSiloId = destinationSiloId;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -16497,7 +16560,7 @@ return selectedSiloId;]]></Body>
 						<Parameter>
 							<Name><![CDATA[initialBatch]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[new BulkBatch(grainType, capacity)]]></Code>
+								<Code><![CDATA[batch]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -16731,9 +16794,6 @@ return selectedSiloId;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[((BulkBatch)batch).destinationSiloId = getBatchDestination()]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
