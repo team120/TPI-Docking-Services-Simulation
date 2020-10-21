@@ -1468,7 +1468,12 @@ else return 1;]]></Body>
 	e -> (e.capacity - e.reservedSpace) > capacity
 	&& e.grainType == grainType);
 	if (availableSilos.isEmpty()) {
-		unallocatedCargo.put(grainType, capacity);
+		Double currentlyUnallocated = unallocatedCargo.get(grainType);
+		unallocatedCargo.put(
+			grainType, 
+			currentlyUnallocated == null? 
+				  capacity 
+				: currentlyUnallocated + capacity);
 		traceln(unallocatedCargo);
 		return -1;
 	} else {
