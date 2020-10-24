@@ -1431,24 +1431,6 @@
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
 					<ReturnType><![CDATA[int]]></ReturnType>
-					<Id>1602647517568</Id>
-					<Name><![CDATA[getSiloGrainType]]></Name>
-					<X>-230</X><Y>1070</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[id]]></Name>
-						<Type><![CDATA[int]]></Type>
-					</Parameter>
-					<Body><![CDATA[if (id >= 0 && id <= 5) return 0;
-if (id <= 6 && id >= 11) return 1;
-else return 1;]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602975207116</Id>
 					<Name><![CDATA[getBatchDestination]]></Name>
 					<X>-230</X><Y>1230</Y>
@@ -1466,7 +1448,7 @@ else return 1;]]></Body>
 					</Parameter>
 					<Body><![CDATA[List<Silo> availableSilos = filter(silos,
 	e -> (e.capacity - e.reservedSpace) > capacity
-	&& e.grainType == grainType);
+	&& e.currentGrainType == null || e.currentGrainType == grainType);
 	if (availableSilos.isEmpty()) {
 		Double currentlyUnallocated = unallocatedCargo.get(grainType);
 		unallocatedCargo.put(
@@ -1477,9 +1459,12 @@ else return 1;]]></Body>
 		traceln(unallocatedCargo);
 		return -1;
 	} else {
-		int selectedSiloId = availableSilos.get(0).id;
-		silos.findFirst(e -> e.id == selectedSiloId).reservedSpace += capacity;
-		return selectedSiloId;
+		Silo selectedSilo = silos.findFirst(e -> e.id == availableSilos.get(0).id);
+		if (selectedSilo.currentGrainType == null) {
+			selectedSilo.currentGrainType = grainType;
+		}
+		selectedSilo.reservedSpace += capacity;
+		return selectedSilo.id;
 	}]]></Body>
 				</Function>
 			</Functions>
@@ -4936,12 +4921,6 @@ if (destinationSiloId != -1){
 							<Name><![CDATA[beltOut]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[unloadingConveyors.get(index)]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[grainType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[getSiloGrainType(index)]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -15398,6 +15377,18 @@ Unloading]]></Text>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1603565098765</Id>
+					<Name><![CDATA[currentGrainType]]></Name>
+					<X>30</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Integer]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1602546677226</Id>
 					<Name><![CDATA[id]]></Name>
@@ -15499,27 +15490,6 @@ Unloading]]></Text>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
 							<Id>1602546677236</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1602647461033</Id>
-					<Name><![CDATA[grainType]]></Name>
-					<X>30</X><Y>230</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>1602647461031</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -16024,6 +15994,9 @@ Unloading]]></Text>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[currentGrainType = null;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
