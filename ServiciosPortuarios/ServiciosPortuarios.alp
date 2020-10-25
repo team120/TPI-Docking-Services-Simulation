@@ -1432,7 +1432,7 @@
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602975207116</Id>
-					<Name><![CDATA[getBatchDestination]]></Name>
+					<Name><![CDATA[reserveBatchDestination]]></Name>
 					<X>-230</X><Y>1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1466,6 +1466,26 @@
 		selectedSilo.reservedSpace += capacity;
 		return selectedSilo.id;
 	}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1603583757285</Id>
+					<Name><![CDATA[getUnloadRow]]></Name>
+					<X>-230</X><Y>1260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[destinationSiloId]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (destinationSiloId >= 0 && destinationSiloId < 6) {
+	return 0;
+} else {
+	return 1;
+}]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -1926,9 +1946,7 @@
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[int destinationSiloId = getBatchDestination(agent.grainType, agent.capacity);
-if (destinationSiloId != -1){
-	agent.setDestinationSilo(destinationSiloId);
+								<Code><![CDATA[if (agent.getDestionationSilo() != -1){
 	agent.valve.open();
 } else {
 	timeUnloading.stopDelay(agent);
@@ -3051,6 +3069,10 @@ if (destinationSiloId != -1){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[int destinationSiloId = reserveBatchDestination(agent.grainType, agent.capacity);
+agent.setDestinationSilo(destinationSiloId);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -5064,6 +5086,9 @@ if (destinationSiloId != -1){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[taskPreemptionPolicy]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.PP_CONTINUE_WITHOUT_RESOURCE]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[terminatedTaskProcessing]]></Name>
@@ -5083,7 +5108,7 @@ if (destinationSiloId != -1){
 						<Parameter>
 							<Name><![CDATA[resourceChoiceCondition]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.getUnloadRow() == ((SilosRow)unit).id]]></Code>
+								<Code><![CDATA[getUnloadRow(agent.getDestionationSilo()) == ((SilosRow)unit).id]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -16931,28 +16956,13 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Variable Class="PlainVariable">
 					<Id>1602601268005</Id>
 					<Name><![CDATA[unloadPoint]]></Name>
-					<X>20</X><Y>260</Y>
+					<X>20</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[PointNode]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1602601268015</Id>
-					<Name><![CDATA[rows]]></Name>
-					<X>20</X><Y>230</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int[]]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[{0, 1}]]></Code>
-						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -17105,23 +17115,11 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Body><![CDATA[return grainBatchColor[type];]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[int]]></ReturnType>
-					<Id>1602601267985</Id>
-					<Name><![CDATA[getUnloadRow]]></Name>
-					<X>20</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[return this.grainType;]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1602975776899</Id>
 					<Name><![CDATA[setDestinationSilo]]></Name>
-					<X>20</X><Y>290</Y>
+					<X>20</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17131,6 +17129,18 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[batch.destinationSiloId = destinationSiloId;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1603583425916</Id>
+					<Name><![CDATA[getDestionationSilo]]></Name>
+					<X>20</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[return batch.destinationSiloId;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
