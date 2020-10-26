@@ -6164,7 +6164,7 @@ if (destinationSiloId != -1){
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 12, 13, 14 )]]></Code>
+								<Code><![CDATA[triangular(10,11,12)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -17072,7 +17072,7 @@ Unloading]]></Text>
 					<LineColor/>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>340</Width>
+					<Width>352.667</Width>
 					<Height>120</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-5952982</FillColor>
@@ -17092,7 +17092,7 @@ Unloading]]></Text>
 					<Rotation>0.0</Rotation>
 					<Color>-1</Color>
 					<Text><![CDATA[Unallocated Cargo 
-by Grain Type]]></Text>
+   by Grain Type]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>36</Size>
@@ -17103,7 +17103,7 @@ by Grain Type]]></Text>
 				<Rectangle>
 					<Id>1603688199704</Id>
 					<Name><![CDATA[rectangle40]]></Name>
-					<X>27.333</X><Y>3702</Y>
+					<X>40</X><Y>3700</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17116,7 +17116,7 @@ by Grain Type]]></Text>
 					<LineColor/>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>330</Width>
+					<Width>340</Width>
 					<Height>120</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-5952982</FillColor>
@@ -17125,7 +17125,7 @@ by Grain Type]]></Text>
     			<PieChart>
 					<Id>1603688939862</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>180</X><Y>4240</Y>
+					<X>40</X><Y>3860</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17144,14 +17144,14 @@ by Grain Type]]></Text>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>340</Width>
-					<Height>220</Height>
+					<Height>280</Height>
 					<BackgroundColor/>
 					<BorderColor>-16777216</BorderColor>
 					<ChartArea>
 						<XOffset>60</XOffset>
 						<YOffset>10</YOffset>
 						<Width>220</Width>
-						<Height>150</Height>
+						<Height>210</Height>
 						<BorderColor/>
 						<GridColor>-12566464</GridColor>
 					</ChartArea>
@@ -17170,10 +17170,10 @@ by Grain Type]]></Text>
 					<Expression><![CDATA[netBalances.utilization()]]></Expression>
 					<Color>-4586749</Color>
 					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Used]]></Title>
+						<Title><![CDATA[Utilization]]></Title>
 					</DataItem>
 					<DataItem>
-					<Expression><![CDATA[1 - serviceNetBalance.utilization()]]></Expression>
+					<Expression><![CDATA[1 - netBalances.utilization()]]></Expression>
 					<Color>-4144960</Color>
 					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Unused]]></Title>
@@ -17182,7 +17182,7 @@ by Grain Type]]></Text>
 				<Rectangle>
 					<Id>1603689507719</Id>
 					<Name><![CDATA[rectangle41]]></Name>
-					<X>487.333</X><Y>3702</Y>
+					<X>480</X><Y>3702</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17195,7 +17195,7 @@ by Grain Type]]></Text>
 					<LineColor/>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>330</Width>
+					<Width>340</Width>
 					<Height>120</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-5952982</FillColor>
@@ -17204,7 +17204,7 @@ by Grain Type]]></Text>
 				<Text>
 					<Id>1603689507722</Id>
 					<Name><![CDATA[textPlaya52]]></Name>
-					<X>87.333</X><Y>3722</Y>
+					<X>120</X><Y>3720</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17226,7 +17226,7 @@ by Grain Type]]></Text>
     			<PieChart>
 					<Id>1603689507728</Id>
 					<Name><![CDATA[chart3]]></Name>
-					<X>487.333</X><Y>3862</Y>
+					<X>480</X><Y>3860</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17283,7 +17283,7 @@ by Grain Type]]></Text>
 				<Rectangle>
 					<Id>1603689536103</Id>
 					<Name><![CDATA[rectangle42]]></Name>
-					<X>947.333</X><Y>3702</Y>
+					<X>940</X><Y>3700</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17296,7 +17296,7 @@ by Grain Type]]></Text>
 					<LineColor/>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>330</Width>
+					<Width>340</Width>
 					<Height>120</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-5952982</FillColor>
@@ -17305,7 +17305,7 @@ by Grain Type]]></Text>
 				<Text>
 					<Id>1603689536105</Id>
 					<Name><![CDATA[textPlaya53]]></Name>
-					<X>1027.333</X><Y>3722</Y>
+					<X>1020</X><Y>3720</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17315,8 +17315,8 @@ by Grain Type]]></Text>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-1</Color>
-					<Text><![CDATA[Tara Area
- Utilization]]></Text>
+					<Text><![CDATA[Tara Balance
+   Utilization]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>36</Size>
@@ -17327,7 +17327,7 @@ by Grain Type]]></Text>
     			<PieChart>
 					<Id>1603689536111</Id>
 					<Name><![CDATA[chart4]]></Name>
-					<X>947.333</X><Y>3862</Y>
+					<X>940</X><Y>3862</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17369,13 +17369,13 @@ by Grain Type]]></Text>
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
-					<Expression><![CDATA[serviceTaraBalance.utilization()]]></Expression>
+					<Expression><![CDATA[taraBalances.utilization()]]></Expression>
 					<Color>-4586749</Color>
 					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Used]]></Title>
+						<Title><![CDATA[Utilization]]></Title>
 					</DataItem>
 					<DataItem>
-					<Expression><![CDATA[1 - serviceTaraBalance.utilization()]]></Expression>
+					<Expression><![CDATA[1 - taraBalances.utilization()]]></Expression>
 					<Color>-4144960</Color>
 					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Unused]]></Title>
@@ -17406,7 +17406,7 @@ by Grain Type]]></Text>
     			<BarChart>
 					<Id>1603723920173</Id>
 					<Name><![CDATA[chart5]]></Name>
-					<X>40</X><Y>3860</Y>
+					<X>1020</X><Y>3300</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17424,15 +17424,15 @@ by Grain Type]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>320</Width>
-					<Height>280</Height>
+					<Width>340</Width>
+					<Height>320</Height>
 					<BackgroundColor/>
 					<BorderColor>-16777216</BorderColor>
 					<ChartArea>
 						<XOffset>20</XOffset>
 						<YOffset>30</YOffset>
-						<Width>280</Width>
-						<Height>130</Height>
+						<Width>300</Width>
+						<Height>150</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -17452,7 +17452,7 @@ by Grain Type]]></Text>
 					<Expression><![CDATA[serviceNetBalance.utilization()]]></Expression>
 					<Color>-4565549</Color>
 					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[AVG of Agents being served]]></Title>
+						<Title><![CDATA[AVG of Agents serviced over time]]></Title>
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
@@ -17462,6 +17462,263 @@ by Grain Type]]></Text>
 						<RelativeWidth>0.8</RelativeWidth>
 					</Bars>
     			</BarChart>
+    			<BarChart>
+					<Id>1603724861251</Id>
+					<Name><![CDATA[chart6]]></Name>
+					<X>1440</X><Y>3300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1603785600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>340</Width>
+					<Height>320</Height>
+					<BackgroundColor/>
+					<BorderColor>-16777216</BorderColor>
+					<ChartArea>
+						<XOffset>20</XOffset>
+						<YOffset>30</YOffset>
+						<Width>300</Width>
+						<Height>150</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>60</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[serviceTaraBalance.utilization()]]></Expression>
+					<Color>-14774017</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[AVG of Agents serviced over time]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>RIGHT</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
+				<Rectangle>
+					<Id>1603725071090</Id>
+					<Name><![CDATA[rectangle43]]></Name>
+					<X>1020</X><Y>3160</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>340</Width>
+					<Height>120</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603725071092</Id>
+					<Name><![CDATA[textPlaya54]]></Name>
+					<X>1040</X><Y>3180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[AVG of Agents serviced 
+in Net Balance]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1603725211878</Id>
+					<Name><![CDATA[rectangle44]]></Name>
+					<X>1440</X><Y>3160</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>340</Width>
+					<Height>120</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603725211881</Id>
+					<Name><![CDATA[textPlaya55]]></Name>
+					<X>1460</X><Y>3180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[AVG of Agents serviced 
+in Tara Balance]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<TimePlot>
+					<Id>1603725481228</Id>
+					<Name><![CDATA[plot]]></Name>
+					<X>480</X><Y>3300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1603785600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[300]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[2]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>460</Width>
+					<Height>320</Height>
+					<BackgroundColor/>
+					<BorderColor>-16777216</BorderColor>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>380</Width>
+						<Height>230</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Weighing Queue Size]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-13447886</Color>
+					<Expression2><![CDATA[serviceNetBalance.queueSize()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>1000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+				<Rectangle>
+					<Id>1603725933488</Id>
+					<Name><![CDATA[rectangle45]]></Name>
+					<X>520</X><Y>3160</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>380</Width>
+					<Height>120</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603725933490</Id>
+					<Name><![CDATA[textPlaya56]]></Name>
+					<X>540</X><Y>3180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Weighing Queue Size
+         over time]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>36</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
