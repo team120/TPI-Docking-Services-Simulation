@@ -206,7 +206,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[6]]></Code>
+							<Code><![CDATA[7]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602642345446</Id>
@@ -278,7 +278,7 @@
 						<ElementClass><![CDATA[StorageTank]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 						<CollectionInitializer Class="CodeValue">
-							<Code><![CDATA[{ storageTank0, storageTank1, storageTank2, storageTank3, storageTank4, storageTank5, storageTank6, storageTank7, storageTank8, storageTank9, storageTank10, storageTank11 }]]></Code>
+							<Code><![CDATA[{ storageTank0, storageTank1, storageTank2, storageTank3, storageTank4, storageTank5, storageTank6, storageTank7, storageTank8, storageTank9, storageTank10, storageTank11, storageTank12, storageTank13 }]]></Code>
 						</CollectionInitializer>
 					</Properties>
 
@@ -296,7 +296,7 @@
 						<ElementClass><![CDATA[BulkConveyorBelt]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 						<CollectionInitializer Class="CodeValue">
-							<Code><![CDATA[{ inBelt0, inBelt1, inBelt2, inBelt3, inBelt4, inBelt5, inBelt6, inBelt7, inBelt8, inBelt9, inBelt10, inBelt11 }]]></Code>
+							<Code><![CDATA[{ inBelt0, inBelt1, inBelt2, inBelt3, inBelt4, inBelt5, inBelt6, inBelt7, inBelt8, inBelt9, inBelt10, inBelt11, inBelt12, inBelt13 }]]></Code>
 						</CollectionInitializer>
 					</Properties>
 
@@ -314,7 +314,7 @@
 						<ElementClass><![CDATA[BulkConveyorBelt]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 						<CollectionInitializer Class="CodeValue">
-							<Code><![CDATA[{ outBelt0, outBelt1, outBelt2, outBelt3, outBelt4, outBelt5, outBelt6, outBelt7, outBelt8, outBelt9, outBelt10, outBelt11 }]]></Code>
+							<Code><![CDATA[{ outBelt0, outBelt1, outBelt2, outBelt3, outBelt4, outBelt5, outBelt6, outBelt7, outBelt8, outBelt9, outBelt10, outBelt11, outBelt12, outBelt13 }]]></Code>
 						</CollectionInitializer>
 					</Properties>
 
@@ -1442,9 +1442,11 @@
 						<Name><![CDATA[id]]></Name>
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
-					<Body><![CDATA[if (id >= 0 && id <= 5) return 0;
-if (id <= 6 && id >= 11) return 1;
-else return 1;]]></Body>
+					<Body><![CDATA[if (id >= 0 && id < 7) return 0;
+if (id >= 7 && id < 11) return 1;
+if (id >= 11 && id < 12) return 2;
+if (id >= 12 && id < 13) return 3;
+else return -2;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
@@ -1481,6 +1483,23 @@ else return 1;]]></Body>
 		silos.findFirst(e -> e.id == selectedSiloId).reservedSpace += capacity;
 		return selectedSiloId;
 	}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1603665037503</Id>
+					<Name><![CDATA[getUnloadRow]]></Name>
+					<X>-230</X><Y>1260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[grainType]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (grainType == 0) { return 0; }
+else return 1;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -4947,7 +4966,7 @@ if (destinationSiloId != -1){
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[12]]></Code>
+						<Code><![CDATA[14]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InEnvironment>true</InEnvironment>	
@@ -5104,7 +5123,7 @@ if (destinationSiloId != -1){
 						<Parameter>
 							<Name><![CDATA[resourceChoiceCondition]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.getUnloadRow() == ((SilosRow)unit).id]]></Code>
+								<Code><![CDATA[getUnloadRow(agent.grainType) == ((SilosRow)unit).id]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -7064,7 +7083,7 @@ if (destinationSiloId != -1){
 				<Polyline>
 					<Id>1601531291856</Id>
 					<Name><![CDATA[dockSP]]></Name>
-					<X>2640</X><Y>400</Y>
+					<X>2630</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12119,7 +12138,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813536</Id>
 					<Name><![CDATA[outBelt0]]></Name>
-					<X>3140</X><Y>310</Y>
+					<X>3140</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12146,7 +12165,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813549</Id>
 					<Name><![CDATA[outBelt3]]></Name>
-					<X>3140</X><Y>640</Y>
+					<X>3140</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12164,16 +12183,16 @@ if (destinationSiloId != -1){
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>115</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602521813561</Id>
 					<Name><![CDATA[outBelt1]]></Name>
-					<X>3140</X><Y>430</Y>
+					<X>3140</X><Y>340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12197,7 +12216,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521813572</Id>
 					<Name><![CDATA[storageTank3]]></Name>
-					<X>3085</X><Y>640</Y>
+					<X>3085</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12212,7 +12231,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521813581</Id>
 					<Name><![CDATA[storageTank0]]></Name>
-					<X>3085</X><Y>310</Y>
+					<X>3085</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12227,7 +12246,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521813587</Id>
 					<Name><![CDATA[storageTank1]]></Name>
-					<X>3085</X><Y>420</Y>
+					<X>3085</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12242,7 +12261,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521813605</Id>
 					<Name><![CDATA[storageTank2]]></Name>
-					<X>3085</X><Y>530</Y>
+					<X>3085</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12257,7 +12276,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813608</Id>
 					<Name><![CDATA[outBelt2]]></Name>
-					<X>3140</X><Y>530</Y>
+					<X>3140</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12284,7 +12303,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521909526</Id>
 					<Name><![CDATA[storageTank4]]></Name>
-					<X>3085</X><Y>750</Y>
+					<X>3085</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12299,7 +12318,7 @@ if (destinationSiloId != -1){
 				<StorageTank>
 					<Id>1602521909529</Id>
 					<Name><![CDATA[storageTank5]]></Name>
-					<X>3085</X><Y>860</Y>
+					<X>3085</X><Y>770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12313,8 +12332,8 @@ if (destinationSiloId != -1){
 				</StorageTank>
 				<BulkConveyorBelt>
 					<Id>1602521909532</Id>
-					<Name><![CDATA[outBelt4]]></Name>
-					<X>3160</X><Y>640</Y>
+					<Name><![CDATA[outBelt10]]></Name>
+					<X>3160</X><Y>555</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12327,21 +12346,21 @@ if (destinationSiloId != -1){
 					<DrawStands>false</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-30</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>115</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>105</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>80</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602521909534</Id>
-					<Name><![CDATA[outBelt5]]></Name>
-					<X>3160</X><Y>530</Y>
+					<Name><![CDATA[outBelt9]]></Name>
+					<X>3160</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12367,8 +12386,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<StorageTank>
 					<Id>1602521909537</Id>
-					<Name><![CDATA[storageTank6]]></Name>
-					<X>3215</X><Y>310</Y>
+					<Name><![CDATA[storageTank7]]></Name>
+					<X>3215</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12382,8 +12401,8 @@ if (destinationSiloId != -1){
 				</StorageTank>
 				<BulkConveyorBelt>
 					<Id>1602521909542</Id>
-					<Name><![CDATA[outBelt6]]></Name>
-					<X>3160</X><Y>430</Y>
+					<Name><![CDATA[outBelt8]]></Name>
+					<X>3160</X><Y>340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12407,7 +12426,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521909546</Id>
 					<Name><![CDATA[outBelt7]]></Name>
-					<X>3160</X><Y>310</Y>
+					<X>3160</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12433,8 +12452,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<StorageTank>
 					<Id>1602521909554</Id>
-					<Name><![CDATA[storageTank7]]></Name>
-					<X>3215</X><Y>420</Y>
+					<Name><![CDATA[storageTank8]]></Name>
+					<X>3215</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12448,8 +12467,8 @@ if (destinationSiloId != -1){
 				</StorageTank>
 				<BulkConveyorBelt>
 					<Id>1602522168940</Id>
-					<Name><![CDATA[outBelt8]]></Name>
-					<X>3160</X><Y>840</Y>
+					<Name><![CDATA[outBelt6]]></Name>
+					<X>3140</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12465,18 +12484,15 @@ if (destinationSiloId != -1){
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<StorageTank>
 					<Id>1602522168948</Id>
-					<Name><![CDATA[storageTank8]]></Name>
-					<X>3215</X><Y>530</Y>
+					<Name><![CDATA[storageTank9]]></Name>
+					<X>3215</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12489,36 +12505,9 @@ if (destinationSiloId != -1){
 					<Height>100</Height>				
 				</StorageTank>
 				<BulkConveyorBelt>
-					<Id>1602522168964</Id>
-					<Name><![CDATA[outBelt9]]></Name>
-					<X>3140</X><Y>840</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>1</Z>
-					<LineColor>-12566464</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<Width>10</Width>
-					<DrawStands>false</DrawStands>
-					<StandsLevel>0.0</StandsLevel>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-					</Points>
-				</BulkConveyorBelt>
-				<BulkConveyorBelt>
 					<Id>1602522168969</Id>
-					<Name><![CDATA[outBelt10]]></Name>
-					<X>3160</X><Y>730</Y>
+					<Name><![CDATA[outBelt11]]></Name>
+					<X>3160</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12531,21 +12520,21 @@ if (destinationSiloId != -1){
 					<DrawStands>false</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>135</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>105</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<StorageTank>
 					<Id>1602522168973</Id>
-					<Name><![CDATA[storageTank9]]></Name>
-					<X>3215</X><Y>640</Y>
+					<Name><![CDATA[storageTank10]]></Name>
+					<X>3215</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12559,8 +12548,8 @@ if (destinationSiloId != -1){
 				</StorageTank>
 				<BulkConveyorBelt>
 					<Id>1602522168976</Id>
-					<Name><![CDATA[outBelt11]]></Name>
-					<X>3140</X><Y>730</Y>
+					<Name><![CDATA[outBelt4]]></Name>
+					<X>3140</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12573,21 +12562,21 @@ if (destinationSiloId != -1){
 					<DrawStands>false</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>135</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>105</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<StorageTank>
 					<Id>1602522168979</Id>
-					<Name><![CDATA[storageTank10]]></Name>
-					<X>3215</X><Y>750</Y>
+					<Name><![CDATA[storageTank11]]></Name>
+					<X>3215</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12601,8 +12590,8 @@ if (destinationSiloId != -1){
 				</StorageTank>
 				<StorageTank>
 					<Id>1602522168981</Id>
-					<Name><![CDATA[storageTank11]]></Name>
-					<X>3215</X><Y>860</Y>
+					<Name><![CDATA[storageTank12]]></Name>
+					<X>3215</X><Y>770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13662,15 +13651,15 @@ if (destinationSiloId != -1){
 						<Point><X>230</X><Y>-60</Y><Z>0</Z></Point>
 						<Point><X>205</X><Y>-60</Y><Z>0</Z></Point>
 						<Point><X>230</X><Y>-35</Y><Z>0</Z></Point>
-						<Point><X>230</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>230</X><Y>-25</Y><Z>0</Z></Point>
-						<Point><X>210</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>230</X><Y>-55</Y><Z>0</Z></Point>
+						<Point><X>230</X><Y>-80</Y><Z>0</Z></Point>
+						<Point><X>210</X><Y>-55</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602521813511</Id>
 					<Name><![CDATA[inBelt3]]></Name>
-					<X>3085</X><Y>530</Y>
+					<X>3085</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13697,7 +13686,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813592</Id>
 					<Name><![CDATA[inBelt1]]></Name>
-					<X>3085</X><Y>310</Y>
+					<X>3085</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13724,7 +13713,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813597</Id>
 					<Name><![CDATA[inBelt2]]></Name>
-					<X>3085</X><Y>420</Y>
+					<X>3085</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13748,7 +13737,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521813601</Id>
 					<Name><![CDATA[inBelt0]]></Name>
-					<X>3085</X><Y>200</Y>
+					<X>3085</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13761,9 +13750,9 @@ if (destinationSiloId != -1){
 					<DrawStands>false</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>35</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>60</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>55</Y><Z>101</Z></Point>
 						<Point><X>0</X><Y>30</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>80</Y><Z>0</Z></Point>
@@ -13775,7 +13764,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521909511</Id>
 					<Name><![CDATA[inBelt4]]></Name>
-					<X>3085</X><Y>640</Y>
+					<X>3085</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13802,7 +13791,7 @@ if (destinationSiloId != -1){
 				<BulkConveyorBelt>
 					<Id>1602521909523</Id>
 					<Name><![CDATA[inBelt5]]></Name>
-					<X>3085</X><Y>750</Y>
+					<X>3085</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13828,8 +13817,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602521909540</Id>
-					<Name><![CDATA[inBelt6]]></Name>
-					<X>3215</X><Y>200</Y>
+					<Name><![CDATA[inBelt7]]></Name>
+					<X>3215</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13842,9 +13831,9 @@ if (destinationSiloId != -1){
 					<DrawStands>false</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>35</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>60</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>60</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>55</Y><Z>101</Z></Point>
 						<Point><X>0</X><Y>30</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>80</Y><Z>0</Z></Point>
@@ -13855,8 +13844,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602521909550</Id>
-					<Name><![CDATA[inBelt7]]></Name>
-					<X>3215</X><Y>310</Y>
+					<Name><![CDATA[inBelt8]]></Name>
+					<X>3215</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13879,8 +13868,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602522168930</Id>
-					<Name><![CDATA[inBelt8]]></Name>
-					<X>3215</X><Y>420</Y>
+					<Name><![CDATA[inBelt9]]></Name>
+					<X>3215</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13906,8 +13895,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602522168956</Id>
-					<Name><![CDATA[inBelt9]]></Name>
-					<X>3215</X><Y>530</Y>
+					<Name><![CDATA[inBelt10]]></Name>
+					<X>3215</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13933,8 +13922,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602522851477</Id>
-					<Name><![CDATA[inBelt10]]></Name>
-					<X>3215</X><Y>640</Y>
+					<Name><![CDATA[inBelt11]]></Name>
+					<X>3215</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13960,8 +13949,8 @@ if (destinationSiloId != -1){
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1602522855398</Id>
-					<Name><![CDATA[inBelt11]]></Name>
-					<X>3215</X><Y>750</Y>
+					<Name><![CDATA[inBelt12]]></Name>
+					<X>3215</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14010,9 +13999,9 @@ if (destinationSiloId != -1){
 						<Point><X>385</X><Y>-80</Y><Z>0</Z></Point>
 						<Point><X>360</X><Y>-80</Y><Z>0</Z></Point>
 						<Point><X>385</X><Y>-55</Y><Z>0</Z></Point>
-						<Point><X>385</X><Y>5</Y><Z>0</Z></Point>
-						<Point><X>385</X><Y>-20</Y><Z>0</Z></Point>
-						<Point><X>365</X><Y>5</Y><Z>0</Z></Point>
+						<Point><X>385</X><Y>-50</Y><Z>0</Z></Point>
+						<Point><X>385</X><Y>-75</Y><Z>0</Z></Point>
+						<Point><X>365</X><Y>-50</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<Group>
@@ -14359,11 +14348,11 @@ Unloading]]></Text>
 					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
-						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>10</Y><Z>0</Z></Point>
+						<Point><X>-17.678</X><Y>-7.678</Y><Z>0</Z></Point>
+						<Point><X>12.403</X><Y>31.706</Y><Z>0</Z></Point>
 						<Point><X>40</X><Y>80</Y><Z>0</Z></Point>
-						<Point><X>28.82</X><Y>57.639</Y><Z>0</Z></Point>
+						<Point><X>27.597</X><Y>58.294</Y><Z>0</Z></Point>
 						<Point><X>62.979</X><Y>89.848</Y><Z>0</Z></Point>
 						<Point><X>110</X><Y>110</Y><Z>0</Z></Point>
 						<Point><X>87.021</X><Y>100.152</Y><Z>0</Z></Point>
@@ -14389,11 +14378,11 @@ Unloading]]></Text>
 					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-17.678</X><Y>-17.678</Y><Z>0</Z></Point>
-						<Point><X>11.18</X><Y>22.361</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>10</Y><Z>0</Z></Point>
+						<Point><X>-17.678</X><Y>-7.678</Y><Z>0</Z></Point>
+						<Point><X>12.862</X><Y>31.437</Y><Z>0</Z></Point>
 						<Point><X>30</X><Y>60</Y><Z>0</Z></Point>
-						<Point><X>18.82</X><Y>37.639</Y><Z>0</Z></Point>
+						<Point><X>17.138</X><Y>38.563</Y><Z>0</Z></Point>
 						<Point><X>52.361</X><Y>71.18</Y><Z>0</Z></Point>
 						<Point><X>90</X><Y>90</Y><Z>0</Z></Point>
 						<Point><X>67.639</X><Y>78.82</Y><Z>0</Z></Point>
@@ -14817,6 +14806,168 @@ Unloading]]></Text>
 					<Height>60</Height>
 					<Rotation>15.0</Rotation>
 				</RectangleNode>
+				<StorageTank>
+					<Id>1603670052533</Id>
+					<Name><![CDATA[storageTank13]]></Name>
+					<X>3220</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>1077952576</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Diameter>100</Diameter>				
+					<Height>100</Height>				
+				</StorageTank>
+				<StorageTank>
+					<Id>1603670085147</Id>
+					<Name><![CDATA[storageTank6]]></Name>
+					<X>3085</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>1077952576</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Diameter>100</Diameter>				
+					<Height>100</Height>				
+				</StorageTank>
+				<BulkConveyorBelt>
+					<Id>1603670198446</Id>
+					<Name><![CDATA[inBelt6]]></Name>
+					<X>3085</X><Y>770</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>101</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>false</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1603670208645</Id>
+					<Name><![CDATA[inBelt13]]></Name>
+					<X>3215</X><Y>770</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>101</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>false</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1603670849768</Id>
+					<Name><![CDATA[outBelt13]]></Name>
+					<X>3160</X><Y>855</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>false</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>65</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>90</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1603671005466</Id>
+					<Name><![CDATA[outBelt12]]></Name>
+					<X>3160</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>false</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>135</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>105</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
+				<BulkConveyorBelt>
+					<Id>1603671024090</Id>
+					<Name><![CDATA[outBelt5]]></Name>
+					<X>3140</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>1</Z>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<Width>10</Width>
+					<DrawStands>false</DrawStands>
+					<StandsLevel>0.0</StandsLevel>
+					<Points>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>85</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>135</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>130</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>105</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>110</Y><Z>0</Z></Point>
+					</Points>
+				</BulkConveyorBelt>
 			</Presentation>
 
 				</Level>
@@ -16951,7 +17102,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[Color[]]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[{yellow, green}]]></Code>
+							<Code><![CDATA[{orange, yellow, green, brown}]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -17010,7 +17161,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[uniform_discr(1)]]></Code>
+							<Code><![CDATA[uniform_discr(3)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602601268025</Id>
@@ -17130,18 +17281,6 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[return grainBatchColor[type];]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[int]]></ReturnType>
-					<Id>1602601267985</Id>
-					<Name><![CDATA[getUnloadRow]]></Name>
-					<X>20</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[return this.grainType;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
