@@ -5104,6 +5104,9 @@ if (destinationSiloId != -1){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[taskPreemptionPolicy]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.PP_WAIT_FOR_ORIGINAL_RESOURCE]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[terminatedTaskProcessing]]></Name>
@@ -5128,6 +5131,9 @@ if (destinationSiloId != -1){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[resourceSelectionMode]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.RESOURCE_SELECTION_NEAREST]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[resourceRating]]></Name>
@@ -17226,7 +17232,7 @@ Unloading]]></Text>
     			<PieChart>
 					<Id>1603689507728</Id>
 					<Name><![CDATA[chart3]]></Name>
-					<X>480</X><Y>3860</Y>
+					<X>410</X><Y>3900</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17244,15 +17250,15 @@ Unloading]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>340</Width>
-					<Height>280</Height>
+					<Width>240</Width>
+					<Height>190</Height>
 					<BackgroundColor/>
 					<BorderColor>-16777216</BorderColor>
 					<ChartArea>
 						<XOffset>60</XOffset>
 						<YOffset>10</YOffset>
-						<Width>220</Width>
-						<Height>210</Height>
+						<Width>120</Width>
+						<Height>120</Height>
 						<BorderColor/>
 						<GridColor>-12566464</GridColor>
 					</ChartArea>
@@ -17268,13 +17274,13 @@ Unloading]]></Text>
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
-					<Expression><![CDATA[timeUnloading.statsUtilization.mean()]]></Expression>
-					<Color>-4586749</Color>
+					<Expression><![CDATA[silosRows.get(0).getUtilization()]]></Expression>
+					<Color>-14774017</Color>
 					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Used]]></Title>
 					</DataItem>
 					<DataItem>
-					<Expression><![CDATA[1 - timeUnloading.statsUtilization.mean()]]></Expression>
+					<Expression><![CDATA[1 - silosRows.get(0).getUtilization()]]></Expression>
 					<Color>-4144960</Color>
 					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Unused]]></Title>
@@ -17900,6 +17906,63 @@ Utilization]]></Text>
 						<RelativeWidth>0.8</RelativeWidth>
 					</Bars>
     			</BarChart>
+    			<PieChart>
+					<Id>1603743925370</Id>
+					<Name><![CDATA[chart7]]></Name>
+					<X>670</X><Y>3900</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1603699200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>240</Width>
+					<Height>190</Height>
+					<BackgroundColor/>
+					<BorderColor>-16777216</BorderColor>
+					<ChartArea>
+						<XOffset>60</XOffset>
+						<YOffset>10</YOffset>
+						<Width>120</Width>
+						<Height>120</Height>
+						<BorderColor/>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[silosRows.get(1).getUtilization() / 3]]></Expression>
+					<Color>-65281</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Used]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[1 - silosRows.get(1).getUtilization()]]></Expression>
+					<Color>-4144960</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Unused]]></Title>
+					</DataItem>
+    			</PieChart>
 			</Presentation>
 
 				</Level>
