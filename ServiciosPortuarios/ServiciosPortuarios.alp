@@ -17406,7 +17406,7 @@ Unloading]]></Text>
     			<BarChart>
 					<Id>1603723920173</Id>
 					<Name><![CDATA[chart5]]></Name>
-					<X>1020</X><Y>3300</Y>
+					<X>1440</X><Y>3840</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17425,14 +17425,14 @@ Unloading]]></Text>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>340</Width>
-					<Height>320</Height>
+					<Height>300</Height>
 					<BackgroundColor/>
 					<BorderColor>-16777216</BorderColor>
 					<ChartArea>
 						<XOffset>20</XOffset>
 						<YOffset>30</YOffset>
 						<Width>300</Width>
-						<Height>150</Height>
+						<Height>130</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -17491,7 +17491,7 @@ Unloading]]></Text>
 						<XOffset>20</XOffset>
 						<YOffset>30</YOffset>
 						<Width>300</Width>
-						<Height>150</Height>
+						<Height>130</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -17524,7 +17524,7 @@ Unloading]]></Text>
 				<Rectangle>
 					<Id>1603725071090</Id>
 					<Name><![CDATA[rectangle43]]></Name>
-					<X>1020</X><Y>3160</Y>
+					<X>1440</X><Y>3700</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17546,7 +17546,7 @@ Unloading]]></Text>
 				<Text>
 					<Id>1603725071092</Id>
 					<Name><![CDATA[textPlaya54]]></Name>
-					<X>1040</X><Y>3180</Y>
+					<X>1460</X><Y>3720</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
