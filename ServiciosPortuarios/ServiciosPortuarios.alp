@@ -368,7 +368,7 @@
 						<ElementClass><![CDATA[Silo]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 						<CollectionInitializer Class="CodeValue">
-							<Code><![CDATA[{silos.get(0), silos.get(6)}]]></Code>
+							<Code><![CDATA[{silos.get(0), silos.get(7)}]]></Code>
 						</CollectionInitializer>
 					</Properties>
 
@@ -1385,7 +1385,7 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
+					<Action><![CDATA[for(int i=0; i < silos.size(); i++){
 	if ((i % silosPerRow) != (silosPerRow - 1)) {
 		silos.get(i).loadExit.connect(silos.get(i + 1).loadEnter);
 	}
@@ -1420,7 +1420,7 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[for(int i=0; i < silos.size() - 1; i++){
+					<Action><![CDATA[for(int i=0; i < silos.size(); i++){
 	if ((i % silosPerRow) != (silosPerRow - 1)) {
 		silos.get(i).unloadExit.connect(silos.get(i + 1).unloadEnter);
 	}
@@ -1444,8 +1444,8 @@
 					</Parameter>
 					<Body><![CDATA[if (id >= 0 && id < 7) return 0;
 if (id >= 7 && id < 11) return 1;
-if (id >= 11 && id < 12) return 2;
-if (id >= 12 && id < 13) return 3;
+if (id >= 11 && id < 13) return 2;
+if (id == 13) return 3;
 else return -2;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
@@ -17102,7 +17102,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[Color[]]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[{orange, yellow, green, brown}]]></Code>
+							<Code><![CDATA[{orange, yellow, green, red}]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
