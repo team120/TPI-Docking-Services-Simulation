@@ -289,6 +289,30 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1603776115902</Id>
+					<Name><![CDATA[shipTankCapacity]]></Name>
+					<X>-270</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1603776115900</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1602546213850</Id>
 					<Name><![CDATA[storageTanks]]></Name>
@@ -1634,11 +1658,45 @@
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[2]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
+					<Action><![CDATA[int checked = 0;
+
+ArrayList<BulkBatch> grainDemands = new ArrayList<BulkBatch>();
+for (int i=0; i<5; i++) {
+	grainDemands.add(
+		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity)
+	);
+}
+
+ArrayList<Double> silosAmmounts = new ArrayList<Double>();
+ArrayList<Integer> silosGrainTypes = new ArrayList<Integer>();
+for(Silo silo : silos) {
+	silosAmmounts.add(silo.reservedSpace);
+	silosGrainTypes.add(silo.grainType);
+}
+
+ArrayList<Double> demandPerSilo  = new ArrayList<Double>();;
+for (int i=0; i<14; i++) {
+	demandPerSilo.add(0.0);
+}
+for(int i=0; i<silosAmmounts.size(); i++) {
+	for(BulkBatch demand : grainDemands) {
+		if (silosAmmounts.get(i) >= demand.size && silosGrainTypes.get(i) == demand.grainType) {
+			demandPerSilo.set(i, demandPerSilo.get(i) + demand.size);
+			silosAmmounts.set(i, silosAmmounts.get(i) - demand.size);
+			checked++;
+		}
+	}
+}
+
+if(checked >= 5) {
+	shipSource.inject();
+}
+]]></Action>
 				</Event>
 			</Events>
 			<Functions>
@@ -2267,6 +2325,9 @@ if (destinationSiloId != -1){
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.MANUAL]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
@@ -5927,7 +5988,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[trucks]]></Name>
-					<X>-270</X><Y>740</Y>
+					<X>-270</X><Y>700</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7791,7 +7852,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[ships]]></Name>
-					<X>-580</X><Y>920</Y>
+					<X>-270</X><Y>730</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22725,6 +22786,10 @@ return main.getColor(type);
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
@@ -22941,6 +23006,10 @@ return main.getColor(type);
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
@@ -23157,6 +23226,10 @@ return main.getColor(type);
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
@@ -23373,6 +23446,10 @@ return main.getColor(type);
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
@@ -23589,6 +23666,10 @@ return main.getColor(type);
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
@@ -23927,7 +24008,7 @@ return main.getColor(type);
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>2080</Width>
+		<Width>1300</Width>
 		<Height>720</Height>
 	</Frame>
 	<Database>
@@ -24024,6 +24105,9 @@ return main.getColor(type);
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[numGrainTypes]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[shipTankCapacity]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
