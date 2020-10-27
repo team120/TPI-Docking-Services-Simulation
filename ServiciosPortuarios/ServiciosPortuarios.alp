@@ -124,7 +124,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641751835</Id>
 					<Name><![CDATA[conveyorSpeed]]></Name>
-					<X>-270</X><Y>1390</Y>
+					<X>520</X><Y>-1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -148,7 +148,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641782382</Id>
 					<Name><![CDATA[siloCapacity]]></Name>
-					<X>-270</X><Y>1420</Y>
+					<X>710</X><Y>-1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -172,7 +172,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641850661</Id>
 					<Name><![CDATA[maxRate]]></Name>
-					<X>-270</X><Y>1480</Y>
+					<X>520</X><Y>-1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -196,7 +196,7 @@
 				<Variable Class="Parameter">
 					<Id>1602642345448</Id>
 					<Name><![CDATA[silosPerRow]]></Name>
-					<X>-270</X><Y>1510</Y>
+					<X>710</X><Y>-1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -220,7 +220,7 @@
 				<Variable Class="Parameter">
 					<Id>1602643193655</Id>
 					<Name><![CDATA[truckCapacity]]></Name>
-					<X>-270</X><Y>1540</Y>
+					<X>710</X><Y>-960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -244,7 +244,7 @@
 				<Variable Class="Parameter">
 					<Id>1602861560824</Id>
 					<Name><![CDATA[siloSecurityBand]]></Name>
-					<X>-270</X><Y>1450</Y>
+					<X>710</X><Y>-1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -268,7 +268,7 @@
 				<Variable Class="Parameter">
 					<Id>1603754997711</Id>
 					<Name><![CDATA[numGrainTypes]]></Name>
-					<X>-270</X><Y>1570</Y>
+					<X>520</X><Y>-1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -292,7 +292,7 @@
 				<Variable Class="Parameter">
 					<Id>1603776115902</Id>
 					<Name><![CDATA[shipTankCapacity]]></Name>
-					<X>-270</X><Y>1600</Y>
+					<X>520</X><Y>-960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -316,7 +316,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602546213850</Id>
 					<Name><![CDATA[storageTanks]]></Name>
-					<X>-270</X><Y>970</Y>
+					<X>460</X><Y>-870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -334,7 +334,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602546353768</Id>
 					<Name><![CDATA[loadingConveyors]]></Name>
-					<X>-270</X><Y>1000</Y>
+					<X>460</X><Y>-820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -352,7 +352,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602546490267</Id>
 					<Name><![CDATA[unloadingConveyors]]></Name>
-					<X>-270</X><Y>1030</Y>
+					<X>460</X><Y>-770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -370,7 +370,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602597845068</Id>
 					<Name><![CDATA[unloadingPoints]]></Name>
-					<X>-270</X><Y>810</Y>
+					<X>220</X><Y>-870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -388,7 +388,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602625324679</Id>
 					<Name><![CDATA[firstLoadingConveyors]]></Name>
-					<X>-270</X><Y>840</Y>
+					<X>220</X><Y>-820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -406,7 +406,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602625583312</Id>
 					<Name><![CDATA[firstConnectedSilos]]></Name>
-					<X>-270</X><Y>870</Y>
+					<X>220</X><Y>-770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -424,7 +424,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1602971890422</Id>
 					<Name><![CDATA[unallocatedCargo]]></Name>
-					<X>-270</X><Y>1220</Y>
+					<X>680</X><Y>-870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -442,7 +442,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1603768363098</Id>
 					<Name><![CDATA[grainBatchColor]]></Name>
-					<X>-270</X><Y>1250</Y>
+					<X>680</X><Y>-820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1565,7 +1565,7 @@
 				<Event>
 					<Id>1602547783113</Id>
 					<Name><![CDATA[connectLoadingConveyors]]></Name>
-					<X>-270</X><Y>1110</Y>
+					<X>460</X><Y>-680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1601,7 +1601,7 @@
 				<Event>
 					<Id>1602547959356</Id>
 					<Name><![CDATA[connectUnloadingConeveyors]]></Name>
-					<X>-270</X><Y>1140</Y>
+					<X>460</X><Y>-640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1637,7 +1637,7 @@
 				<Event>
 					<Id>1603771780611</Id>
 					<Name><![CDATA[shipArrival]]></Name>
-					<X>-270</X><Y>1170</Y>
+					<X>460</X><Y>-600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1705,7 +1705,7 @@ if(checked >= 5) {
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602647517568</Id>
 					<Name><![CDATA[getSiloGrainType]]></Name>
-					<X>-270</X><Y>1070</Y>
+					<X>220</X><Y>-600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1725,7 +1725,7 @@ else return -2;]]></Body>
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602975207116</Id>
 					<Name><![CDATA[getBatchDestination]]></Name>
-					<X>-270</X><Y>1280</Y>
+					<X>220</X><Y>-680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1757,7 +1757,7 @@ else return -2;]]></Body>
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1603665037503</Id>
 					<Name><![CDATA[getUnloadRow]]></Name>
-					<X>-270</X><Y>1310</Y>
+					<X>220</X><Y>-640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1775,7 +1775,7 @@ else return 1;
 					<ReturnType><![CDATA[Color]]></ReturnType>
 					<Id>1603767820527</Id>
 					<Name><![CDATA[getColor]]></Name>
-					<X>-270</X><Y>1340</Y>
+					<X>220</X><Y>-560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5041,7 +5041,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>1602546698906</Id>
 					<Name><![CDATA[silos]]></Name>
-					<X>-270</X><Y>940</Y>
+					<X>220</X><Y>-1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5988,7 +5988,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[trucks]]></Name>
-					<X>-270</X><Y>700</Y>
+					<X>220</X><Y>-1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6059,7 +6059,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[silosRows]]></Name>
-					<X>-270</X><Y>780</Y>
+					<X>220</X><Y>-960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7852,7 +7852,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[ships]]></Name>
-					<X>-270</X><Y>730</Y>
+					<X>220</X><Y>-1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9537,7 +9537,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531740154">
 					<Id>1601531740173</Id>
 					<Name><![CDATA[laneConnector7]]></Name>
-					<X>1333.7387489829225</X><Y>123.1306187516699</Y>
+					<X>1333.8364416204668</X><Y>123.31882234441531</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9546,11 +9546,11 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
-						<Point><X>4.472135954999658</X><Y>8.94427190999916</Y></Point>
-						<Point><X>25.043961347997538</X><Y>-12.521980673998826</Y></Point>
-						<Point><X>29.516097302997196</X><Y>-3.5777087639996665</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
+						<Point><X>4.740998230349987</X><Y>8.804710999221754</Y></Point>
+						<Point><X>24.6531907978208</X><Y>-13.274795044980479</Y></Point>
+						<Point><X>29.394189028171013</X><Y>-4.470084045758725</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -9558,7 +9558,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531740154">
 					<Id>1601531740174</Id>
 					<Name><![CDATA[laneConnector8]]></Name>
-					<X>1333.7387489829225</X><Y>123.1306187516699</Y>
+					<X>1333.8364416204668</X><Y>123.31882234441531</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9567,11 +9567,11 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
-						<Point><X>4.472135954999658</X><Y>8.94427190999916</Y></Point>
-						<Point><X>12.521980673998769</X><Y>-6.260990336999413</Y></Point>
-						<Point><X>16.994116628998427</X><Y>2.6832815729997463</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
+						<Point><X>4.740998230349987</X><Y>8.804710999221754</Y></Point>
+						<Point><X>12.326595398910285</X><Y>-6.637397522490232</Y></Point>
+						<Point><X>17.0675936292605</X><Y>2.167313476731522</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -9589,12 +9589,12 @@ if (destinationSiloId != -1){
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-62.954913237553455</X><Y>-59.29917550629676</Y></Point>
-						<Point><X>-4.203774418190051</X><Y>-9.073493298667842</Y></Point>
-						<Point><X>-0.2753022380661605</X><Y>-0.5717360914914025</Y></Point>
-						<Point><X>4.196833716933497</X><Y>8.372535818507743</Y></Point>
-						<Point><X>-0.2753022380661605</X><Y>-0.5717360914914025</Y></Point>
-						<Point><X>-60.271202906633334</X><Y>-120.56353742862568</Y></Point>
-						<Point><X>-60.271202906633334</X><Y>-120.56353742862568</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-0.47829224770566725</X><Y>-1.0323535643548212</Y></Point>
+						<Point><X>-0.47829224770566725</X><Y>-1.0323535643548212</Y></Point>
+						<Point><X>-4.682066665895718</X><Y>-10.105846863022663</Y></Point>
+						<Point><X>-60.56428081926583</X><Y>-121.12814820686192</Y></Point>
+						<Point><X>-55.82328258891562</X><Y>-112.32343720764017</Y></Point>
 						<Point><X>-62.954913237553455</X><Y>-59.29917550629676</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -9613,12 +9613,12 @@ if (destinationSiloId != -1){
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-50.25202261941854</X><Y>-65.18445969176298</Y></Point>
-						<Point><X>-4.203774418190051</X><Y>-9.073493298667842</Y></Point>
-						<Point><X>-0.0943922939300137</X><Y>-0.19602993995806628</Y></Point>
-						<Point><X>4.377743661069644</X><Y>8.748241970041079</Y></Point>
-						<Point><X>-0.0943922939300137</X><Y>-0.19602993995806628</Y></Point>
-						<Point><X>-60.09029296249719</X><Y>-120.18783127709249</Y></Point>
-						<Point><X>-60.09029296249719</X><Y>-120.18783127709249</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-0.47829224770566725</X><Y>-1.0323535643549349</Y></Point>
+						<Point><X>-0.47829224770566725</X><Y>-1.0323535643549349</Y></Point>
+						<Point><X>-4.682066665895945</X><Y>-10.105846863022776</Y></Point>
+						<Point><X>-60.18798560004143</X><Y>-120.3760348698379</Y></Point>
+						<Point><X>-55.446987369691215</X><Y>-111.57132387061614</Y></Point>
 						<Point><X>-50.25202261941854</X><Y>-65.18445969176298</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -9627,7 +9627,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531790518">
 					<Id>1601531790561</Id>
 					<Name><![CDATA[laneConnector38]]></Name>
-					<X>1321.2167683089237</X><Y>129.39160908866933</Y>
+					<X>1321.5098462215562</X><Y>129.95621986690554</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9636,17 +9636,14 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>34.882231691076186</X><Y>42.481390911330664</Y></Point>
-						<Point><X>11.944052469113558</X><Y>23.888104938227286</Y></Point>
-						<Point><X>24.127337067410053</X><Y>47.655088830206694</Y></Point>
-						<Point><X>11.944052469113558</X><Y>23.888104938227286</Y></Point>
-						<Point><X>36.31786830399801</X><Y>71.43620936441525</Y></Point>
-						<Point><X>36.31786830399801</X><Y>71.43620936441525</Y></Point>
-						<Point><X>24.127337067410053</X><Y>47.655088830206694</Y></Point>
-						<Point><X>48.501152902294734</X><Y>95.20319325639466</Y></Point>
-						<Point><X>59.728473074224894</X><Y>119.43641897402603</Y></Point>
-						<Point><X>48.501152902294734</X><Y>95.20319325639466</Y></Point>
-						<Point><X>34.882231691076186</X><Y>42.481390911330664</Y></Point>
+						<Point><X>34.58915377844369</X><Y>41.91678013309445</Y></Point>
+						<Point><X>4.740998230350215</X><Y>8.804710999221754</Y></Point>
+						<Point><X>58.957102913886956</X><Y>117.83945463143567</Y></Point>
+						<Point><X>54.753328495696906</X><Y>108.76596133276786</Y></Point>
+						<Point><X>58.957102913886956</X><Y>117.83945463143567</Y></Point>
+						<Point><X>59.435395161592396</X><Y>118.87180819578981</Y></Point>
+						<Point><X>59.435395161592396</X><Y>118.87180819578981</Y></Point>
+						<Point><X>34.58915377844369</X><Y>41.91678013309445</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -9654,7 +9651,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531790518">
 					<Id>1601531790562</Id>
 					<Name><![CDATA[laneConnector39]]></Name>
-					<X>1333.7387489829225</X><Y>123.1306187516699</Y>
+					<X>1333.8364416204668</X><Y>123.31882234441531</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9663,17 +9660,14 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
-						<Point><X>11.981345333723766</X><Y>23.962690667447745</Y></Point>
-						<Point><X>24.20081955485648</X><Y>47.804830457928134</Y></Point>
-						<Point><X>11.981345333723766</X><Y>23.962690667447745</Y></Point>
-						<Point><X>36.427533610914224</X><Y>71.66109631907422</Y></Point>
-						<Point><X>36.427533610914224</X><Y>71.66109631907422</Y></Point>
-						<Point><X>24.20081955485648</X><Y>47.804830457928134</Y></Point>
-						<Point><X>48.64700783204694</X><Y>95.5032361095546</Y></Point>
-						<Point><X>59.90938301836104</X><Y>119.81212512555923</Y></Point>
-						<Point><X>48.64700783204694</X><Y>95.5032361095546</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
+						<Point><X>4.740998230349987</X><Y>8.804710999221754</Y></Point>
+						<Point><X>59.33339813311113</X><Y>118.59156796845895</Y></Point>
+						<Point><X>55.129623714920854</X><Y>109.5180746697911</Y></Point>
+						<Point><X>59.33339813311113</X><Y>118.59156796845895</Y></Point>
+						<Point><X>59.8116903808168</X><Y>119.62392153281382</Y></Point>
+						<Point><X>59.8116903808168</X><Y>119.62392153281382</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -9734,11 +9728,11 @@ if (destinationSiloId != -1){
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-98.73152537390956</X><Y>2.310344683306539</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30.762466757806806</X><Y>-7.27112850639071</Y></Point>
-						<Point><X>-30.762466757806806</X><Y>-7.27112850639071</Y></Point>
-						<Point><X>-40.494312885570935</X><Y>-9.57138304568042</Y></Point>
-						<Point><X>-96.04781504298944</X><Y>-58.95401723902238</Y></Point>
-						<Point><X>-91.57567908798978</X><Y>-50.00974532902322</Y></Point>
+						<Point><X>-27.128505196384594</X><Y>-6.412192137327253</Y></Point>
+						<Point><X>-27.128505196384594</X><Y>-6.412192137327253</Y></Point>
+						<Point><X>-36.86035132414872</X><Y>-8.712446676616963</Y></Point>
+						<Point><X>-96.34089295562194</X><Y>-59.51862801725862</Y></Point>
+						<Point><X>-91.59989472527172</X><Y>-50.71391701803687</Y></Point>
 						<Point><X>-98.73152537390956</X><Y>2.310344683306539</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -9747,7 +9741,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531612412">
 					<Id>1601540343523</Id>
 					<Name><![CDATA[laneConnector33]]></Name>
-					<X>1333.7387489829225</X><Y>123.1306187516699</Y>
+					<X>1333.8364416204668</X><Y>123.31882234441531</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9756,14 +9750,14 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
-						<Point><X>4.472135954999658</X><Y>8.94427190999916</Y></Point>
-						<Point><X>109.79570132654771</X><Y>86.91933433813291</Y></Point>
-						<Point><X>100.06385519878359</X><Y>84.61907979884323</Y></Point>
-						<Point><X>109.79570132654771</X><Y>86.91933433813291</Y></Point>
-						<Point><X>111.43070732597016</X><Y>87.30579030163277</Y></Point>
-						<Point><X>111.43070732597016</X><Y>87.30579030163277</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>1.552634993058291</X><Y>2.8834649871083684</Y></Point>
+						<Point><X>1.552634993058291</X><Y>2.8834649871083684</Y></Point>
+						<Point><X>6.293633223408506</X><Y>11.688175986330123</Y></Point>
+						<Point><X>111.33301468842592</X><Y>87.11758670888736</Y></Point>
+						<Point><X>101.60116856066179</X><Y>84.81733216959765</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -9771,7 +9765,7 @@ if (destinationSiloId != -1){
 				<LaneConnector SourceId="1601531740154" TargetId="1601531612412">
 					<Id>1601540343524</Id>
 					<Name><![CDATA[laneConnector34]]></Name>
-					<X>1333.7387489829225</X><Y>123.1306187516699</Y>
+					<X>1333.8364416204668</X><Y>123.31882234441531</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9780,14 +9774,14 @@ if (destinationSiloId != -1){
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
-						<Point><X>4.472135954999658</X><Y>8.94427190999916</Y></Point>
-						<Point><X>83.88859692316896</X><Y>66.41007721637233</Y></Point>
-						<Point><X>74.15675079540483</X><Y>64.10982267708262</Y></Point>
-						<Point><X>83.88859692316896</X><Y>66.41007721637233</Y></Point>
-						<Point><X>114.65106368097577</X><Y>73.68120572276304</Y></Point>
-						<Point><X>114.65106368097577</X><Y>73.68120572276304</Y></Point>
-						<Point><X>22.360251017077417</X><Y>48.74238124833009</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
+						<Point><X>4.740998230349987</X><Y>8.804710999221754</Y></Point>
+						<Point><X>87.42486584704693</X><Y>67.08080999269038</Y></Point>
+						<Point><X>77.6930197192828</X><Y>64.78055545340067</Y></Point>
+						<Point><X>87.42486584704693</X><Y>67.08080999269038</Y></Point>
+						<Point><X>114.55337104343153</X><Y>73.49300213001763</Y></Point>
+						<Point><X>114.55337104343153</X><Y>73.49300213001763</Y></Point>
+						<Point><X>22.262558379533175</X><Y>48.55417765558468</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -10012,10 +10006,10 @@ if (destinationSiloId != -1){
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>10.819</X><Y>22.538</Y><Z>0</Z></Point>
-						<Point><X>-11.18</X><Y>-22.361</Y><Z>0</Z></Point>
-						<Point><X>-100</X><Y>-200</Y><Z>0</Z></Point>
-						<Point><X>-88.819</X><Y>-177.639</Y><Z>0</Z></Point>
-						<Point><X>-123.829</X><Y>-192.439</Y><Z>0</Z></Point>
+						<Point><X>-11.852</X><Y>-22.012</Y><Z>0</Z></Point>
+						<Point><X>-140</X><Y>-260</Y><Z>0</Z></Point>
+						<Point><X>-128.147</X><Y>-237.988</Y><Z>0</Z></Point>
+						<Point><X>-163.829</X><Y>-252.439</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -19165,13 +19159,274 @@ in Tara Balance]]></Text>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Rectangle>
+					<Id>1603783345372</Id>
+					<Name><![CDATA[rectangle9]]></Name>
+					<X>480</X><Y>-1120</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>400</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-2302756</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1603783535901</Id>
+					<Name><![CDATA[rectangle10]]></Name>
+					<X>380</X><Y>-1120</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>100</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711288</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603783573392</Id>
+					<Name><![CDATA[text11]]></Name>
+					<X>450</X><Y>-1105</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>90.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Parameteres]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1603783737181</Id>
+					<Name><![CDATA[rectangle11]]></Name>
+					<X>180</X><Y>-720</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>700</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-8355712</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1603783737186</Id>
+					<Name><![CDATA[rectangle12]]></Name>
+					<X>80</X><Y>-720</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>100</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16758272</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603783737190</Id>
+					<Name><![CDATA[text15]]></Name>
+					<X>165</X><Y>-688</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>90.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Functions
+ & Events]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1603783741076</Id>
+					<Name><![CDATA[rectangle13]]></Name>
+					<X>180</X><Y>-920</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>700</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-4144960</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1603783741080</Id>
+					<Name><![CDATA[rectangle46]]></Name>
+					<X>80</X><Y>-920</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>100</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-10157467</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603783741084</Id>
+					<Name><![CDATA[text16]]></Name>
+					<X>150</X><Y>-895</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>90.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Collections]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1603783745362</Id>
+					<Name><![CDATA[rectangle48]]></Name>
+					<X>180</X><Y>-1120</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>200</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1603783745365</Id>
+					<Name><![CDATA[rectangle49]]></Name>
+					<X>80</X><Y>-1120</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>100</Width>
+					<Height>200</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-7992025</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1603783745367</Id>
+					<Name><![CDATA[text17]]></Name>
+					<X>150</X><Y>-1065</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>90.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Agents]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
 				<EmbeddedObjectPresentation>
 					<Id>1602601238988</Id>
 					<Name><![CDATA[trucks_presentation]]></Name>
-					<X>-70</X><Y>1770</Y>
+					<X>100</X><Y>-320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19190,7 +19445,7 @@ in Tara Balance]]></Text>
 				<EmbeddedObjectPresentation>
 					<Id>1603769999931</Id>
 					<Name><![CDATA[ships_presentation]]></Name>
-					<X>-300</X><Y>1840</Y>
+					<X>330</X><Y>-420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24008,8 +24263,8 @@ return main.getColor(type);
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>1300</Width>
-		<Height>720</Height>
+		<Width>1480</Width>
+		<Height>1400</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
