@@ -1712,8 +1712,6 @@ for(int i = 0; i < silosAmmounts.size(); i++) {
 	}
 }
 
-traceln(demandPerSilo);
-
 if(!grainDemands.stream().anyMatch(e -> e.isSatisfied == false)) {
 	Ship incommingShip = new Ship(demandPerSilo);
 	shipEnter.take(incommingShip);
@@ -1773,7 +1771,6 @@ else return -2;]]></Body>
 	if (availableSilos.isEmpty()) {
 		double currentlyUnallocated = unallocatedCargo.get(grainType);
 		unallocatedCargo.set(grainType, currentlyUnallocated + capacity);
-		traceln(unallocatedCargo);
 		return -1;
 	} else {
 		int selectedSiloId = availableSilos.get(0).id;
