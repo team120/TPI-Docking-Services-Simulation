@@ -21234,6 +21234,11 @@ closeAt = tank.amount() - demandedAmount;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTank != -1) {
+	((BulkBatch)batch).destinationShipTankId = destinationShipTank;
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -21462,11 +21467,6 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[if (destinationShipTank != -1) {
-	((BulkBatch)batch).destinationShipTankId = destinationShipTank;
-}]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
