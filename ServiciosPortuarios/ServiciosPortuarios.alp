@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201530" AlpVersion="8.5.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -27834,8 +27834,8 @@ if (((BulkBatch)batch).destinationShipTankId == 4){
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>2140</Width>
-		<Height>320</Height>
+		<Width>1090</Width>
+		<Height>200</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
@@ -27889,8 +27889,8 @@ if (((BulkBatch)batch).destinationShipTankId == 4){
 			<Presentation>
 				<Text>
 					<Id>0</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>20</X><Y>20</Y>
+					<Name><![CDATA[Title]]></Name>
+					<X>20</X><Y>10</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27900,9 +27900,75 @@ if (((BulkBatch)batch).destinationShipTankId == 4){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-12490271</Color>
-					<Text><![CDATA[ServiciosPortuarios]]></Text>
+					<Text><![CDATA[Servicios Portuarios Simulation]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1603894553457</Id>
+					<Name><![CDATA[Welcome]]></Name>
+					<X>20</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Welcome to our simulation: Trucks arrivals to the port, storage and shipment of grains.
+]]></Text>
+					<Font>
+						<Name>Arial</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1603895064131</Id>
+					<Name><![CDATA[Authors]]></Name>
+					<X>20</X><Y>140</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[This project was made by A. Recalde, J. Acciarri, N. Antonelli. 
+Visit us on GitHub where you can find the source code.]]></Text>
+					<Font>
+						<Name>Arial</Name>
+						<Size>20</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1603895110462</Id>
+					<Name><![CDATA[Consider]]></Name>
+					<X>20</X><Y>90</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Please choose one of the views after starting this simulation and consider going fullscreen. 
+]]></Text>
+					<Font>
+						<Name>Arial</Name>
 						<Size>24</Size>
 						<Style>0</Style>
 					</Font>
