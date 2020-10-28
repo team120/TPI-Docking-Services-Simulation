@@ -1698,23 +1698,28 @@ for(Silo silo : silos) {
 }
 
 ArrayList<Double> demandPerSilo  = new ArrayList<Double>();
+ArrayList<Integer> destinationShipTankPerSilo  = new ArrayList<Integer>();
 for (int i=0; i<silos.size(); i++) {
 	demandPerSilo.add(0.0);
+	destinationShipTankPerSilo.add(-1);
 }
 
 for(int i = 0; i < silosAmmounts.size(); i++) {
-	for(BulkBatch demand : demandsPerShipTank) {
-		if (!demand.isSatisfied && silosAmmounts.get(i) >= demand.size && silosGrainTypes.get(i) == demand.grainType) {
-			demand.isSatisfied = true;
-			demandPerSilo.set(i, demandPerSilo.get(i) + demand.size);
-			silosAmmounts.set(i, silosAmmounts.get(i) - demand.size);
-			break;
+	for(int j = 0; j < demandsPerShipTank.size(); j++) {
+		if (!demandsPerShipTank.get(j).isSatisfied 
+			&& silosAmmounts.get(i) >= demandsPerShipTank.get(j).size 
+			&& silosGrainTypes.get(i) == demandsPerShipTank.get(j).grainType) {
+				demandsPerShipTank.get(j).isSatisfied = true;
+				demandPerSilo.set(i, demandPerSilo.get(i) + demandsPerShipTank.get(j).size);
+				silosAmmounts.set(i, silosAmmounts.get(i) - demandsPerShipTank.get(j).size);
+				destinationShipTankPerSilo.set(i, j);
+				break;
 		}
 	}
 }
 
 if(!demandsPerShipTank.stream().anyMatch(e -> e.isSatisfied == false)) {
-	Ship incommingShip = new Ship(demandsPerShipTank, demandPerSilo);
+	Ship incommingShip = new Ship(demandPerSilo, destinationShipTankPerSilo);
 	shipEnter.take(incommingShip);
 	traceln("GrainDemand");
 	traceln(demandsPerShipTank);
@@ -2607,11 +2612,15 @@ if (destinationSiloId != -1){
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[for (int i=0; i < silos.size(); i++){
+								<Code><![CDATA[for (int i=0; i < agent.shipTankEnters.size(); i++){
+	pier.pierExits.get(i).connect(agent.shipTankEnters.get(i));
+}
+for (int i=0; i < silos.size(); i++){
 	double demand = agent.demandPerSilo.get(i);
+	int destinationShipTank = agent.destinationShipTankPerSilo.get(i);
 	if (demand > 0.0) {
 		silos.get(i).reservedSpace -= demand;
-		silos.get(i).openValve(demand);		
+		silos.get(i).programValve(demand, destinationShipTank);		
 	}
 }]]></Code>
 							</Value>
@@ -7650,10 +7659,10 @@ if (destinationSiloId != -1){
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
-							<Name><![CDATA[demansPerShipTank]]></Name>
+							<Name><![CDATA[demandPerSilo]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[demandPerSilo]]></Name>
+							<Name><![CDATA[destinationShipTankPerSilo]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -20187,7 +20196,7 @@ in Tara Balance]]></Text>
 				<Variable Class="PlainVariable">
 					<Id>1603845970287</Id>
 					<Name><![CDATA[isSatisfied]]></Name>
-					<X>30</X><Y>110</Y>
+					<X>30</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20197,6 +20206,18 @@ in Tara Balance]]></Text>
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[false]]></Code>
 						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1603857197678</Id>
+					<Name><![CDATA[destinationShipTankId]]></Name>
+					<X>30</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -20414,6 +20435,21 @@ in Tara Balance]]></Text>
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[capacity]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1603857679416</Id>
+					<Name><![CDATA[destinationShipTank]]></Name>
+					<X>30</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[-1]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -20851,7 +20887,7 @@ in Tara Balance]]></Text>
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1603853350919</Id>
-					<Name><![CDATA[openValve]]></Name>
+					<Name><![CDATA[programValve]]></Name>
 					<X>30</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -20861,7 +20897,12 @@ in Tara Balance]]></Text>
 						<Name><![CDATA[demandedAmount]]></Name>
 						<Type><![CDATA[double]]></Type>
 					</Parameter>
-					<Body><![CDATA[valve.open();
+					<Parameter>
+						<Name><![CDATA[destinationBilge]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[destinationShipTank = destinationBilge;
+valve.open();
 closeAt = tank.amount() - demandedAmount;]]></Body>
 				</Function>
 			</Functions>
@@ -21421,6 +21462,11 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTank != -1) {
+	((BulkBatch)batch).destinationShipTankId = destinationShipTank;
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -23257,14 +23303,14 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 			<Variables>
 				<Variable Class="Parameter">
 					<Id>1603851085409</Id>
-					<Name><![CDATA[demansPerShipTank]]></Name>
+					<Name><![CDATA[demandPerSilo]]></Name>
 					<X>80</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[ArrayList<BulkBatch>]]></Type>
+						<Type><![CDATA[ArrayList<Double>]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -23278,14 +23324,14 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1603842369752</Id>
-					<Name><![CDATA[demandPerSilo]]></Name>
+					<Name><![CDATA[destinationShipTankPerSilo]]></Name>
 					<X>80</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[ArrayList<Double>]]></Type>
+						<Type><![CDATA[ArrayList<Integer>]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -23317,7 +23363,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1603770338182</Id>
-					<Name><![CDATA[shipTanksEnter]]></Name>
+					<Name><![CDATA[shipTankEnters]]></Name>
 					<X>80</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -25141,6 +25187,24 @@ return main.getColor(type);
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1603859708936</Id>
+					<Name><![CDATA[pierExits]]></Name>
+					<X>-170</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[FluidExit]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+						<CollectionInitializer Class="CodeValue">
+							<Code><![CDATA[{ fluidExit0, fluidExit1, fluidExit2, fluidExit3, fluidExit4 }]]></Code>
+						</CollectionInitializer>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Connectors>
 				<Connector>
@@ -26374,6 +26438,12 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[fluidSelectOutput.select(1);
+if (((BulkBatch)batch).destinationShipTankId == 0){
+	fluidSelectOutput.select(2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -26599,12 +26669,24 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[conveyor2Belt.length()]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.conveyorSpeed]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.maxRate]]></Code>
+								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[stopped]]></Name>
@@ -26629,6 +26711,12 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[fluidSelectOutput1.select(1);
+if (((BulkBatch)batch).destinationShipTankId == 1){
+	fluidSelectOutput1.select(2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -26896,6 +26984,12 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[fluidSelectOutput2.select(1);
+if (((BulkBatch)batch).destinationShipTankId == 2){
+	fluidSelectOutput2.select(2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -27163,6 +27257,12 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[fluidSelectOutput3.select(1);
+if (((BulkBatch)batch).destinationShipTankId == 3){
+	fluidSelectOutput3.select(2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -27430,6 +27530,12 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[fluidSelectOutput4.select(1);
+if (((BulkBatch)batch).destinationShipTankId == 4){
+	fluidSelectOutput4.select(2);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
