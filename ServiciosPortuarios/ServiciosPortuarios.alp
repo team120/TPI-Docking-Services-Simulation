@@ -1683,15 +1683,13 @@ silos.get(silos.size() - 1).unloadExit.connect(pier.unloadEnterWSS);]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[int checked = 0;
-
-ArrayList<BulkBatch> grainDemands = new ArrayList<BulkBatch>();
+					<Action><![CDATA[ArrayList<BulkBatch> grainDemands = new ArrayList<BulkBatch>();
 for (int i=0; i<5; i++) {
 	grainDemands.add(
 		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity)
 	);
 }
-List<Pair<Double, Integer>> list = new ArrayList<Pair<Integer, Double>>(); 
+
 ArrayList<Double> silosAmmounts = new ArrayList<Double>();
 ArrayList<Integer> silosGrainTypes = new ArrayList<Integer>();
 for(Silo silo : silos) {
@@ -1700,24 +1698,23 @@ for(Silo silo : silos) {
 }
 
 ArrayList<Double> demandPerSilo  = new ArrayList<Double>();
-for (int i=0; i < silos.size(); i++) {
+for (int i=0; i<silos.size(); i++) {
 	demandPerSilo.add(0.0);
 }
 
 for(int i = 0; i < silosAmmounts.size(); i++) {
 	for(BulkBatch demand : grainDemands) {
 		if (!demand.isSatisfied && silosAmmounts.get(i) >= demand.size && silosGrainTypes.get(i) == demand.grainType) {
-			
+			demand.isSatisfied = true;
 			demandPerSilo.set(i, demandPerSilo.get(i) + demand.size);
 			silosAmmounts.set(i, silosAmmounts.get(i) - demand.size);
-			checked++;
 		}
 	}
 }
 
 traceln(demandPerSilo);
 
-if(checked >= 5) {
+if(!grainDemands.stream().anyMatch(e -> e.isSatisfied == false)) {
 	Ship incommingShip = new Ship(demandPerSilo);
 	shipEnter.take(incommingShip);
 	traceln("GrainDemand");
