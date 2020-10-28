@@ -1683,9 +1683,9 @@ silos.get(silos.size() - 1).unloadExit.connect(pier.unloadEnterWSS);]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[ArrayList<BulkBatch> grainDemands = new ArrayList<BulkBatch>();
+					<Action><![CDATA[ArrayList<BulkBatch> demandsPerShipTank = new ArrayList<BulkBatch>();
 for (int i=0; i<5; i++) {
-	grainDemands.add(
+	demandsPerShipTank.add(
 		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity)
 	);
 }
@@ -1703,24 +1703,23 @@ for (int i=0; i<silos.size(); i++) {
 }
 
 for(int i = 0; i < silosAmmounts.size(); i++) {
-	for(BulkBatch demand : grainDemands) {
+	for(BulkBatch demand : demandsPerShipTank) {
 		if (!demand.isSatisfied && silosAmmounts.get(i) >= demand.size && silosGrainTypes.get(i) == demand.grainType) {
 			demand.isSatisfied = true;
 			demandPerSilo.set(i, demandPerSilo.get(i) + demand.size);
 			silosAmmounts.set(i, silosAmmounts.get(i) - demand.size);
+			break;
 		}
 	}
 }
 
-if(!grainDemands.stream().anyMatch(e -> e.isSatisfied == false)) {
-	Ship incommingShip = new Ship(demandPerSilo);
+if(!demandsPerShipTank.stream().anyMatch(e -> e.isSatisfied == false)) {
+	Ship incommingShip = new Ship(demandsPerShipTank, demandPerSilo);
 	shipEnter.take(incommingShip);
 	traceln("GrainDemand");
-	traceln(grainDemands);
+	traceln(demandsPerShipTank);
 	traceln("Ships");
-	for(Ship ship: ships) {
-		traceln(ship.demandPerSilo);
-	}
+	ships.stream().forEach(s -> traceln(s.demandPerSilo));
 	traceln("End Ships");
 }
 ]]></Action>
@@ -7641,6 +7640,9 @@ if (destinationSiloId != -1){
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[demansPerShipTank]]></Name>
+						</Parameter>
 						<Parameter>
 							<Name><![CDATA[demandPerSilo]]></Name>
 						</Parameter>
@@ -19970,7 +19972,7 @@ in Tara Balance]]></Text>
 				<EmbeddedObjectPresentation>
 					<Id>1603769999931</Id>
 					<Name><![CDATA[ships_presentation]]></Name>
-					<X>330</X><Y>-420</Y>
+					<X>4240</X><Y>1920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23200,6 +23202,27 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 			<CurrentLevel>1603769999879</CurrentLevel>
 			<ConnectionsId>1603769999875</ConnectionsId>
 			<Variables>
+				<Variable Class="Parameter">
+					<Id>1603851085409</Id>
+					<Name><![CDATA[demansPerShipTank]]></Name>
+					<X>80</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[ArrayList<BulkBatch>]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1603851085407</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1603842369752</Id>
 					<Name><![CDATA[demandPerSilo]]></Name>
