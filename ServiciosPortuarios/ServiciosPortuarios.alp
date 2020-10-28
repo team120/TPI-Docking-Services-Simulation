@@ -24877,7 +24877,7 @@ return main.getColor(type);
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>5.1</Z>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[5.8 * getLevel(0)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[100 * getLevel(0)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -24901,7 +24901,7 @@ return main.getColor(type);
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>5.1</Z>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[5.8 * getLevel(1)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[100 * getLevel(1)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -24925,7 +24925,7 @@ return main.getColor(type);
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>5.1</Z>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[5.8 * getLevel(2)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[100 * getLevel(2)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -24949,7 +24949,7 @@ return main.getColor(type);
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>5.1</Z>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[5.8 * getLevel(3)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[100 * getLevel(3)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -24973,7 +24973,7 @@ return main.getColor(type);
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>5.1</Z>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[5.8 * getLevel(4)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[100 * getLevel(4)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
