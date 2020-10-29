@@ -1686,7 +1686,7 @@ silos.get(silos.size() - 1).unloadExit.connect(pier.unloadEnterWSS);]]></Action>
 					<Action><![CDATA[ArrayList<BulkBatch> demandsPerShipTank = new ArrayList<BulkBatch>();
 for (int i=0; i<5; i++) {
 	demandsPerShipTank.add(
-		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity)
+		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity, -1)
 	);
 }
 
@@ -20232,21 +20232,9 @@ in Tara Balance]]></Text>
 			<ConnectionsId>1602515486955</ConnectionsId>
 			<Variables>
 				<Variable Class="PlainVariable">
-					<Id>1602645705643</Id>
-					<Name><![CDATA[destinationSiloId]]></Name>
-					<X>30</X><Y>80</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1603845970287</Id>
 					<Name><![CDATA[isSatisfied]]></Name>
-					<X>30</X><Y>140</Y>
+					<X>30</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20259,15 +20247,18 @@ in Tara Balance]]></Text>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1603857197678</Id>
-					<Name><![CDATA[destinationShipTankId]]></Name>
-					<X>30</X><Y>110</Y>
+					<Id>1603915953882</Id>
+					<Name><![CDATA[destinationSiloId]]></Name>
+					<X>30</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[-1]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -20311,6 +20302,30 @@ in Tara Balance]]></Text>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602515501481</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1603926580302</Id>
+					<Name><![CDATA[destinationShipTankId]]></Name>
+					<X>30</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[-1]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1603926580300</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -20637,7 +20652,7 @@ in Tara Balance]]></Text>
 				<Connector>
 					<Id>1602546677207</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>500</X><Y>230</Y>
+					<X>490</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20664,7 +20679,7 @@ in Tara Balance]]></Text>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -20802,7 +20817,7 @@ in Tara Balance]]></Text>
 				<Connector>
 					<Id>1602546677217</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>790</X><Y>230</Y>
+					<X>850</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20835,7 +20850,7 @@ in Tara Balance]]></Text>
 				<Connector>
 					<Id>1602546677219</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>670</X><Y>230</Y>
+					<X>730</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20866,42 +20881,9 @@ in Tara Balance]]></Text>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1602546677221</Id>
-					<Name><![CDATA[connector6]]></Name>
-					<X>580</X><Y>230</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Silo]]></ClassName>
-						<ItemName><![CDATA[fluidSelectInput]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectInput]]></ClassName>
-						<ItemName><![CDATA[in1]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Silo]]></ClassName>
-						<ItemName><![CDATA[valve]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Valve]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1602546677223</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>60</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20931,6 +20913,39 @@ in Tara Balance]]></Text>
 						<Point><X>580</X><Y>250</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1603915396284</Id>
+					<Name><![CDATA[connector9]]></Name>
+					<X>640</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidSelectInput]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidSelectInput]]></ClassName>
+						<ItemName><![CDATA[in1]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[valve]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Valve]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-130</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -20952,8 +20967,9 @@ in Tara Balance]]></Text>
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[destinationShipTank = destinationBilge;
-valve.open();
-closeAt = tank.amount() - demandedAmount;]]></Body>
+traceln(destinationShipTank);
+closeAt = tank.amount() - demandedAmount;
+valve.open();]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -21187,11 +21203,6 @@ closeAt = tank.amount() - demandedAmount;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[if (destinationShipTank != -1) {
-	((BulkBatch)batch).destinationShipTankId = destinationShipTank;
-}]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -21239,7 +21250,7 @@ closeAt = tank.amount() - demandedAmount;]]></Body>
 				<EmbeddedObject>
 					<Id>1602546677177</Id>
 					<Name><![CDATA[valve]]></Name>
-					<X>500</X><Y>220</Y>
+					<X>490</X><Y>220</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21289,6 +21300,9 @@ closeAt = tank.amount() - demandedAmount;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[((BulkBatch)batch).destinationShipTankId = destinationShipTank]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -21453,7 +21467,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677185</Id>
 					<Name><![CDATA[bulkConveyor1]]></Name>
-					<X>670</X><Y>210</Y>
+					<X>730</X><Y>210</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21720,7 +21734,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677197</Id>
 					<Name><![CDATA[unloadExit]]></Name>
-					<X>790</X><Y>220</Y>
+					<X>850</X><Y>220</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21792,7 +21806,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677201</Id>
 					<Name><![CDATA[fluidSelectInput]]></Name>
-					<X>580</X><Y>220</Y>
+					<X>640</X><Y>220</Y>
 					<Label><X>10</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21879,7 +21893,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677205</Id>
 					<Name><![CDATA[unloadEnter]]></Name>
-					<X>500</X><Y>300</Y>
+					<X>560</X><Y>300</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22107,7 +22121,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[BulkBatch]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[new BulkBatch(grainType, capacity)]]></Code>
+							<Code><![CDATA[new BulkBatch(grainType, capacity, -1)]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -26343,11 +26357,11 @@ return main.getColor(type);
 						<Type><![CDATA[Object]]></Type>
 					</Parameter>
 					<Parameter>
-						<Name><![CDATA[currentShiipTank]]></Name>
+						<Name><![CDATA[currentShipTank]]></Name>
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[fluidSelectOutput.select(1);
-if (((BulkBatch)batch).destinationShipTankId == 0){
+if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 	fluidSelectOutput.select(2);
 }]]></Body>
 				</Function>
@@ -28298,7 +28312,7 @@ if (((BulkBatch)batch).destinationShipTankId == 0){
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
 		<Width>1990</Width>
-		<Height>200</Height>
+		<Height>390</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
