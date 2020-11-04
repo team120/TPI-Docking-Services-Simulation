@@ -1829,6 +1829,22 @@ else return 1;
 					<ShowLabel>true</ShowLabel>
 					<Body><![CDATA[return unallocatedCargo;]]></Body>
 				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1604459504800</Id>
+					<Name><![CDATA[getRandomGrainType]]></Name>
+					<X>690</X><Y>-560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double prob = Math.random();
+if (prob<=0.30) { return 1;}
+if (prob>0.30 && prob<=0.40) { return 2; }
+if (prob>0.40 && prob<=0.50) { return 3; }
+return 0;]]></Body>
+				</Function>
 			</Functions>
 			<AgentLinks>
 				<AgentLink>
@@ -4205,6 +4221,9 @@ if (destinationSiloId != -1){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[getRandomGrainType()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onWayNotFound]]></Name>
@@ -5804,6 +5823,9 @@ if (destinationSiloId != -1){
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[grainType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[getRandomGrainType()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
@@ -28739,7 +28761,7 @@ dataset_Sorghum
 .getY(dataset_Soy.size()-1)]]></Expression>
 					<Color>-16711936</Color>
 					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[item]]></Title>
+						<Title><![CDATA[Soy]]></Title>
 					</DataItem>
 					<DataItem>
 					<Expression><![CDATA[dataset_Sorghum
