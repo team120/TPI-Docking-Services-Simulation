@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201530" AlpVersion="8.5.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -230,7 +230,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[150]]></Code>
+							<Code><![CDATA[uniform_discr(100, 200)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602643193653</Id>
@@ -21846,7 +21846,7 @@ Components]]></Text>
 					<Id>1604557328528</Id>
 					<Name><![CDATA[Init]]></Name>
 					<X>210</X><Y>430</Y>
-					<Label><X>35</X><Y>10</Y></Label>
+					<Label><X>35</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -21859,13 +21859,13 @@ Components]]></Text>
 					<Id>1604557328537</Id>
 					<Name><![CDATA[OpenValve]]></Name>
 					<X>200</X><Y>520</Y>
-					<Label><X>15</X><Y>15</Y></Label>
+					<Label><X>15</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="120" Height="40">
 						<EntryAction><![CDATA[fluidConvertOut.setBatchOut(setOuputBatch(), main.getColor(grainType));
-valve.dispense(order.demand, CUBIC_METER);]]></EntryAction>
+valve.dispense(order.demand, TON);]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -21873,7 +21873,7 @@ valve.dispense(order.demand, CUBIC_METER);]]></EntryAction>
 					<Id>1604557328541</Id>
 					<Name><![CDATA[ReduceReserved]]></Name>
 					<X>180</X><Y>620</Y>
-					<Label><X>15</X><Y>15</Y></Label>
+					<Label><X>10</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -22154,14 +22154,14 @@ return outputBatch;]]></Body>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[capacity + main.siloSecurityBand]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[0]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22313,7 +22313,7 @@ return outputBatch;]]></Body>
 							<Name><![CDATA[openRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22424,7 +22424,7 @@ return outputBatch;]]></Body>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22541,7 +22541,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -23550,14 +23550,14 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[capacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[capacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -23570,7 +23570,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 							<Name><![CDATA[maxRateOut]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate / 4]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -23724,7 +23724,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 							<Name><![CDATA[openRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate / 2]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -24330,7 +24330,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -24859,7 +24859,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1604556664308</Id>
 					<Name><![CDATA[incrementCounter]]></Name>
 					<X>440</X><Y>820</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24905,7 +24905,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1604556664328</Id>
 					<Name><![CDATA[KeepClosed]]></Name>
 					<X>630</X><Y>630</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>15</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24917,7 +24917,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1604556664331</Id>
 					<Name><![CDATA[WaitUntilDock]]></Name>
 					<X>450</X><Y>540</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>5</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24929,7 +24929,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1604556664333</Id>
 					<Name><![CDATA[Init]]></Name>
 					<X>460</X><Y>440</Y>
-					<Label><X>35</X><Y>15</Y></Label>
+					<Label><X>35</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24942,7 +24942,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1604556664336</Id>
 					<Name><![CDATA[UnloadSilo]]></Name>
 					<X>290</X><Y>620</Y>
-					<Label><X>15</X><Y>15</Y></Label>
+					<Label><X>15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24960,7 +24960,7 @@ deliver(order, main.silos.get(siloCounter));]]></EntryAction>
 					<Id>1604556664339</Id>
 					<Name><![CDATA[ShipTankLoaded]]></Name>
 					<X>280</X><Y>740</Y>
-					<Label><X>5</X><Y>15</Y></Label>
+					<Label><X>5</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -25510,11 +25510,15 @@ return main.getColor(type);
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.shipTankCapacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -25733,11 +25737,15 @@ return main.getColor(type);
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.shipTankCapacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -25956,11 +25964,15 @@ return main.getColor(type);
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.shipTankCapacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -26179,11 +26191,15 @@ return main.getColor(type);
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.shipTankCapacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -26402,11 +26418,15 @@ return main.getColor(type);
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.shipTankCapacity]]></Code>
-								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialAmount]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitRateOut]]></Name>
@@ -27598,39 +27618,6 @@ return main.getColor(type);
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Pier]]></ClassName>
-						<ItemName><![CDATA[fluidSelectOutput4]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1603855871908</Id>
-					<Name><![CDATA[connector18]]></Name>
-					<X>1820</X><Y>130</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Pier]]></ClassName>
-						<ItemName><![CDATA[fluidSelectOutput4]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-						<ItemName><![CDATA[out2]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Pier]]></ClassName>
 						<ItemName><![CDATA[fluidExit4]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -27640,41 +27627,10 @@ return main.getColor(type);
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>30</X><Y>50</Y></Point>
-						<Point><X>110</X><Y>50</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1603855876846</Id>
-					<Name><![CDATA[connector19]]></Name>
-					<X>1930</X><Y>110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Pier]]></ClassName>
-						<ItemName><![CDATA[fluidDispose]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidDispose]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Pier]]></ClassName>
-						<ItemName><![CDATA[fluidSelectOutput4]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-						<ItemName><![CDATA[out1]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-110</X><Y>0</Y></Point>
+						<Point><X>100</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>20</Y></Point>
+						<Point><X>150</X><Y>70</Y></Point>
+						<Point><X>230</X><Y>70</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -27861,7 +27817,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28047,7 +28003,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28245,7 +28201,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28515,7 +28471,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28785,7 +28741,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -29055,7 +29011,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -29325,7 +29281,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[main.maxRate]]></Code>
-								<Unit Class="FlowRateUnits"><![CDATA[CUBIC_METER_PER_SECOND]]></Unit>
+								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -29351,9 +29307,6 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput4, batch, 4);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -29421,159 +29374,6 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 						<Parameter>
 							<Name><![CDATA[fluidEnter]]></Name>
 						</Parameter>
-						<Parameter>
-							<Name><![CDATA[showBatchesInFlowchart]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onNewBatchIn]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRateChange]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1603855854093</Id>
-					<Name><![CDATA[fluidSelectOutput4]]></Name>
-					<X>1800</X><Y>100</Y>
-					<Label><X>-70</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-							<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-							<ItemName><![CDATA[1412618001603]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[selectOnCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[condition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[selectOutput1]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[limitRateOut]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maxRateOut]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[showBatchesInFlowchart]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onNewBatchIn]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRateChange]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1603855874845</Id>
-					<Name><![CDATA[fluidDispose]]></Name>
-					<X>1930</X><Y>90</Y>
-					<Label><X>-50</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidDispose]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-							<ClassName><![CDATA[FluidDispose]]></ClassName>
-							<ItemName><![CDATA[1412618001589]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
 						<Parameter>
 							<Name><![CDATA[showBatchesInFlowchart]]></Name>
 						</Parameter>
@@ -29834,7 +29634,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>1400</Width>
+		<Width>2000</Width>
 		<Height>980</Height>
 	</Frame>
 	<Database>
