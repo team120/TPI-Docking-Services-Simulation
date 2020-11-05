@@ -124,7 +124,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641751835</Id>
 					<Name><![CDATA[conveyorSpeed]]></Name>
-					<X>520</X><Y>-1360</Y>
+					<X>520</X><Y>-1380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -148,7 +148,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641782382</Id>
 					<Name><![CDATA[siloCapacity]]></Name>
-					<X>710</X><Y>-1360</Y>
+					<X>730</X><Y>-1340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -172,7 +172,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641850661</Id>
 					<Name><![CDATA[maxRate]]></Name>
-					<X>520</X><Y>-1320</Y>
+					<X>520</X><Y>-1340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -196,7 +196,7 @@
 				<Variable Class="Parameter">
 					<Id>1602642345448</Id>
 					<Name><![CDATA[silosPerRow]]></Name>
-					<X>710</X><Y>-1280</Y>
+					<X>730</X><Y>-1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -220,7 +220,7 @@
 				<Variable Class="Parameter">
 					<Id>1602643193655</Id>
 					<Name><![CDATA[truckCapacity]]></Name>
-					<X>710</X><Y>-1240</Y>
+					<X>730</X><Y>-1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -244,7 +244,7 @@
 				<Variable Class="Parameter">
 					<Id>1602861560824</Id>
 					<Name><![CDATA[siloSecurityBand]]></Name>
-					<X>710</X><Y>-1320</Y>
+					<X>730</X><Y>-1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -268,7 +268,7 @@
 				<Variable Class="Parameter">
 					<Id>1603754997711</Id>
 					<Name><![CDATA[numGrainTypes]]></Name>
-					<X>520</X><Y>-1280</Y>
+					<X>520</X><Y>-1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -292,7 +292,7 @@
 				<Variable Class="Parameter">
 					<Id>1603776115902</Id>
 					<Name><![CDATA[shipTankCapacity]]></Name>
-					<X>520</X><Y>-1240</Y>
+					<X>730</X><Y>-1380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -306,6 +306,54 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1603776115900</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604552632277</Id>
+					<Name><![CDATA[shipStorageStepZ]]></Name>
+					<X>520</X><Y>-1260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[14]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1604552632275</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604552896818</Id>
+					<Name><![CDATA[shipStorageMinZ]]></Name>
+					<X>520</X><Y>-1220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[55]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1604552896816</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1785,7 +1833,7 @@ silos.get(silos.size() - 1).unloadExit.connect(pier.unloadEnterWSS);]]></Action>
 					<Action><![CDATA[ArrayList<BulkBatch> demandsPerShipTank = new ArrayList<BulkBatch>();
 for (int i=0; i<5; i++) {
 	demandsPerShipTank.add(
-		new BulkBatch(uniform_discr(numGrainTypes - 1), shipTankCapacity, -1)
+		new BulkBatch(getRandomGrainType(), shipTankCapacity, -1)
 	);
 }
 
@@ -1939,10 +1987,10 @@ else return 1;
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Body><![CDATA[double prob = Math.random();
-if (prob<=0.30) { return 1;}
-if (prob>0.30 && prob<=0.40) { return 2; }
-if (prob>0.40 && prob<=0.50) { return 3; }
-return 0;]]></Body>
+if (prob<=0.50) { return 0; }
+if (prob>0.50 && prob<=0.80) { return 1; }
+if (prob>0.80 && prob<=0.90) { return 2; }
+return 3;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -24425,7 +24473,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1603906257889</Id>
 					<Name><![CDATA[incrementCounter]]></Name>
 					<X>300</X><Y>740</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24471,7 +24519,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<Id>1603911633715</Id>
 					<Name><![CDATA[OpenValve]]></Name>
 					<X>180</X><Y>580</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>5</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24487,7 +24535,7 @@ main.silos.get(siloCounter).programValve(demand, destinationShipTank);]]></Entry
 					<Id>1603911636490</Id>
 					<Name><![CDATA[KeepClosed]]></Name>
 					<X>490</X><Y>580</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>15</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24499,11 +24547,11 @@ main.silos.get(siloCounter).programValve(demand, destinationShipTank);]]></Entry
 					<Id>1603912039188</Id>
 					<Name><![CDATA[WaitUntilDock]]></Name>
 					<X>310</X><Y>490</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>5</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="120" Height="40">
+					<Properties Width="130" Height="40">
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -24511,7 +24559,7 @@ main.silos.get(siloCounter).programValve(demand, destinationShipTank);]]></Entry
 					<Id>1603936117018</Id>
 					<Name><![CDATA[ReduceReservedSpace]]></Name>
 					<X>130</X><Y>670</Y>
-					<Label><X>10</X><Y>10</Y></Label>
+					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -26128,9 +26176,10 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>5.1</Z>
+					<Z>10</Z>
+					<ZCode><![CDATA[main.shipStorageMinZ]]></ZCode>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[100 * getLevel(0)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[main.shipStorageStepZ * getLevel(0)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -26152,9 +26201,10 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>5.1</Z>
+					<Z>10</Z>
+					<ZCode><![CDATA[main.shipStorageMinZ]]></ZCode>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[100 * getLevel(1)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[main.shipStorageStepZ * getLevel(1)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -26176,9 +26226,10 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>5.1</Z>
+					<Z>10</Z>
+					<ZCode><![CDATA[main.shipStorageMinZ]]></ZCode>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[100 * getLevel(2)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[main.shipStorageStepZ * getLevel(2)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -26200,9 +26251,10 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>5.1</Z>
+					<Z>10</Z>
+					<ZCode><![CDATA[main.shipStorageMinZ]]></ZCode>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[100 * getLevel(3)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[main.shipStorageStepZ * getLevel(3)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -26224,9 +26276,10 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>5.1</Z>
+					<Z>10</Z>
+					<ZCode><![CDATA[main.shipStorageMinZ]]></ZCode>
 					<ZHeight>10</ZHeight>
-					<ZHeightCode><![CDATA[100 * getLevel(4)]]></ZHeightCode>
+					<ZHeightCode><![CDATA[main.shipStorageStepZ * getLevel(4)]]></ZHeightCode>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
@@ -29343,6 +29396,12 @@ through the different views.]]></Text>
 				<Parameter>
 					<ParameterName><![CDATA[shipTankCapacity]]></ParameterName>
 				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[shipStorageStepZ]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[shipStorageMinZ]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -29846,6 +29905,12 @@ dataset_mean_queue_time_WSS
 			<FreeformParamValue>	
 				<Id>1603776115902</Id>
 			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1604552632277</Id>
+			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1604552896818</Id>
+			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602641751835</Id>
 				<Type>FIXED</Type>
@@ -29876,6 +29941,14 @@ dataset_mean_queue_time_WSS
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1603776115902</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1604552632277</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1604552896818</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
 			<ModelTimeProperties>
