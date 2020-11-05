@@ -158,7 +158,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[2500]]></Code>
+							<Code><![CDATA[12860]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602641782380</Id>
@@ -230,7 +230,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[uniform_discr(100, 200)]]></Code>
+							<Code><![CDATA[uniform_discr(20, 40)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602643193653</Id>
@@ -302,7 +302,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1000]]></Code>
+							<Code><![CDATA[6000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1603776115900</Id>
@@ -2042,7 +2042,7 @@ return 3;]]></Body>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[750]]></Code>
+								<Code><![CDATA[5600]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -4027,7 +4027,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[uniform(75,300)]]></Code>
+								<Code><![CDATA[uniform(10, 42)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -4036,6 +4036,10 @@ send("shipArrivedPort", agent);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[dropTimePerLevel]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[useResources]]></Name>
@@ -6268,7 +6272,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular(10,11,12)]]></Code>
+								<Code><![CDATA[triangular(1, 2, 3)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -6749,7 +6753,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 8, 9, 10)]]></Code>
+								<Code><![CDATA[triangular(1, 2, 3)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -20141,7 +20145,7 @@ in Tara Balance]]></Text>
 				<Rectangle>
 					<Id>1603895384898</Id>
 					<Name><![CDATA[rectangle54]]></Name>
-					<X>0</X><Y>1760</Y>
+					<X>20</X><Y>1760</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
