@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201530" AlpVersion="8.5.7">
 <Model>
 	<Id>1598843002680</Id>
 	<Name><![CDATA[ServiciosPortuarios]]></Name>
@@ -2793,7 +2793,8 @@ if (destinationSiloId != -1){
 							<Value Class="CodeValue">
 								<Code><![CDATA[for (int i=0; i < agent.shipTankEnters.size(); i++){
 	pier.pierExits.get(i).connect(agent.shipTankEnters.get(i));
-}]]></Code>
+}
+send("shipArrivedPort", agent);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -21333,33 +21334,15 @@ Components]]></Text>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1603854674116</Id>
-					<Name><![CDATA[closeAt]]></Name>
-					<X>30</X><Y>320</Y>
+					<Id>1604557328518</Id>
+					<Name><![CDATA[order]]></Name>
+					<X>30</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[capacity]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1603857679416</Id>
-					<Name><![CDATA[destinationShipTank]]></Name>
-					<X>30</X><Y>350</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[-1]]></Code>
-						</InitialValue>
+						<Type><![CDATA[SiloOrder]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -21496,7 +21479,7 @@ Components]]></Text>
 				<Connector>
 					<Id>1602546677207</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>490</X><Y>230</Y>
+					<X>560</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21626,42 +21609,9 @@ Components]]></Text>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1602546677215</Id>
-					<Name><![CDATA[connector4]]></Name>
-					<X>380</X><Y>130</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Silo]]></ClassName>
-						<ItemName><![CDATA[fluidSelectOutput]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
-						<ItemName><![CDATA[out2]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Silo]]></ClassName>
-						<ItemName><![CDATA[tank]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
-						<ClassName><![CDATA[Tank]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>50</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1602546677217</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>790</X><Y>230</Y>
+					<X>900</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21694,7 +21644,7 @@ Components]]></Text>
 				<Connector>
 					<Id>1602546677219</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>670</X><Y>230</Y>
+					<X>780</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21727,7 +21677,7 @@ Components]]></Text>
 				<Connector>
 					<Id>1602546677223</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>640</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21753,14 +21703,81 @@ Components]]></Text>
 						<ItemName><![CDATA[in2]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>530</X><Y>310</Y></Point>
-						<Point><X>580</X><Y>250</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>-60</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1603915396284</Id>
+					<Id>1604557660278</Id>
+					<Name><![CDATA[connector4]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidSelectOutput]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidSelectOutput]]></ClassName>
+						<ItemName><![CDATA[out2]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidConvertIn]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>380</X><Y>130</Y></Point>
+						<Point><X>400</X><Y>180</Y></Point>
+						<Point><X>430</X><Y>180</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604557660281</Id>
+					<Name><![CDATA[connector6]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidConvertIn]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[tank]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[Tank]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>450</X><Y>180</Y></Point>
+						<Point><X>490</X><Y>180</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604557745851</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>580</X><Y>230</Y>
+					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21778,6 +21795,39 @@ Components]]></Text>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
 						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidConvertOut]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>690</X><Y>230</Y></Point>
+						<Point><X>660</X><Y>230</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604557745865</Id>
+					<Name><![CDATA[connector10]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[fluidConvertOut]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
 						<ItemName><![CDATA[valve]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -21786,34 +21836,180 @@ Components]]></Text>
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>640</X><Y>230</Y></Point>
+						<Point><X>580</X><Y>230</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
-			<Functions>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>VOID</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1603853350919</Id>
-					<Name><![CDATA[programValve]]></Name>
-					<X>30</X><Y>290</Y>
+			<StatechartElements>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604557328528</Id>
+					<Name><![CDATA[Init]]></Name>
+					<X>210</X><Y>430</Y>
+					<Label><X>35</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[order = null;]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604557328537</Id>
+					<Name><![CDATA[OpenValve]]></Name>
+					<X>200</X><Y>520</Y>
+					<Label><X>15</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="120" Height="40">
+						<EntryAction><![CDATA[fluidConvertOut.setBatchOut(setOuputBatch(), main.getColor(grainType));
+valve.dispense(order.demand, CUBIC_METER);]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604557328541</Id>
+					<Name><![CDATA[ReduceReserved]]></Name>
+					<X>180</X><Y>620</Y>
+					<Label><X>15</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="150" Height="40">
+						<EntryAction><![CDATA[reservedSpace -= order.demand;]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1604557328544</Id>
+					<Name><![CDATA[statechart]]></Name>
+					<X>260</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[demandedAmount]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Parameter>
-						<Name><![CDATA[destinationBilge]]></Name>
-						<Type><![CDATA[int]]></Type>
-					</Parameter>
-					<Body><![CDATA[destinationShipTank = destinationBilge;
-traceln(destinationShipTank);
-closeAt = tank.amount() - demandedAmount;
-valve.open();]]></Body>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1604557328528">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604557328558</Id>
+					<Name><![CDATA[transition10]]></Name>
+					<X>260</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604557328528" Target="1604557328537" Trigger="message">
+						<Action><![CDATA[order = msg]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[SiloOrder]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["startUnload"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604557328562</Id>
+					<Name><![CDATA[transition11]]></Name>
+					<X>180</X><Y>640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>-200</Y></Point>
+						<Point><X>30</X><Y>-200</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604557328541" Target="1604557328528" Trigger="condition">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604557328564</Id>
+					<Name><![CDATA[transition12]]></Name>
+					<X>260</X><Y>560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604557328537" Target="1604557328541" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[String]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["shipTankLoaded"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+			</StatechartElements>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[BulkBatch]]></ReturnType>
+					<Id>1604557767574</Id>
+					<Name><![CDATA[setOuputBatch]]></Name>
+					<X>30</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[BulkBatch outputBatch = new BulkBatch(0, 0, -1);
+if (order != null) {
+	outputBatch = new BulkBatch(
+		this.grainType, order.demand, order.destinationShipTankId
+	);
+}
+
+return outputBatch;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -21829,6 +22025,11 @@ valve.open();]]></Body>
 					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
 					<AgentLinkBidirectional>true</AgentLinkBidirectional>
 					<MessageType><![CDATA[Object]]></MessageType>
+					<StatechartReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Silo]]></ClassName>
+						<ItemName><![CDATA[statechart]]></ItemName>
+					</StatechartReference>
 					<LineStyle>SOLID</LineStyle>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
@@ -21932,7 +22133,7 @@ valve.open();]]></Body>
 				<EmbeddedObject>
 					<Id>1602546677173</Id>
 					<Name><![CDATA[tank]]></Name>
-					<X>420</X><Y>170</Y>
+					<X>490</X><Y>170</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22025,22 +22226,16 @@ valve.open();]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountBelow]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[closeAt]]></Code>
+								<Code><![CDATA[]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[CUBIC_METER]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onBelow]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[valve.close();]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn]]></Name>
@@ -22094,7 +22289,7 @@ valve.open();]]></Body>
 				<EmbeddedObject>
 					<Id>1602546677177</Id>
 					<Name><![CDATA[valve]]></Name>
-					<X>490</X><Y>220</Y>
+					<X>560</X><Y>220</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22308,7 +22503,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677185</Id>
 					<Name><![CDATA[bulkConveyor1]]></Name>
-					<X>670</X><Y>210</Y>
+					<X>780</X><Y>210</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22575,7 +22770,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677197</Id>
 					<Name><![CDATA[unloadExit]]></Name>
-					<X>790</X><Y>220</Y>
+					<X>900</X><Y>220</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22647,7 +22842,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677201</Id>
 					<Name><![CDATA[fluidSelectInput]]></Name>
-					<X>580</X><Y>220</Y>
+					<X>690</X><Y>220</Y>
 					<Label><X>10</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22679,14 +22874,13 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[self.select(1);
-((BulkBatch)batch).destinationShipTankId = destinationShipTank;]]></Code>
+								<Code><![CDATA[self.select(1);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchIn2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[self.select(2)]]></Code>
+								<Code><![CDATA[self.select(2);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22735,7 +22929,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602546677205</Id>
 					<Name><![CDATA[unloadEnter]]></Name>
-					<X>500</X><Y>300</Y>
+					<X>610</X><Y>300</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22763,6 +22957,198 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1604557656824</Id>
+					<Name><![CDATA[fluidConvertIn]]></Name>
+					<X>430</X><Y>170</Y>
+					<Label><X>-65</X><Y>35</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[FluidConvert]]></ClassName>
+							<ItemName><![CDATA[1419336987268]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[factor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modeBatchCustom]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customBatch]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[grainType]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customBatchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[main.getColor(grainType)]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRateChange]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1604557740211</Id>
+					<Name><![CDATA[fluidConvertOut]]></Name>
+					<X>640</X><Y>220</Y>
+					<Label><X>-45</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+						<ClassName><![CDATA[FluidConvert]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.fluid]]></PackageName>
+							<ClassName><![CDATA[FluidConvert]]></ClassName>
+							<ItemName><![CDATA[1419336987268]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[factor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modeBatchCustom]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customBatch]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[setOuputBatch()]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customBatchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batchColor]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[main.getColor(((BulkBatch)batch).grainType)]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[showBatchesInFlowchart]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onNewBatchIn]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRateChange]]></Name>
@@ -22835,7 +23221,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Title><![CDATA[[viewSilos]]]></Title>
-					<Width>760</Width>
+					<Width>900</Width>
 					<Height>300</Height>
 				</Area>
 			</Areas>
@@ -24470,10 +24856,10 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 			</Connectors>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1603906257889</Id>
+					<Id>1604556664308</Id>
 					<Name><![CDATA[incrementCounter]]></Name>
-					<X>300</X><Y>740</Y>
-					<Label><X>10</X><Y>15</Y></Label>
+					<X>440</X><Y>820</Y>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24483,9 +24869,9 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="Branch" ParentState="ROOT_NODE">
-					<Id>1603906586654</Id>
+					<Id>1604556664313</Id>
 					<Name><![CDATA[branch]]></Name>
-					<X>380</X><Y>840</Y>
+					<X>520</X><Y>920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24494,9 +24880,9 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
-					<Id>1603906615368</Id>
+					<Id>1604556664322</Id>
 					<Name><![CDATA[finalState]]></Name>
-					<X>380</X><Y>910</Y>
+					<X>520</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24505,9 +24891,9 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Branch" ParentState="ROOT_NODE">
-					<Id>1603911614834</Id>
+					<Id>1604556664325</Id>
 					<Name><![CDATA[branch1]]></Name>
-					<X>370</X><Y>590</Y>
+					<X>510</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24516,26 +24902,10 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1603911633715</Id>
-					<Name><![CDATA[OpenValve]]></Name>
-					<X>180</X><Y>580</Y>
-					<Label><X>5</X><Y>15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[double demand = demandPerSilo.get(siloCounter);
-int destinationShipTank = destinationShipTankPerSilo.get(siloCounter);
-
-main.silos.get(siloCounter).programValve(demand, destinationShipTank);]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1603911636490</Id>
+					<Id>1604556664328</Id>
 					<Name><![CDATA[KeepClosed]]></Name>
-					<X>490</X><Y>580</Y>
-					<Label><X>15</X><Y>15</Y></Label>
+					<X>630</X><Y>630</Y>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -24544,61 +24914,90 @@ main.silos.get(siloCounter).programValve(demand, destinationShipTank);]]></Entry
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1603912039188</Id>
+					<Id>1604556664331</Id>
 					<Name><![CDATA[WaitUntilDock]]></Name>
-					<X>310</X><Y>490</Y>
-					<Label><X>5</X><Y>20</Y></Label>
+					<X>450</X><Y>540</Y>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="130" Height="40">
+					<Properties Width="120" Height="40">
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1603936117018</Id>
-					<Name><![CDATA[ReduceReservedSpace]]></Name>
-					<X>130</X><Y>670</Y>
-					<Label><X>10</X><Y>15</Y></Label>
+					<Id>1604556664333</Id>
+					<Name><![CDATA[Init]]></Name>
+					<X>460</X><Y>440</Y>
+					<Label><X>35</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="190" Height="30">
+					<Properties Width="100" Height="40">
+						<EntryAction><![CDATA[siloCounter = 0;]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604556664336</Id>
+					<Name><![CDATA[UnloadSilo]]></Name>
+					<X>290</X><Y>620</Y>
+					<Label><X>15</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="120" Height="40">
 						<EntryAction><![CDATA[double demand = demandPerSilo.get(siloCounter);
+int destinationShipTank = destinationShipTankPerSilo.get(siloCounter);
+traceln(destinationShipTank);
 
-main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
+SiloOrder order = new SiloOrder(demand, destinationShipTank);
+deliver(order, main.silos.get(siloCounter));]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604556664339</Id>
+					<Name><![CDATA[ShipTankLoaded]]></Name>
+					<X>280</X><Y>740</Y>
+					<Label><X>5</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="140" Height="40">
+						<EntryAction><![CDATA[deliver("shipTankLoaded", main.silos.get(siloCounter));]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
-					<Id>1603905704628</Id>
+					<Id>1604556664342</Id>
 					<Name><![CDATA[statechart]]></Name>
-					<X>370</X><Y>430</Y>
+					<X>510</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
-					<Properties Target="1603912039188">
+					<Properties Target="1604556664333">
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603906619528</Id>
+					<Id>1604556664350</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>380</X><Y>850</Y>
+					<X>520</X><Y>930</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>52</Y></Point>
+						<Point><X>0</X><Y>22</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603906586654" Target="1603906615368" Trigger="timeout">
+					<Properties Source="1604556664313" Target="1604556664322" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24616,19 +25015,19 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603911808489</Id>
+					<Id>1604556664354</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>358</X><Y>590</Y>
+					<X>498</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-78</X><Y>0</Y></Point>
+						<Point><X>-88</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603911614834" Target="1603911633715" Trigger="timeout">
+					<Properties Source="1604556664325" Target="1604556664336" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24646,9 +25045,9 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603911817779</Id>
+					<Id>1604556664358</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>382</X><Y>590</Y>
+					<X>522</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24658,7 +25057,7 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 						<Point><X>108</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603911614834" Target="1603911636490" Trigger="timeout">
+					<Properties Source="1604556664325" Target="1604556664328" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24676,50 +25075,20 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603911834112</Id>
-					<Name><![CDATA[transition4]]></Name>
-					<X>230</X><Y>610</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
-					</Points>
-					<IconOffset>30.0</IconOffset>
-					<Properties Source="1603911633715" Target="1603936117018" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[100]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603911843262</Id>
+					<Id>1604556664361</Id>
 					<Name><![CDATA[transition5]]></Name>
-					<X>560</X><Y>610</Y>
+					<X>700</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>140</Y></Point>
-						<Point><X>-100</X><Y>140</Y></Point>
+						<Point><X>0</X><Y>170</Y></Point>
+						<Point><X>-100</X><Y>170</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603911636490" Target="1603906257889" Trigger="condition">
+					<Properties Source="1604556664328" Target="1604556664308" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24737,9 +25106,9 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603912091908</Id>
+					<Id>1604556664366</Id>
 					<Name><![CDATA[transition]]></Name>
-					<X>380</X><Y>770</Y>
+					<X>520</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24749,7 +25118,7 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 						<Point><X>0</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603906257889" Target="1603906586654" Trigger="condition">
+					<Properties Source="1604556664308" Target="1604556664313" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24767,9 +25136,9 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603912131509</Id>
+					<Id>1604556664370</Id>
 					<Name><![CDATA[transition6]]></Name>
-					<X>368</X><Y>840</Y>
+					<X>508</X><Y>920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24777,11 +25146,11 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-258</X><Y>0</Y></Point>
-						<Point><X>-258</X><Y>-330</Y></Point>
-						<Point><X>-58</X><Y>-330</Y></Point>
+						<Point><X>-258</X><Y>-360</Y></Point>
+						<Point><X>-58</X><Y>-360</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603906586654" Target="1603912039188" Trigger="timeout">
+					<Properties Source="1604556664313" Target="1604556664331" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24799,9 +25168,9 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603912330028</Id>
+					<Id>1604556664374</Id>
 					<Name><![CDATA[transition7]]></Name>
-					<X>370</X><Y>530</Y>
+					<X>510</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24811,7 +25180,7 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603912039188" Target="1603911614834" Trigger="condition">
+					<Properties Source="1604556664331" Target="1604556664325" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -24829,9 +25198,9 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1603936167754</Id>
+					<Id>1604556664378</Id>
 					<Name><![CDATA[transition8]]></Name>
-					<X>230</X><Y>700</Y>
+					<X>350</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24839,12 +25208,12 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>55</Y></Point>
-						<Point><X>70</X><Y>55</Y></Point>
+						<Point><X>90</X><Y>55</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1603936117018" Target="1603906257889" Trigger="condition">
+					<Properties Source="1604556664339" Target="1604556664308" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
@@ -24856,6 +25225,66 @@ main.silos.get(siloCounter).reservedSpace -= demand;]]></EntryAction>
 						<DefaultTransition>true</DefaultTransition>
 						<FilterType><![CDATA[unconditionally]]></FilterType>
 						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604556664381</Id>
+					<Name><![CDATA[transition9]]></Name>
+					<X>510</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604556664333" Target="1604556664331" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[String]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["shipArrivedPort"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604556664387</Id>
+					<Name><![CDATA[transition4]]></Name>
+					<X>350</X><Y>660</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>80</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1604556664336" Target="1604556664339" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[String]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["tankIsFull"]]></EqualsExpression>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
@@ -25131,6 +25560,9 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -25351,6 +25783,9 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -25571,6 +26006,9 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -25791,6 +26229,9 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -26011,6 +26452,9 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
@@ -29184,6 +29628,188 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 			<Presentation>
 				<Level>
 					<Id>1603831863141</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1604557869956</Id>
+			<Name><![CDATA[SiloOrder]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1604557869954</Id>
+				<Name><![CDATA[1604557869954]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604563200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1604557869952</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1604557869955</CurrentLevel>
+			<ConnectionsId>1604557869951</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1604557891489</Id>
+					<Name><![CDATA[demand]]></Name>
+					<X>20</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1604557891487</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604557891528</Id>
+					<Name><![CDATA[destinationShipTankId]]></Name>
+					<X>20</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1604557891526</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1604557869951</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Presentation>
+				<Level>
+					<Id>1604557869955</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
