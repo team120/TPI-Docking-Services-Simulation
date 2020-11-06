@@ -148,7 +148,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641782382</Id>
 					<Name><![CDATA[siloCapacity]]></Name>
-					<X>730</X><Y>-1340</Y>
+					<X>730</X><Y>-1350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -172,7 +172,7 @@
 				<Variable Class="Parameter">
 					<Id>1602641850661</Id>
 					<Name><![CDATA[maxRate]]></Name>
-					<X>520</X><Y>-1340</Y>
+					<X>520</X><Y>-1350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -182,7 +182,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[50]]></Code>
+							<Code><![CDATA[100]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602641850659</Id>
@@ -196,7 +196,7 @@
 				<Variable Class="Parameter">
 					<Id>1602642345448</Id>
 					<Name><![CDATA[silosPerRow]]></Name>
-					<X>730</X><Y>-1260</Y>
+					<X>730</X><Y>-1270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -220,7 +220,7 @@
 				<Variable Class="Parameter">
 					<Id>1602643193655</Id>
 					<Name><![CDATA[truckCapacity]]></Name>
-					<X>730</X><Y>-1220</Y>
+					<X>730</X><Y>-1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -244,7 +244,7 @@
 				<Variable Class="Parameter">
 					<Id>1602861560824</Id>
 					<Name><![CDATA[siloSecurityBand]]></Name>
-					<X>730</X><Y>-1300</Y>
+					<X>730</X><Y>-1310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -268,7 +268,7 @@
 				<Variable Class="Parameter">
 					<Id>1603754997711</Id>
 					<Name><![CDATA[numGrainTypes]]></Name>
-					<X>520</X><Y>-1300</Y>
+					<X>520</X><Y>-1310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -316,7 +316,7 @@
 				<Variable Class="Parameter">
 					<Id>1604552632277</Id>
 					<Name><![CDATA[shipStorageStepZ]]></Name>
-					<X>520</X><Y>-1260</Y>
+					<X>520</X><Y>-1270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -340,7 +340,7 @@
 				<Variable Class="Parameter">
 					<Id>1604552896818</Id>
 					<Name><![CDATA[shipStorageMinZ]]></Name>
-					<X>520</X><Y>-1220</Y>
+					<X>520</X><Y>-1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -354,6 +354,30 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1604552896816</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604654880327</Id>
+					<Name><![CDATA[platformUnloadRate]]></Name>
+					<X>880</X><Y>-1240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[75]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1604654880325</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -20854,6 +20878,30 @@ Components]]></Text>
 					</Font>
 					<Alignment>CENTER</Alignment>
 				</Text>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1604655241226</Id>
+					<Name><![CDATA[slider]]></Name>
+					<X>2540</X><Y>-220</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
+						<Enabled>true</Enabled>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[50]]></MinValue>
+						<MaxValue><![CDATA[150]]></MaxValue>
+						<Step><![CDATA[25]]></Step>
+						<LinkTo>true</LinkTo>
+						<Link>platformUnloadRate</Link>
+					</ExtendedProperties>
+				</Control>
 			</Presentation>
 
 				</Level>
@@ -23590,7 +23638,7 @@ self.select(1);]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxRateOut]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate / 4]]></Code>
+								<Code><![CDATA[main.platformUnloadRate / 4]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -23744,7 +23792,7 @@ self.select(1);]]></Code>
 						<Parameter>
 							<Name><![CDATA[openRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate / 2]]></Code>
+								<Code><![CDATA[main.platformUnloadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -24364,7 +24412,7 @@ self.select(1);]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.platformUnloadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -30140,6 +30188,9 @@ through the different views.]]></Text>
 				<Parameter>
 					<ParameterName><![CDATA[shipStorageMinZ]]></ParameterName>
 				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[platformUnloadRate]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -30798,6 +30849,9 @@ dataset_mean_queue_time_WSS
 			<FreeformParamValue>	
 				<Id>1604552896818</Id>
 			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1604654880327</Id>
+			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602641751835</Id>
 				<Type>FIXED</Type>
@@ -30836,6 +30890,10 @@ dataset_mean_queue_time_WSS
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1604552896818</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1604654880327</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
 			<ModelTimeProperties>
