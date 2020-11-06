@@ -27829,12 +27829,18 @@ return main.getColor(type);
 						<Type><![CDATA[Object]]></Type>
 					</Parameter>
 					<Parameter>
+						<Name><![CDATA[bulkConveyor]]></Name>
+						<Type><![CDATA[BulkConveyor]]></Type>
+					</Parameter>
+					<Parameter>
 						<Name><![CDATA[currentShipTank]]></Name>
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[fluidSelectOutput.select(1);
 if (((BulkBatch)batch).destinationShipTankId == currentShipTank
-	&& !main.ships.get(0).shipTanks.get(currentShipTank).isFull()){
+	&& !main.ships.get(0).shipTanks.get(currentShipTank).isFull()
+	&& bulkConveyor.getBatchSize(0) > 0.01){
+	traceln(bulkConveyor.getBatchSize(0) < 0.01);
 	fluidSelectOutput.select(2);
 }]]></Body>
 				</Function>
@@ -28404,7 +28410,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput, batch, 0);]]></Code>
+								<Code><![CDATA[routeToShipTank(fluidSelectOutput, batch, self, 0);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28674,7 +28680,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput1, batch, 1);]]></Code>
+								<Code><![CDATA[routeToShipTank(fluidSelectOutput1, batch, self, 1);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28944,7 +28950,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput2, batch, 2);]]></Code>
+								<Code><![CDATA[routeToShipTank(fluidSelectOutput2, batch, self, 2);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -29214,7 +29220,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput3, batch, 3);]]></Code>
+								<Code><![CDATA[routeToShipTank(fluidSelectOutput3, batch, self, 3);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -29484,7 +29490,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[onNewBatchOut]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[routeToShipTank(fluidSelectOutput4, batch, 4);]]></Code>
+								<Code><![CDATA[routeToShipTank(fluidSelectOutput4, batch, self, 4);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
