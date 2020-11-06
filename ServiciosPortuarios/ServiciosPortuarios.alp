@@ -182,7 +182,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
+							<Code><![CDATA[50]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602641850659</Id>
@@ -22414,27 +22414,39 @@ Capacity]]></Text>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1604557328537</Id>
 					<Name><![CDATA[OpenValve]]></Name>
-					<X>260</X><Y>460</Y>
+					<X>260</X><Y>550</Y>
 					<Label><X>15</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="120" Height="40">
-						<EntryAction><![CDATA[fluidConvertOut.setBatchOut(setOuputBatch(), main.getColor(grainType));
-valve.dispense(order.demand, TON);]]></EntryAction>
+						<EntryAction><![CDATA[valve.dispense(order.demand, TON);]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1604557328541</Id>
 					<Name><![CDATA[ReduceReserved]]></Name>
-					<X>240</X><Y>560</Y>
+					<X>240</X><Y>650</Y>
 					<Label><X>10</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="150" Height="40">
 						<EntryAction><![CDATA[reservedSpace -= order.demand;]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604693790523</Id>
+					<Name><![CDATA[ProgramValve]]></Name>
+					<X>260</X><Y>450</Y>
+					<Label><X>15</X><Y>25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="120" Height="40">
+						<EntryAction><![CDATA[fluidConvertOut.setBatchOut(setOuputBatch(), main.getColor(grainType));]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -22463,10 +22475,10 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1604557328528" Target="1604557328537" Trigger="message">
+					<Properties Source="1604557328528" Target="1604693790523" Trigger="message">
 						<Action><![CDATA[order = msg]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -22487,7 +22499,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1604557328562</Id>
 					<Name><![CDATA[transition11]]></Name>
-					<X>240</X><Y>580</Y>
+					<X>240</X><Y>670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22495,8 +22507,8 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-50</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>-200</Y></Point>
-						<Point><X>30</X><Y>-200</Y></Point>
+						<Point><X>-50</X><Y>-290</Y></Point>
+						<Point><X>30</X><Y>-290</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1604557328541" Target="1604557328528" Trigger="condition">
@@ -22519,7 +22531,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1604557328564</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>320</X><Y>500</Y>
+					<X>320</X><Y>590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -22543,6 +22555,36 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 						<DefaultTransition>true</DefaultTransition>
 						<FilterType><![CDATA[equalsTo]]></FilterType>
 						<EqualsExpression><![CDATA["shipTankLoaded"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604693816863</Id>
+					<Name><![CDATA[transition]]></Name>
+					<X>320</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604693790523" Target="1604557328537" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[5]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
@@ -23779,7 +23821,7 @@ self.select(1);]]></Code>
 					<ShowLabel>false</ShowLabel>
 					<Title><![CDATA[[viewSilos]]]></Title>
 					<Width>1040</Width>
-					<Height>640</Height>
+					<Height>700</Height>
 				</Area>
 			</Areas>
 
@@ -25467,7 +25509,7 @@ self.select(1);]]></Code>
 				<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
 					<Id>1604556664322</Id>
 					<Name><![CDATA[finalState]]></Name>
-					<X>520</X><Y>960</Y>
+					<X>520</X><Y>1050</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25554,6 +25596,23 @@ deliver(order, main.silos.get(siloCounter));]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1604698567409</Id>
+					<Name><![CDATA[ShipLeave]]></Name>
+					<X>470</X><Y>970</Y>
+					<Label><X>10</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[main.shipDelay.stopDelay(this);
+
+for (int i=0; i < main.pier.pierExits.size(); i++){
+	main.pier.pierExits.get(i).disconnect();
+}]]></EntryAction>
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1604556664342</Id>
 					<Name><![CDATA[statechart]]></Name>
@@ -25579,10 +25638,10 @@ deliver(order, main.silos.get(siloCounter));]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>22</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1604556664313" Target="1604556664322" Trigger="timeout">
+					<Properties Source="1604556664313" Target="1604698567409" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -25858,10 +25917,12 @@ deliver(order, main.silos.get(siloCounter));]]></EntryAction>
 					<IconOffset>30.0</IconOffset>
 					<Properties Source="1604556664336" Target="1604556664339" Trigger="message">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[150]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[shipTanks.get(
+	destinationShipTankPerSilo.get(siloCounter)
+).onChange()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -25870,47 +25931,40 @@ deliver(order, main.silos.get(siloCounter));]]></EntryAction>
 						<DefaultTransition>true</DefaultTransition>
 						<FilterType><![CDATA[equalsTo]]></FilterType>
 						<EqualsExpression><![CDATA["tankIsFull"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+						<SatisfiesExpression><![CDATA[destinationShipTankPerSilo.get(siloCounter);]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-			</StatechartElements>
-			<Events>
-				<Event>
-					<Id>1603905662393</Id>
-					<Name><![CDATA[stopDockDelay]]></Name>
-					<X>80</X><Y>430</Y>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1604698587560</Id>
+					<Name><![CDATA[transition10]]></Name>
+					<X>520</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>42</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1604698567409" Target="1604556664322" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
 						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1603958400000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[shipTanks.stream().allMatch(t -> t.amount() == t.capacity)]]></Condition>
-					</Properties>
-					<Action><![CDATA[main.shipDelay.stopDelay(this);
-
-for (int i=0; i < main.pier.pierExits.size(); i++){
-	main.pier.pierExits.get(i).disconnect();
-}]]></Action>
-				</Event>
-			</Events>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+			</StatechartElements>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
@@ -26094,7 +26148,7 @@ return main.getColor(type);
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Code><![CDATA[main.shipTankCapacity + main.siloSecurityBand]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
@@ -26149,21 +26203,31 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTankPerSilo.get(siloCounter)==0)
+{
+	deliver("tankIsFull", this);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
@@ -26321,7 +26385,7 @@ return main.getColor(type);
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Code><![CDATA[main.shipTankCapacity + main.siloSecurityBand]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
@@ -26376,21 +26440,31 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTankPerSilo.get(siloCounter)==1)
+{
+	deliver("tankIsFull", this);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
@@ -26548,7 +26622,7 @@ return main.getColor(type);
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Code><![CDATA[main.shipTankCapacity + main.siloSecurityBand]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
@@ -26603,21 +26677,31 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTankPerSilo.get(siloCounter)==2)
+{
+	deliver("tankIsFull", this);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
@@ -26775,7 +26859,7 @@ return main.getColor(type);
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Code><![CDATA[main.shipTankCapacity + main.siloSecurityBand]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
@@ -26830,21 +26914,31 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTankPerSilo.get(siloCounter)==3)
+{
+	deliver("tankIsFull", this);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
@@ -27002,7 +27096,7 @@ return main.getColor(type);
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Code><![CDATA[main.shipTankCapacity + main.siloSecurityBand]]></Code>
 								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
 							</Value>
 						</Parameter>
@@ -27057,21 +27151,31 @@ return main.getColor(type);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFull]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[deliver("tankIsFull", this);]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEmpty]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[amountAbove]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[main.shipTankCapacity]]></Code>
+								<Unit Class="AmountUnits"><![CDATA[TON]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAbove]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (destinationShipTankPerSilo.get(siloCounter)==4)
+{
+	deliver("tankIsFull", this);
+}]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[actionOnBelow]]></Name>
@@ -27355,7 +27459,7 @@ return main.getColor(type);
 					<ShowLabel>false</ShowLabel>
 					<Title><![CDATA[]]></Title>
 					<Width>1340</Width>
-					<Height>1000</Height>
+					<Height>1060</Height>
 				</Area>
 			</Areas>
 
@@ -28325,10 +28429,10 @@ return main.getColor(type);
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[fluidSelectOutput.select(1);
+traceln((BulkBatch)batch);
 if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 	&& !main.ships.get(0).shipTanks.get(currentShipTank).isFull()
-	&& bulkConveyor.getBatchSize(0) > 0.01){
-	traceln(bulkConveyor.getBatchSize(0) < 0.01);
+	&& bulkConveyor.getBatchSize(0, TON) > 0.01){
 	fluidSelectOutput.select(2);
 }]]></Body>
 				</Function>
@@ -30489,7 +30593,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
 		<Width>2000</Width>
-		<Height>940</Height>
+		<Height>1060</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
