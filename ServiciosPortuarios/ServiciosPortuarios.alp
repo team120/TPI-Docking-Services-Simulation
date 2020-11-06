@@ -29718,8 +29718,8 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>1300</Width>
-		<Height>840</Height>
+		<Width>1360</Width>
+		<Height>940</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
@@ -29967,7 +29967,7 @@ dataset_mean_queue_time_WSS
 			<AnalysisData>
     			<DataSet>
 					<Id>1604456465235</Id>
-					<Name><![CDATA[dataset_Corn]]></Name>
+					<Name><![CDATA[dataset_Coa]]></Name>
 					<X>40</X><Y>120</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -29989,7 +29989,7 @@ dataset_mean_queue_time_WSS
 				</DataSet>
     			<DataSet>
 					<Id>1604456679872</Id>
-					<Name><![CDATA[dataset_Wheat]]></Name>
+					<Name><![CDATA[dataset_Wheata]]></Name>
 					<X>40</X><Y>170</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -30011,7 +30011,7 @@ dataset_mean_queue_time_WSS
 				</DataSet>
     			<DataSet>
 					<Id>1604457019504</Id>
-					<Name><![CDATA[dataset_Soy]]></Name>
+					<Name><![CDATA[dataset_Soya]]></Name>
 					<X>40</X><Y>220</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -30033,7 +30033,7 @@ dataset_mean_queue_time_WSS
 				</DataSet>
     			<DataSet>
 					<Id>1604457022859</Id>
-					<Name><![CDATA[dataset_Sorghum]]></Name>
+					<Name><![CDATA[dataset_Sorghuma]]></Name>
 					<X>40</X><Y>260</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -30056,37 +30056,6 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604516547641</Id>
 					<Name><![CDATA[dataset_mean_queue_time_C]]></Name>
-					<X>60</X><Y>600</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604563200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<Value><![CDATA[]]></Value>
-					<NumberOfIntervals>1000</NumberOfIntervals>
-					<MinMaxAutodetect>true</MinMaxAutodetect>
-					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
-					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
-					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
-					<CalculateCDF>true</CalculateCDF>
-					<CalculatePercentiles>true</CalculatePercentiles>
-					<LowPercent>5</LowPercent>
-					<HighPercent>95</HighPercent>
-					<Title><![CDATA[]]></Title>
-				</HistogramData>
-    			<HistogramData>
-					<Id>1604517376888</Id>
-					<Name><![CDATA[dataset_mean_queue_time_WSS]]></Name>
 					<X>60</X><Y>660</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -30103,6 +30072,167 @@ dataset_mean_queue_time_WSS
 						<Code><![CDATA[1]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1604517376888</Id>
+					<Name><![CDATA[dataset_mean_queue_time_WSS]]></Name>
+					<X>60</X><Y>720</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604563200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1604626011995</Id>
+					<Name><![CDATA[dataset_Corn]]></Name>
+					<X>60</X><Y>360</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604649600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1604626074751</Id>
+					<Name><![CDATA[dataset_Wheat]]></Name>
+					<X>60</X><Y>400</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604649600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1604626080072</Id>
+					<Name><![CDATA[dataset_Soy]]></Name>
+					<X>60</X><Y>440</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604649600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1604626086028</Id>
+					<Name><![CDATA[dataset_Sorghum]]></Name>
+					<X>60</X><Y>480</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604649600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
 					<Value><![CDATA[]]></Value>
 					<NumberOfIntervals>1000</NumberOfIntervals>
 					<MinMaxAutodetect>true</MinMaxAutodetect>
@@ -30118,87 +30248,10 @@ dataset_mean_queue_time_WSS
 			</AnalysisData>
 
 			<Presentation>
-    			<BarChart>
-					<Id>1604456085112</Id>
-					<Name><![CDATA[Unallocated_Cargo_Statistics]]></Name>
-					<X>220</X><Y>40</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604476800000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>480</Width>
-					<Height>380</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>400</Width>
-						<Height>290</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<DataItem>
-					<Expression><![CDATA[dataset_Corn.getYMean()]]></Expression>
-					<Color>-23296</Color>
-					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Corn]]></Title>
-					</DataItem>
-					<DataItem>
-					<Expression><![CDATA[dataset_Wheat.getYMean()]]></Expression>
-					<Color>-10496</Color>
-					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Wheat]]></Title>
-					</DataItem>
-					<DataItem>
-					<Expression><![CDATA[dataset_Soy.getYMean()]]></Expression>
-					<Color>-16711936</Color>
-					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Soy]]></Title>
-					</DataItem>
-					<DataItem>
-					<Expression><![CDATA[dataset_Sorghum.getYMean()]]></Expression>
-					<Color>-6632142</Color>
-					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[Sorghum]]></Title>
-					</DataItem>
-					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
-					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
-					<ScaleType>AUTO</ScaleType>
-					<Bars>
-						<Direction>UP</Direction>
-						<RelativeWidth>0.8</RelativeWidth>
-					</Bars>
-    			</BarChart>
     			<Histogram>
 					<Id>1604516501671</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>300</X><Y>520</Y>
+					<X>300</X><Y>560</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30216,15 +30269,15 @@ dataset_mean_queue_time_WSS
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>380</Width>
-					<Height>300</Height>
+					<Width>420</Width>
+					<Height>340</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>300</Width>
-						<Height>210</Height>
+						<Width>340</Width>
+						<Height>250</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -30271,7 +30324,7 @@ dataset_mean_queue_time_WSS
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Unallocated Cargo MEAN by Grain Type]]></Text>
+					<Text><![CDATA[Unallocated Cargo MEAN by Grain Type Distribution]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
@@ -30282,7 +30335,7 @@ dataset_mean_queue_time_WSS
 				<Text>
 					<Id>1604517293183</Id>
 					<Name><![CDATA[bar_chart_title1]]></Name>
-					<X>350</X><Y>480</Y>
+					<X>340</X><Y>500</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30304,7 +30357,7 @@ dataset_mean_queue_time_WSS
     			<Histogram>
 					<Id>1604517488334</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>720</X><Y>520</Y>
+					<X>740</X><Y>560</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30322,15 +30375,15 @@ dataset_mean_queue_time_WSS
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>380</Width>
-					<Height>300</Height>
+					<Width>440</Width>
+					<Height>340</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>300</Width>
-						<Height>210</Height>
+						<Width>360</Width>
+						<Height>250</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -30367,7 +30420,7 @@ dataset_mean_queue_time_WSS
 				<Text>
 					<Id>1604517539766</Id>
 					<Name><![CDATA[bar_chart_title2]]></Name>
-					<X>790</X><Y>480</Y>
+					<X>780</X><Y>500</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30386,11 +30439,104 @@ dataset_mean_queue_time_WSS
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+    			<Histogram>
+					<Id>1604626142027</Id>
+					<Name><![CDATA[chart1]]></Name>
+					<X>240</X><Y>80</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604649600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>580</Width>
+					<Height>360</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>500</Width>
+						<Height>270</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>false</ShowCDF>
+					<ShowMean>true</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[dataset_Corn]]></Expression>
+						<ColorPDF>-16728065</ColorPDF>
+						<ColorCDF>-16728065</ColorCDF>
+						<ColorLowPercent>-23296</ColorLowPercent>
+						<ColorHighPercent>-10496</ColorHighPercent>
+						<ColorMean>-8097537</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Corn]]></Title>							
+					</HistogramDataExpression>
+					<HistogramDataExpression>
+					<Expression><![CDATA[dataset_Wheat]]></Expression>
+						<ColorPDF>-4565549</ColorPDF>
+						<ColorCDF>-4565549</ColorCDF>
+						<ColorLowPercent>-4343957</ColorLowPercent>
+						<ColorHighPercent>-6632142</ColorHighPercent>
+						<ColorMean>-60269</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Wheat]]></Title>							
+					</HistogramDataExpression>
+					<HistogramDataExpression>
+					<Expression><![CDATA[dataset_Soy]]></Expression>
+						<ColorPDF>-2354116</ColorPDF>
+						<ColorCDF>-2354116</ColorCDF>
+						<ColorLowPercent>-12004916</ColorLowPercent>
+						<ColorHighPercent>-14774017</ColorHighPercent>
+						<ColorMean>-29696</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Soy]]></Title>							
+					</HistogramDataExpression>
+					<HistogramDataExpression>
+					<Expression><![CDATA[dataset_Sorghum]]></Expression>
+						<ColorPDF>-10496</ColorPDF>
+						<ColorCDF>-10496</ColorCDF>
+						<ColorLowPercent>-8097537</ColorLowPercent>
+						<ColorHighPercent>-3137392</ColorHighPercent>
+						<ColorMean>-12799119</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Sorghum]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
 			</Presentation>
 
 			<AllowParallelEvaluations>true</AllowParallelEvaluations>
 			<UseFreeformParameters>true</UseFreeformParameters>
-			<NumberOfRuns>100</NumberOfRuns>
+			<NumberOfRuns>1000</NumberOfRuns>
 			<FreeformParamValue>	
 				<Id>1602641751835</Id>
 			</FreeformParamValue>
@@ -30405,6 +30551,9 @@ dataset_mean_queue_time_WSS
 			</FreeformParamValue>
 			<FreeformParamValue>	
 				<Id>1602643193655</Id>
+				<Expression Class="CodeValue">
+					<Code><![CDATA[normal(30, 150)]]></Code>
+				</Expression>
 			</FreeformParamValue>
 			<FreeformParamValue>	
 				<Id>1602861560824</Id>
