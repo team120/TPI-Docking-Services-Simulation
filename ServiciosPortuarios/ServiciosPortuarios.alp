@@ -20374,7 +20374,7 @@ in Tara Balance]]></Text>
     			<Histogram>
 					<Id>1604513991326</Id>
 					<Name><![CDATA[Corn_Unload_Histogram]]></Name>
-					<X>30</X><Y>4410</Y>
+					<X>40</X><Y>4400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20392,15 +20392,15 @@ in Tara Balance]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>330</Width>
-					<Height>250</Height>
+					<Width>700</Width>
+					<Height>510</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>250</Width>
-						<Height>160</Height>
+						<Width>620</Width>
+						<Height>390</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -20408,7 +20408,7 @@ in Tara Balance]]></Text>
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>40</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -20437,7 +20437,7 @@ in Tara Balance]]></Text>
     			<Histogram>
 					<Id>1604514898315</Id>
 					<Name><![CDATA[WSS_Unload_Histogram]]></Name>
-					<X>30</X><Y>4680</Y>
+					<X>840</X><Y>4400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20455,15 +20455,15 @@ in Tara Balance]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>330</Width>
-					<Height>250</Height>
+					<Width>680</Width>
+					<Height>520</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>250</Width>
-						<Height>160</Height>
+						<Width>600</Width>
+						<Height>390</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -20471,7 +20471,7 @@ in Tara Balance]]></Text>
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>40</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -21218,6 +21218,20 @@ Components]]></Text>
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618813762</Id>
+					<Name><![CDATA[viewBulkBatch]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>260</Width>
+					<Height>270</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -21845,7 +21859,7 @@ Components]]></Text>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1604557328528</Id>
 					<Name><![CDATA[Init]]></Name>
-					<X>210</X><Y>430</Y>
+					<X>270</X><Y>370</Y>
 					<Label><X>35</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21858,7 +21872,7 @@ Components]]></Text>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1604557328537</Id>
 					<Name><![CDATA[OpenValve]]></Name>
-					<X>200</X><Y>520</Y>
+					<X>260</X><Y>460</Y>
 					<Label><X>15</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21872,7 +21886,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1604557328541</Id>
 					<Name><![CDATA[ReduceReserved]]></Name>
-					<X>180</X><Y>620</Y>
+					<X>240</X><Y>560</Y>
 					<Label><X>10</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21885,7 +21899,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1604557328544</Id>
 					<Name><![CDATA[statechart]]></Name>
-					<X>260</X><Y>390</Y>
+					<X>320</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21900,7 +21914,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1604557328558</Id>
 					<Name><![CDATA[transition10]]></Name>
-					<X>260</X><Y>460</Y>
+					<X>320</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21931,7 +21945,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1604557328562</Id>
 					<Name><![CDATA[transition11]]></Name>
-					<X>180</X><Y>640</Y>
+					<X>240</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21963,7 +21977,7 @@ valve.dispense(order.demand, TON);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1604557328564</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>260</X><Y>560</Y>
+					<X>320</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23214,15 +23228,15 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 			<Areas>
 				<Area>
 					<Id>1602659365446</Id>
-					<Name><![CDATA[viewSilos]]></Name>
-					<X>140</X><Y>40</Y>
+					<Name><![CDATA[viewSilo]]></Name>
+					<X>0</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Title><![CDATA[[viewSilos]]]></Title>
-					<Width>900</Width>
-					<Height>300</Height>
+					<Width>1040</Width>
+					<Height>640</Height>
 				</Area>
 			</Areas>
 
@@ -23923,6 +23937,20 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618728242</Id>
+					<Name><![CDATA[viewTruck]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>370</Width>
+					<Height>310</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -24112,7 +24140,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1602627646849</Id>
 					<Name><![CDATA[connector20]]></Name>
-					<X>180</X><Y>190</Y>
+					<X>140</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24145,7 +24173,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1602627646852</Id>
 					<Name><![CDATA[connector22]]></Name>
-					<X>300</X><Y>190</Y>
+					<X>260</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24217,7 +24245,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602627646759</Id>
 					<Name><![CDATA[loadEnter]]></Name>
-					<X>70</X><Y>180</Y>
+					<X>30</X><Y>190</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24292,7 +24320,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602627646806</Id>
 					<Name><![CDATA[bulkConveyor]]></Name>
-					<X>180</X><Y>170</Y>
+					<X>140</X><Y>180</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24403,7 +24431,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<EmbeddedObject>
 					<Id>1602627646831</Id>
 					<Name><![CDATA[loadExit]]></Name>
-					<X>300</X><Y>180</Y>
+					<X>260</X><Y>190</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24493,6 +24521,20 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618711336</Id>
+					<Name><![CDATA[viewSilosRow]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>370</Width>
+					<Height>310</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -24691,7 +24733,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1603770338297</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>390</X><Y>250</Y>
+					<X>470</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24724,7 +24766,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1603770338299</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>560</X><Y>250</Y>
+					<X>640</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24757,7 +24799,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1603770338301</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>730</X><Y>250</Y>
+					<X>810</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24790,7 +24832,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1603770338303</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>910</X><Y>250</Y>
+					<X>990</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24823,7 +24865,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 				<Connector>
 					<Id>1603770338305</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>1100</X><Y>250</Y>
+					<X>1180</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25414,7 +25456,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338198</Id>
 					<Name><![CDATA[shipTankEnter1]]></Name>
-					<X>300</X><Y>240</Y>
+					<X>380</X><Y>240</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25489,7 +25531,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338209</Id>
 					<Name><![CDATA[shipTank1]]></Name>
-					<X>390</X><Y>240</Y>
+					<X>470</X><Y>240</Y>
 					<Label><X>-15</X><Y>90</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25641,7 +25683,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338219</Id>
 					<Name><![CDATA[shipTankEnter2]]></Name>
-					<X>470</X><Y>240</Y>
+					<X>550</X><Y>240</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25716,7 +25758,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338228</Id>
 					<Name><![CDATA[shipTank2]]></Name>
-					<X>560</X><Y>240</Y>
+					<X>640</X><Y>240</Y>
 					<Label><X>-15</X><Y>90</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25868,7 +25910,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338239</Id>
 					<Name><![CDATA[shipTankEnter3]]></Name>
-					<X>640</X><Y>240</Y>
+					<X>720</X><Y>240</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25943,7 +25985,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338248</Id>
 					<Name><![CDATA[shipTank3]]></Name>
-					<X>730</X><Y>240</Y>
+					<X>810</X><Y>240</Y>
 					<Label><X>-15</X><Y>90</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26095,7 +26137,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338258</Id>
 					<Name><![CDATA[shipTankEnter4]]></Name>
-					<X>820</X><Y>240</Y>
+					<X>900</X><Y>240</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26170,7 +26212,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338268</Id>
 					<Name><![CDATA[shipTank4]]></Name>
-					<X>910</X><Y>240</Y>
+					<X>990</X><Y>240</Y>
 					<Label><X>-15</X><Y>90</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26322,7 +26364,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338279</Id>
 					<Name><![CDATA[shipTankEnter5]]></Name>
-					<X>1010</X><Y>240</Y>
+					<X>1090</X><Y>240</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26397,7 +26439,7 @@ return main.getColor(type);
 				<EmbeddedObject>
 					<Id>1603770338288</Id>
 					<Name><![CDATA[shipTank5]]></Name>
-					<X>1100</X><Y>240</Y>
+					<X>1180</X><Y>240</Y>
 					<Label><X>-15</X><Y>90</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26759,6 +26801,20 @@ return main.getColor(type);
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618654264</Id>
+					<Name><![CDATA[viewShip]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1340</Width>
+					<Height>1000</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -26862,7 +26918,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603833329426</Id>
 					<Name><![CDATA[conveyorBeltWSS]]></Name>
-					<X>-170</X><Y>100</Y>
+					<X>40</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26883,7 +26939,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603833357448</Id>
 					<Name><![CDATA[conveyorBeltC]]></Name>
-					<X>-170</X><Y>130</Y>
+					<X>40</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26904,7 +26960,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603834263790</Id>
 					<Name><![CDATA[conveyor1Belt]]></Name>
-					<X>-170</X><Y>160</Y>
+					<X>40</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26926,7 +26982,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603834263803</Id>
 					<Name><![CDATA[conveyor2Belt]]></Name>
-					<X>-170</X><Y>185</Y>
+					<X>40</X><Y>335</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26948,7 +27004,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603834263813</Id>
 					<Name><![CDATA[conveyor3Belt]]></Name>
-					<X>-170</X><Y>210</Y>
+					<X>40</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26970,7 +27026,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603834263822</Id>
 					<Name><![CDATA[conveyor4Belt]]></Name>
-					<X>-170</X><Y>235</Y>
+					<X>40</X><Y>385</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26992,7 +27048,7 @@ return main.getColor(type);
 				<Variable Class="Parameter">
 					<Id>1603834263832</Id>
 					<Name><![CDATA[conveyor5Belt]]></Name>
-					<X>-170</X><Y>260</Y>
+					<X>40</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27014,7 +27070,7 @@ return main.getColor(type);
 				<Variable Class="CollectionVariable">
 					<Id>1603859708936</Id>
 					<Name><![CDATA[pierExits]]></Name>
-					<X>-170</X><Y>290</Y>
+					<X>40</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27034,7 +27090,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603831937911</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>180</X><Y>110</Y>
+					<X>200</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27067,7 +27123,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832211054</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>180</X><Y>190</Y>
+					<X>200</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27100,7 +27156,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832224313</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>360</X><Y>110</Y>
+					<X>380</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27133,7 +27189,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832238630</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>230</X><Y>190</Y>
+					<X>250</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27167,7 +27223,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832248603</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>480</X><Y>110</Y>
+					<X>500</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27200,7 +27256,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832371205</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>640</X><Y>110</Y>
+					<X>660</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27233,7 +27289,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832406589</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>740</X><Y>180</Y>
+					<X>760</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27267,7 +27323,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832520010</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>760</X><Y>110</Y>
+					<X>780</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27300,7 +27356,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832668571</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>1020</X><Y>180</Y>
+					<X>1040</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27334,7 +27390,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832668574</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>1050</X><Y>110</Y>
+					<X>1070</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27367,7 +27423,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832681917</Id>
 					<Name><![CDATA[connector10]]></Name>
-					<X>810</X><Y>110</Y>
+					<X>830</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27400,7 +27456,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832684709</Id>
 					<Name><![CDATA[connector11]]></Name>
-					<X>1310</X><Y>180</Y>
+					<X>1330</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27434,7 +27490,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832684715</Id>
 					<Name><![CDATA[connector12]]></Name>
-					<X>1350</X><Y>110</Y>
+					<X>1370</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27467,7 +27523,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832693480</Id>
 					<Name><![CDATA[connector13]]></Name>
-					<X>1100</X><Y>110</Y>
+					<X>1120</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27500,7 +27556,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832716223</Id>
 					<Name><![CDATA[connector14]]></Name>
-					<X>1610</X><Y>180</Y>
+					<X>1630</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27534,7 +27590,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832716227</Id>
 					<Name><![CDATA[connector15]]></Name>
-					<X>1650</X><Y>110</Y>
+					<X>1670</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27567,7 +27623,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603832722780</Id>
 					<Name><![CDATA[connector16]]></Name>
-					<X>1400</X><Y>110</Y>
+					<X>1420</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27600,7 +27656,7 @@ return main.getColor(type);
 				<Connector>
 					<Id>1603855865265</Id>
 					<Name><![CDATA[connector17]]></Name>
-					<X>1700</X><Y>110</Y>
+					<X>1720</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27640,7 +27696,7 @@ return main.getColor(type);
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1603912903081</Id>
 					<Name><![CDATA[routeToShipTank]]></Name>
-					<X>-170</X><Y>330</Y>
+					<X>40</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27704,7 +27760,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603831915628</Id>
 					<Name><![CDATA[unloadEnterWSS]]></Name>
-					<X>20</X><Y>100</Y>
+					<X>40</X><Y>100</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27779,7 +27835,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603831933361</Id>
 					<Name><![CDATA[bulkConveyorWSS]]></Name>
-					<X>180</X><Y>90</Y>
+					<X>200</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27890,7 +27946,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832196158</Id>
 					<Name><![CDATA[unloadEnterC]]></Name>
-					<X>20</X><Y>180</Y>
+					<X>40</X><Y>180</Y>
 					<Label><X>-25</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27965,7 +28021,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832208944</Id>
 					<Name><![CDATA[bulkConveyorC]]></Name>
-					<X>180</X><Y>170</Y>
+					<X>200</X><Y>170</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28076,7 +28132,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832216846</Id>
 					<Name><![CDATA[fluidSelectInput]]></Name>
-					<X>360</X><Y>100</Y>
+					<X>380</X><Y>100</Y>
 					<Label><X>-60</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28163,7 +28219,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832246531</Id>
 					<Name><![CDATA[bulkConveyor2]]></Name>
-					<X>480</X><Y>90</Y>
+					<X>500</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28277,7 +28333,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832368645</Id>
 					<Name><![CDATA[fluidSelectOutput]]></Name>
-					<X>640</X><Y>100</Y>
+					<X>660</X><Y>100</Y>
 					<Label><X>-70</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28361,7 +28417,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832402929</Id>
 					<Name><![CDATA[fluidExit0]]></Name>
-					<X>740</X><Y>170</Y>
+					<X>760</X><Y>170</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28433,7 +28489,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832517849</Id>
 					<Name><![CDATA[bulkConveyor3]]></Name>
-					<X>760</X><Y>90</Y>
+					<X>780</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28547,7 +28603,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832668406</Id>
 					<Name><![CDATA[fluidSelectOutput1]]></Name>
-					<X>920</X><Y>100</Y>
+					<X>940</X><Y>100</Y>
 					<Label><X>-70</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28631,7 +28687,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832668482</Id>
 					<Name><![CDATA[fluidExit1]]></Name>
-					<X>1020</X><Y>170</Y>
+					<X>1040</X><Y>170</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28703,7 +28759,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832668546</Id>
 					<Name><![CDATA[bulkConveyor4]]></Name>
-					<X>1050</X><Y>90</Y>
+					<X>1070</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28817,7 +28873,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832684450</Id>
 					<Name><![CDATA[fluidSelectOutput2]]></Name>
-					<X>1210</X><Y>100</Y>
+					<X>1230</X><Y>100</Y>
 					<Label><X>-70</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28901,7 +28957,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832684541</Id>
 					<Name><![CDATA[fluidExit2]]></Name>
-					<X>1310</X><Y>170</Y>
+					<X>1330</X><Y>170</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -28973,7 +29029,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832684626</Id>
 					<Name><![CDATA[bulkConveyor5]]></Name>
-					<X>1350</X><Y>90</Y>
+					<X>1370</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29087,7 +29143,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832716062</Id>
 					<Name><![CDATA[fluidSelectOutput3]]></Name>
-					<X>1510</X><Y>100</Y>
+					<X>1530</X><Y>100</Y>
 					<Label><X>-70</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29171,7 +29227,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832716134</Id>
 					<Name><![CDATA[fluidExit3]]></Name>
-					<X>1610</X><Y>170</Y>
+					<X>1630</X><Y>170</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29243,7 +29299,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832716194</Id>
 					<Name><![CDATA[bulkConveyor6]]></Name>
-					<X>1650</X><Y>90</Y>
+					<X>1670</X><Y>90</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29354,7 +29410,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 				<EmbeddedObject>
 					<Id>1603832728812</Id>
 					<Name><![CDATA[fluidExit4]]></Name>
-					<X>1930</X><Y>170</Y>
+					<X>1950</X><Y>170</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29441,6 +29497,20 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618606573</Id>
+					<Name><![CDATA[viewPier]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>2000</Width>
+					<Height>640</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -29623,6 +29693,20 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1604618789138</Id>
+					<Name><![CDATA[viewSiloOrder]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>250</Width>
+					<Height>160</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 	</ActiveObjectClasses>	
@@ -29634,8 +29718,8 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank){
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>2000</Width>
-		<Height>980</Height>
+		<Width>1300</Width>
+		<Height>840</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
