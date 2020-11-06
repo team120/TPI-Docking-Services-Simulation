@@ -171,7 +171,7 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1602641850661</Id>
-					<Name><![CDATA[maxRate]]></Name>
+					<Name><![CDATA[siloLoadRate]]></Name>
 					<X>860</X><Y>-1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -230,7 +230,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[uniform_discr(150, 200)]]></Code>
+							<Code><![CDATA[normal(30, 150)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602643193653</Id>
@@ -21484,9 +21484,9 @@ Unload Rate]]></Text>
 					<ExtendedProperties>
 						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
 						<Orientation>HORIZONTAL</Orientation>
-						<MinValue><![CDATA[15]]></MinValue>
-						<MaxValue><![CDATA[30]]></MaxValue>
-						<Step><![CDATA[1]]></Step>
+						<MinValue><![CDATA[17]]></MinValue>
+						<MaxValue><![CDATA[86]]></MaxValue>
+						<Step><![CDATA[23]]></Step>
 						<LinkTo>true</LinkTo>
 						<Link>shipLoadRate</Link>
 					</ExtendedProperties>
@@ -21589,7 +21589,7 @@ Load Rate]]></Text>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[15]]></Text>
+					<Text><![CDATA[17]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
@@ -21610,7 +21610,7 @@ Load Rate]]></Text>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[30]]></Text>
+					<Text><![CDATA[86]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
@@ -23441,7 +23441,7 @@ return outputBatch;]]></Body>
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.siloLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -31183,7 +31183,7 @@ through the different views.]]></Text>
 					<ParameterName><![CDATA[siloCapacity]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[maxRate]]></ParameterName>
+					<ParameterName><![CDATA[siloLoadRate]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[silosPerRow]]></ParameterName>
@@ -31222,11 +31222,11 @@ through the different views.]]></Text>
 				<RealTimeScale>1.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
-				<StopOption><![CDATA[Stop at specified date]]></StopOption>
+				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1604188800000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1604793600000]]></FinalDate>	
-				<FinalTime><![CDATA[604800.0]]></FinalTime>	
+				<FinalDate><![CDATA[1604199600000]]></FinalDate>	
+				<FinalTime><![CDATA[10800.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>
@@ -31982,6 +31982,9 @@ dataset_ship_load_times
 			</FreeformParamValue>
 			<FreeformParamValue>	
 				<Id>1604695564479</Id>
+				<Expression Class="CodeValue">
+					<Code><![CDATA[17]]></Code>
+				</Expression>
 			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602641751835</Id>
