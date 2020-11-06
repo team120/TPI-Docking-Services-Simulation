@@ -292,7 +292,7 @@
 				<Variable Class="Parameter">
 					<Id>1603776115902</Id>
 					<Name><![CDATA[shipTankCapacity]]></Name>
-					<X>1100</X><Y>-1000</Y>
+					<X>1100</X><Y>-960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -316,7 +316,7 @@
 				<Variable Class="Parameter">
 					<Id>1604552632277</Id>
 					<Name><![CDATA[shipStorageStepZ]]></Name>
-					<X>1100</X><Y>-1080</Y>
+					<X>1100</X><Y>-1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -340,7 +340,7 @@
 				<Variable Class="Parameter">
 					<Id>1604552896818</Id>
 					<Name><![CDATA[shipStorageMinZ]]></Name>
-					<X>1100</X><Y>-1040</Y>
+					<X>1100</X><Y>-1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -378,6 +378,30 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1604654880325</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604695564479</Id>
+					<Name><![CDATA[shipLoadRate]]></Name>
+					<X>1100</X><Y>-1080</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[17]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1604695564477</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -552,7 +576,7 @@
 				<Connector>
 					<Id>1599014672027</Id>
 					<Name><![CDATA[connector27]]></Name>
-					<X>710</X><Y>2380</Y>
+					<X>830</X><Y>2380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -579,73 +603,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599014672029</Id>
-					<Name><![CDATA[connector29]]></Name>
-					<X>600</X><Y>2380</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToGoAway]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[shipDelay]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599539329628</Id>
-					<Name><![CDATA[connector28]]></Name>
-					<X>490</X><Y>2380</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[shipDelay]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[queue]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1749,6 +1707,138 @@
 						<Point><X>50</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1604695205410</Id>
+					<Name><![CDATA[connector28]]></Name>
+					<X>560</X><Y>2380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipDelay]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipsStartTM]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-60</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604695205414</Id>
+					<Name><![CDATA[connector30]]></Name>
+					<X>490</X><Y>2380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipsStartTM]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[queue]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604695258075</Id>
+					<Name><![CDATA[connector29]]></Name>
+					<X>710</X><Y>2380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToGoAway]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipsEndTM]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1604695258078</Id>
+					<Name><![CDATA[connector33]]></Name>
+					<X>650</X><Y>2380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipsEndTM]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[serviciosportuarios]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[shipDelay]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Events>
 				<Event>
@@ -1893,11 +1983,11 @@ if(demandsPerShipTank.stream().allMatch(e -> e.isSatisfied == true)
 	&& ships.size() == 0) {
 		Ship incommingShip = new Ship(demandPerSilo, destinationShipTankPerSilo);
 		shipEnter.take(incommingShip);
-		traceln("GrainDemand");
-		traceln(demandsPerShipTank);
-		traceln("Ships");
-		ships.stream().forEach(s -> traceln(s.demandPerSilo));
-		traceln("End Ships");
+		//traceln("GrainDemand");
+		//traceln(demandsPerShipTank);
+		//traceln("Ships");
+		//ships.stream().forEach(s -> traceln(s.demandPerSilo));
+		//traceln("End Ships");
 }
 ]]></Action>
 				</Event>
@@ -2698,7 +2788,7 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>1599014634157</Id>
 					<Name><![CDATA[sink2]]></Name>
-					<X>710</X><Y>2370</Y>
+					<X>830</X><Y>2370</Y>
 					<Label><X>30</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2764,8 +2854,8 @@ if (destinationSiloId != -1){
 				<EmbeddedObject>
 					<Id>1599014662349</Id>
 					<Name><![CDATA[shipDelay]]></Name>
-					<X>490</X><Y>2360</Y>
-					<Label><X>-20</X><Y>50</Y></Label>
+					<X>560</X><Y>2360</Y>
+					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2873,7 +2963,7 @@ send("shipArrivedPort", agent);]]></Code>
 				<EmbeddedObject>
 					<Id>1599014670595</Id>
 					<Name><![CDATA[moveToGoAway]]></Name>
-					<X>600</X><Y>2360</Y>
+					<X>710</X><Y>2360</Y>
 					<Label><X>-40</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5370,7 +5460,7 @@ send("shipArrivedPort", agent);]]></Code>
 					<Id>1602558339437</Id>
 					<Name><![CDATA[release]]></Name>
 					<X>1020</X><Y>2020</Y>
-					<Label><X>-5</X><Y>-5</Y></Label>
+					<Label><X>-10</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -8316,6 +8406,144 @@ send("shipArrivedPort", agent);]]></Code>
 							<Name><![CDATA[startObjects]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[{ timeQueue_IN }]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[datasetCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1000]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1604695155136</Id>
+					<Name><![CDATA[shipsStartTM]]></Name>
+					<X>490</X><Y>2360</Y>
+					<Label><X>-45</X><Y>45</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+							<ItemName><![CDATA[1412336243204]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1604695157468</Id>
+					<Name><![CDATA[shipsEndTM]]></Name>
+					<X>630</X><Y>2360</Y>
+					<Label><X>-30</X><Y>45</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+							<ItemName><![CDATA[1412336243203]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[startObjects]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[{ shipsStartTM }]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -18287,7 +18515,7 @@ in Tara Balance]]></Text>
     			<Histogram>
 					<Id>1604513991326</Id>
 					<Name><![CDATA[Corn_Unload_Histogram]]></Name>
-					<X>40</X><Y>4400</Y>
+					<X>40</X><Y>4500</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18305,15 +18533,15 @@ in Tara Balance]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>700</Width>
-					<Height>510</Height>
+					<Width>620</Width>
+					<Height>410</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>620</Width>
-						<Height>390</Height>
+						<Width>540</Width>
+						<Height>290</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -18350,7 +18578,7 @@ in Tara Balance]]></Text>
     			<Histogram>
 					<Id>1604514898315</Id>
 					<Name><![CDATA[WSS_Unload_Histogram]]></Name>
-					<X>840</X><Y>4400</Y>
+					<X>840</X><Y>4500</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18368,15 +18596,15 @@ in Tara Balance]]></Text>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>680</Width>
-					<Height>520</Height>
+					<Width>620</Width>
+					<Height>420</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>600</Width>
-						<Height>390</Height>
+						<Width>540</Width>
+						<Height>290</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -21239,31 +21467,10 @@ Unload Rate]]></Text>
 					<FillColor>-16777216</FillColor>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
-				<Text>
-					<Id>1604655766392</Id>
-					<Name><![CDATA[text26]]></Name>
-					<X>417</X><Y>-1067</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-1</Color>
-					<Text><![CDATA[Ton]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>20</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
 				<Control Type="Slider">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1604655832839</Id>
-					<Name><![CDATA[sliderSilo]]></Name>
+					<Name><![CDATA[sliderShipLoadRate]]></Name>
 					<X>330</X><Y>-1030</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -21277,11 +21484,11 @@ Unload Rate]]></Text>
 					<ExtendedProperties>
 						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
 						<Orientation>HORIZONTAL</Orientation>
-						<MinValue><![CDATA[8000]]></MinValue>
-						<MaxValue><![CDATA[14000]]></MaxValue>
-						<Step><![CDATA[1000]]></Step>
+						<MinValue><![CDATA[15]]></MinValue>
+						<MaxValue><![CDATA[30]]></MaxValue>
+						<Step><![CDATA[1]]></Step>
 						<LinkTo>true</LinkTo>
-						<Link>siloCapacity</Link>
+						<Link>shipLoadRate</Link>
 					</ExtendedProperties>
 				</Control>
 				<Text>
@@ -21329,7 +21536,7 @@ Unload Rate]]></Text>
 				<Text>
 					<Id>1604656020239</Id>
 					<Name><![CDATA[text31]]></Name>
-					<X>120</X><Y>-1060</Y>
+					<X>110</X><Y>-1060</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21339,8 +21546,8 @@ Unload Rate]]></Text>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[   Silos
-Capacity]]></Text>
+					<Text><![CDATA[    Ship
+Load Rate]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>32</Size>
@@ -21349,9 +21556,9 @@ Capacity]]></Text>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1604656118767</Id>
-					<Name><![CDATA[text32]]></Name>
-					<X>295</X><Y>-1025</Y>
+					<Id>1604696245014</Id>
+					<Name><![CDATA[text26]]></Name>
+					<X>410</X><Y>-1067</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21360,19 +21567,19 @@ Capacity]]></Text>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[8000]]></Text>
+					<Color>-1</Color>
+					<Text><![CDATA[Ton/s]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
-						<Size>14</Size>
+						<Size>20</Size>
 						<Style>0</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1604656149847</Id>
-					<Name><![CDATA[text33]]></Name>
-					<X>430</X><Y>-1025</Y>
+					<Id>1604696340243</Id>
+					<Name><![CDATA[text32]]></Name>
+					<X>300</X><Y>-1030</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21382,10 +21589,223 @@ Capacity]]></Text>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[14000]]></Text>
+					<Text><![CDATA[15]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
-						<Size>14</Size>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1604696353032</Id>
+					<Name><![CDATA[text33]]></Name>
+					<X>430</X><Y>-1030</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[30]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<Histogram>
+					<Id>1604696535513</Id>
+					<Name><![CDATA[Ship_Time_Distribution]]></Name>
+					<X>1600</X><Y>4530</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604563200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[310]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>620</Width>
+					<Height>390</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>540</Width>
+						<Height>260</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>true</ShowCDF>
+					<ShowMean>true</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[shipsEndTM.distribution]]></Expression>
+						<ColorPDF>-14774017</ColorPDF>
+						<ColorCDF>-10496</ColorCDF>
+						<ColorLowPercent>-4565549</ColorLowPercent>
+						<ColorHighPercent>-16777216</ColorHighPercent>
+						<ColorMean>-10496</ColorMean>
+						<LineWidth>2</LineWidth>						
+						<Title><![CDATA[Ship Load Time Distribution]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
+				<Rectangle>
+					<Id>1604699868327</Id>
+					<Name><![CDATA[rectangle76]]></Name>
+					<X>60</X><Y>4400</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>570</Width>
+					<Height>80</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1604699868332</Id>
+					<Name><![CDATA[textPlaya65]]></Name>
+					<X>90</X><Y>4420</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Plataform 1 - Unload Time Distribution]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1604699973314</Id>
+					<Name><![CDATA[rectangle77]]></Name>
+					<X>860</X><Y>4420</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>570</Width>
+					<Height>80</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1604699973317</Id>
+					<Name><![CDATA[textPlaya67]]></Name>
+					<X>890</X><Y>4440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Plataform 2 - Unload Time Distribution]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1604699995944</Id>
+					<Name><![CDATA[rectangle78]]></Name>
+					<X>1620</X><Y>4420</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>570</Width>
+					<Height>80</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1604699995947</Id>
+					<Name><![CDATA[textPlaya68]]></Name>
+					<X>1720</X><Y>4440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Ship Load Time Distribution]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>30</Size>
 						<Style>0</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
@@ -22441,7 +22861,7 @@ Capacity]]></Text>
 					<Id>1604693790523</Id>
 					<Name><![CDATA[ProgramValve]]></Name>
 					<X>260</X><Y>450</Y>
-					<Label><X>15</X><Y>25</Y></Label>
+					<Label><X>5</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -22910,7 +23330,7 @@ return outputBatch;]]></Body>
 						<Parameter>
 							<Name><![CDATA[openRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -23138,7 +23558,7 @@ if(((BulkBatch)batch).destinationSiloId == id) {
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -25223,7 +25643,7 @@ self.select(1);]]></Code>
 				<Variable Class="PlainVariable">
 					<Id>1603906677637</Id>
 					<Name><![CDATA[siloCounter]]></Name>
-					<X>80</X><Y>470</Y>
+					<X>80</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25576,7 +25996,7 @@ self.select(1);]]></Code>
 					<Properties Width="120" Height="40">
 						<EntryAction><![CDATA[double demand = demandPerSilo.get(siloCounter);
 int destinationShipTank = destinationShipTankPerSilo.get(siloCounter);
-traceln(destinationShipTank);
+// traceln(destinationShipTank);
 
 SiloOrder order = new SiloOrder(demand, destinationShipTank);
 deliver(order, main.silos.get(siloCounter));]]></EntryAction>
@@ -28429,7 +28849,7 @@ return main.getColor(type);
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
 					<Body><![CDATA[fluidSelectOutput.select(1);
-traceln((BulkBatch)batch);
+// traceln((BulkBatch)batch);
 if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 	&& !main.ships.get(0).shipTanks.get(currentShipTank).isFull()
 	&& bulkConveyor.getBatchSize(0, TON) > 0.01){
@@ -28590,7 +29010,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -28776,7 +29196,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -28974,7 +29394,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -29244,7 +29664,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -29514,7 +29934,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -29784,7 +30204,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -30054,7 +30474,7 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 						<Parameter>
 							<Name><![CDATA[maxInputRate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[main.maxRate]]></Code>
+								<Code><![CDATA[main.shipLoadRate]]></Code>
 								<Unit Class="FlowRateUnits"><![CDATA[TON_PER_SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -30592,8 +31012,8 @@ if (((BulkBatch)batch).destinationShipTankId == currentShipTank
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>2000</Width>
-		<Height>1060</Height>
+		<Width>1700</Width>
+		<Height>1040</Height>
 	</Frame>
 	<Database>
 		<Logging>true</Logging>
@@ -30789,6 +31209,9 @@ through the different views.]]></Text>
 				<Parameter>
 					<ParameterName><![CDATA[platformUnloadRate]]></ParameterName>
 				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[shipLoadRate]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -30799,11 +31222,11 @@ through the different views.]]></Text>
 				<RealTimeScale>1.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
-				<StopOption><![CDATA[Never]]></StopOption>
-				<InitialDate><![CDATA[1598832000000]]></InitialDate>	
+				<StopOption><![CDATA[Stop at specified date]]></StopOption>
+				<InitialDate><![CDATA[1604188800000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1601424000000]]></FinalDate>	
-				<FinalTime><![CDATA[100.0]]></FinalTime>	
+				<FinalDate><![CDATA[1604793600000]]></FinalDate>	
+				<FinalTime><![CDATA[604800.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>
@@ -30813,7 +31236,7 @@ through the different views.]]></Text>
 			<Name><![CDATA[ParametersVariation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>512</MaximumMemory>
+			<MaximumMemory>2048</MaximumMemory>
 			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<AfterSimulationRunCode><![CDATA[dataset_Corn
@@ -30832,108 +31255,24 @@ dataset_Sorghum
 dataset_mean_queue_time_C
 	.add(root.timeQueue_OUT_Corn
 	.distribution.mean());
-	
+
 dataset_mean_queue_time_WSS
 	.add(root.timeQueue_OUT_WSS
 	.distribution.mean());
+
+dataset_ship_load_times
+    .add(root.shipsEndTM
+    .distribution.mean());
 ]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
 			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
 			<AnalysisData>
-    			<DataSet>
-					<Id>1604456465235</Id>
-					<Name><![CDATA[dataset_Coa]]></Name>
-					<X>40</X><Y>120</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604476800000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1604456679872</Id>
-					<Name><![CDATA[dataset_Wheata]]></Name>
-					<X>40</X><Y>170</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604476800000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1604457019504</Id>
-					<Name><![CDATA[dataset_Soya]]></Name>
-					<X>40</X><Y>220</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604476800000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1604457022859</Id>
-					<Name><![CDATA[dataset_Sorghuma]]></Name>
-					<X>40</X><Y>260</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1604476800000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
     			<HistogramData>
 					<Id>1604516547641</Id>
 					<Name><![CDATA[dataset_mean_queue_time_C]]></Name>
-					<X>60</X><Y>660</Y>
+					<X>40</X><Y>780</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30965,7 +31304,7 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604517376888</Id>
 					<Name><![CDATA[dataset_mean_queue_time_WSS]]></Name>
-					<X>60</X><Y>720</Y>
+					<X>1300</X><Y>780</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30997,7 +31336,7 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604626011995</Id>
 					<Name><![CDATA[dataset_Corn]]></Name>
-					<X>60</X><Y>360</Y>
+					<X>40</X><Y>260</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31029,7 +31368,7 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604626074751</Id>
 					<Name><![CDATA[dataset_Wheat]]></Name>
-					<X>60</X><Y>400</Y>
+					<X>40</X><Y>300</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31061,7 +31400,7 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604626080072</Id>
 					<Name><![CDATA[dataset_Soy]]></Name>
-					<X>60</X><Y>440</Y>
+					<X>40</X><Y>340</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31093,7 +31432,7 @@ dataset_mean_queue_time_WSS
     			<HistogramData>
 					<Id>1604626086028</Id>
 					<Name><![CDATA[dataset_Sorghum]]></Name>
-					<X>60</X><Y>480</Y>
+					<X>40</X><Y>380</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31122,13 +31461,45 @@ dataset_mean_queue_time_WSS
 					<HighPercent>95</HighPercent>
 					<Title><![CDATA[]]></Title>
 				</HistogramData>
+    			<HistogramData>
+					<Id>1604696827995</Id>
+					<Name><![CDATA[dataset_ship_load_times]]></Name>
+					<X>1300</X><Y>280</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604736000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Logging>false</Logging>
+					<Value><![CDATA[]]></Value>
+					<NumberOfIntervals>1000</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>true</CalculatePercentiles>
+					<LowPercent>5</LowPercent>
+					<HighPercent>95</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
 			</AnalysisData>
 
 			<Presentation>
     			<Histogram>
 					<Id>1604516501671</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>300</X><Y>560</Y>
+					<X>340</X><Y>680</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31191,7 +31562,7 @@ dataset_mean_queue_time_WSS
 				<Text>
 					<Id>1604517211931</Id>
 					<Name><![CDATA[bar_chart_title]]></Name>
-					<X>240</X><Y>30</Y>
+					<X>260</X><Y>150</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31212,7 +31583,7 @@ dataset_mean_queue_time_WSS
 				<Text>
 					<Id>1604517293183</Id>
 					<Name><![CDATA[bar_chart_title1]]></Name>
-					<X>340</X><Y>500</Y>
+					<X>380</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31223,7 +31594,7 @@ dataset_mean_queue_time_WSS
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
 					<Text><![CDATA[Queue Time Mean's Distribution
-       (Grain Type: Corn)]]></Text>
+          (Grain Type: Corn)]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
@@ -31234,7 +31605,7 @@ dataset_mean_queue_time_WSS
     			<Histogram>
 					<Id>1604517488334</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>740</X><Y>560</Y>
+					<X>820</X><Y>680</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31297,7 +31668,7 @@ dataset_mean_queue_time_WSS
 				<Text>
 					<Id>1604517539766</Id>
 					<Name><![CDATA[bar_chart_title2]]></Name>
-					<X>780</X><Y>500</Y>
+					<X>860</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31308,7 +31679,7 @@ dataset_mean_queue_time_WSS
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
 					<Text><![CDATA[Queue Time Mean's Distribution
-      (Grain Type: W-S-S)]]></Text>
+       (Grain Type: W-S-S)]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>24</Size>
@@ -31319,7 +31690,7 @@ dataset_mean_queue_time_WSS
     			<Histogram>
 					<Id>1604626142027</Id>
 					<Name><![CDATA[chart1]]></Name>
-					<X>240</X><Y>80</Y>
+					<X>240</X><Y>200</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31409,6 +31780,165 @@ dataset_mean_queue_time_WSS
 						<Title><![CDATA[Sorghum]]></Title>							
 					</HistogramDataExpression>
     			</Histogram>
+    			<Histogram>
+					<Id>1604696794741</Id>
+					<Name><![CDATA[chart3]]></Name>
+					<X>840</X><Y>200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1604563200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>420</Width>
+					<Height>340</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>340</Width>
+						<Height>250</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>false</ShowCDF>
+					<ShowMean>true</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[dataset_ship_load_times]]></Expression>
+						<ColorPDF>-4565549</ColorPDF>
+						<ColorCDF>-65536</ColorCDF>
+						<ColorLowPercent>-16711936</ColorLowPercent>
+						<ColorHighPercent>-14774017</ColorHighPercent>
+						<ColorMean>-4343957</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Ship Load]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
+				<Text>
+					<Id>1604696800669</Id>
+					<Name><![CDATA[bar_chart_title3]]></Name>
+					<X>900</X><Y>150</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Ship Load Time Distribution]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1604697221037</Id>
+					<Name><![CDATA[rectangle8]]></Name>
+					<X>-1.103</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1701.103</Width>
+					<Height>120</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>snow</FillMaterial>
+				</Rectangle>
+				<Polyline>
+					<Id>1604697221042</Id>
+					<Name><![CDATA[polyline7]]></Name>
+					<X>-1.103</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-16777216</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>621.103</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>701.103</X><Y>60</Y><Z>0</Z></Point>
+					   <Point><X>621.103</X><Y>120</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>120</Y><Z>0</Z></Point>
+					   <Point><X>0.448</X><Y>1</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>false</Closed>
+				</Polyline>
+				<Text>
+					<Id>1604697221046</Id>
+					<Name><![CDATA[text14]]></Name>
+					<X>16.837</X><Y>27</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Parameters Variation]]></Text>
+					<Font>
+						<Name>Arial</Name>
+						<Size>60</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 			<AllowParallelEvaluations>true</AllowParallelEvaluations>
@@ -31450,6 +31980,9 @@ dataset_mean_queue_time_WSS
 			<FreeformParamValue>	
 				<Id>1604654880327</Id>
 			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1604695564479</Id>
+			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602641751835</Id>
 				<Type>FIXED</Type>
@@ -31494,12 +32027,16 @@ dataset_mean_queue_time_WSS
 				<Id>1604654880327</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1604695564479</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
-				<InitialDate><![CDATA[1598832000000]]></InitialDate>	
+				<InitialDate><![CDATA[1604188800000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1598835599000]]></FinalDate>	
-				<FinalTime><![CDATA[3599.0]]></FinalTime>	
+				<FinalDate><![CDATA[1604199600000]]></FinalDate>	
+				<FinalTime><![CDATA[10800.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
