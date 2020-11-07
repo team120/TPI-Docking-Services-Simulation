@@ -121,6 +121,21 @@
 			<CurrentLevel>1598843002685</CurrentLevel>
 			<ConnectionsId>1598843002681</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1604726274235</Id>
+					<Name><![CDATA[notServedTrucks]]></Name>
+					<X>1370</X><Y>-1140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1602641751835</Id>
 					<Name><![CDATA[conveyorSpeed]]></Name>
@@ -1998,7 +2013,7 @@ if(demandsPerShipTank.stream().allMatch(e -> e.isSatisfied == true)
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1602647517568</Id>
 					<Name><![CDATA[getSiloGrainType]]></Name>
-					<X>860</X><Y>-760</Y>
+					<X>860</X><Y>-800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2049,7 +2064,7 @@ else return -2;]]></Body>
 					<ReturnType><![CDATA[int]]></ReturnType>
 					<Id>1603665037503</Id>
 					<Name><![CDATA[getUnloadRow]]></Name>
-					<X>860</X><Y>-820</Y>
+					<X>860</X><Y>-840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2105,6 +2120,22 @@ if (prob<=0.50) { return 0; }
 if (prob>0.50 && prob<=0.80) { return 1; }
 if (prob>0.80 && prob<=0.90) { return 2; }
 return 3;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1604727004336</Id>
+					<Name><![CDATA[getDenialOfServiceProb]]></Name>
+					<X>860</X><Y>-760</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if (timeUnloading.out.count() != 0) {
+	return notServedTrucks/timeUnloading.out.count();
+} else {
+	return 0.0;
+}]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -2577,6 +2608,7 @@ if (destinationSiloId != -1){
 	agent.valve.open();
 } else {
 	timeUnloading.stopDelay(agent);
+	notServedTrucks++;
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -21807,6 +21839,115 @@ Load Rate]]></Text>
 						<Point><X>0</X><Y>-50</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
+    			<TimePlot>
+					<Id>1604726459990</Id>
+					<Name><![CDATA[plotDoS]]></Name>
+					<X>1420.661</X><Y>3920</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1603785600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[600]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[2]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>460</Width>
+					<Height>320</Height>
+					<BackgroundColor/>
+					<BorderColor>-16777216</BorderColor>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>380</Width>
+						<Height>230</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Trucks Served]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-13447886</Color>
+					<Expression2><![CDATA[notServedTrucks]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>1000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+				<Rectangle>
+					<Id>1604726459999</Id>
+					<Name><![CDATA[rectangle79]]></Name>
+					<X>1420</X><Y>3780</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>467.965367965368</Width>
+					<Height>120</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-5952982</FillColor>
+					<FillMaterial>grass</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1604726460003</Id>
+					<Name><![CDATA[textPlaya69]]></Name>
+					<X>1540</X><Y>3820</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Trucks Served]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>36</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
