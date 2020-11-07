@@ -31595,7 +31595,7 @@ dataset_ship_load_times
 					<Value><![CDATA[]]></Value>
 					<NumberOfIntervals>1000</NumberOfIntervals>
 					<MinMaxAutodetect>false</MinMaxAutodetect>
-					<RangeMinExpression><![CDATA[800]]></RangeMinExpression>
+					<RangeMinExpression><![CDATA[2000]]></RangeMinExpression>
 					<RangeMaxExpression><![CDATA[2700]]></RangeMaxExpression>
 					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
 					<CalculateCDF>true</CalculateCDF>
