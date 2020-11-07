@@ -5034,6 +5034,9 @@ send("shipArrivedPort", agent);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entityLocation]]></Name>
@@ -6254,6 +6257,9 @@ send("shipArrivedPort", agent);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entityLocation]]></Name>
