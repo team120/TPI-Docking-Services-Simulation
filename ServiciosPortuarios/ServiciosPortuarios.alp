@@ -365,7 +365,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[75]]></Code>
+							<Code><![CDATA[50]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1604654880325</Id>
@@ -6100,7 +6100,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[triangular(70, 85, 100)]]></Code>
+								<Code><![CDATA[triangular(80, 95, 110)]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -6393,7 +6393,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular(8,10,12)]]></Code>
+								<Code><![CDATA[triangular(8,9,10)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -21635,7 +21635,7 @@ Load Rate]]></Text>
 				<BulkConveyorBelt>
 					<Id>1602645516019</Id>
 					<Name><![CDATA[inBilge0]]></Name>
-					<X>3360</X><Y>530</Y>
+					<X>3320</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21645,34 +21645,34 @@ Load Rate]]></Text>
 					<LineColor>-12566464</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<Width>10</Width>
-					<DrawStands>false</DrawStands>
+					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
-						<Point><X>-55</X><Y>35</Y><Z>0</Z></Point>
-						<Point><X>-45.425</X><Y>11.906</Y><Z>0</Z></Point>
-						<Point><X>-40.942</X><Y>14.327</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-90</Y><Z>85</Z></Point>
-						<Point><X>15.942</X><Y>-69.327</Y><Z>0</Z></Point>
+						<Point><X>-15</X><Y>40</Y><Z>0</Z></Point>
+						<Point><X>-9.762</X><Y>15.555</Y><Z>0</Z></Point>
+						<Point><X>-6.822</X><Y>16.375</Y><Z>0</Z></Point>
+						<Point><X>30</X><Y>-90</Y><Z>15</Z></Point>
+						<Point><X>21.822</X><Y>-66.375</Y><Z>0</Z></Point>
 						<Point><X>30</X><Y>-115</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>-170</Y><Z>90</Z></Point>
+						<Point><X>30</X><Y>-170</Y><Z>30</Z></Point>
 						<Point><X>30</X><Y>-145</Y><Z>0</Z></Point>
-						<Point><X>20.424624432489175</X><Y>-146.90644716070918</Y><Z>0</Z></Point>
+						<Point><X>24.761772781728162</X><Y>-145.55493964806476</Y><Z>0</Z></Point>
 					</Points>
 				</BulkConveyorBelt>
 				<BulkConveyorBelt>
 					<Id>1603830484603</Id>
 					<Name><![CDATA[inBilge4]]></Name>
-					<X>3390</X><Y>145</Y>
+					<X>3350</X><Y>145</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>90</Z>
+					<Z>30</Z>
 					<LineColor>-12566464</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<Width>10</Width>
-					<DrawStands>false</DrawStands>
+					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -21746,17 +21746,17 @@ Load Rate]]></Text>
 				<BulkConveyorBelt>
 					<Id>1603829819618</Id>
 					<Name><![CDATA[inBilge1]]></Name>
-					<X>3390</X><Y>360</Y>
+					<X>3350</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>90</Z>
+					<Z>30</Z>
 					<LineColor>-12566464</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<Width>10</Width>
-					<DrawStands>false</DrawStands>
+					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -21770,17 +21770,17 @@ Load Rate]]></Text>
 				<BulkConveyorBelt>
 					<Id>1603830308887</Id>
 					<Name><![CDATA[inBilge2]]></Name>
-					<X>3390</X><Y>295</Y>
+					<X>3350</X><Y>295</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>90</Z>
+					<Z>30</Z>
 					<LineColor>-12566464</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<Width>10</Width>
-					<DrawStands>false</DrawStands>
+					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -21794,17 +21794,17 @@ Load Rate]]></Text>
 				<BulkConveyorBelt>
 					<Id>1603830369362</Id>
 					<Name><![CDATA[inBilge3]]></Name>
-					<X>3390</X><Y>220</Y>
+					<X>3350</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>90</Z>
+					<Z>30</Z>
 					<LineColor>-12566464</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<Width>10</Width>
-					<DrawStands>false</DrawStands>
+					<DrawStands>true</DrawStands>
 					<StandsLevel>0.0</StandsLevel>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -21817,18 +21817,18 @@ Load Rate]]></Text>
 				</BulkConveyorBelt>
     			<TimePlot>
 					<Id>1604726459990</Id>
-					<Name><![CDATA[plotDoS]]></Name>
+					<Name><![CDATA[plotTS]]></Name>
 					<X>1420.661</X><Y>3920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>false</AutoUpdate>
+					<AutoUpdate>true</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
 					<OccurrenceDate>1603785600000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[600]]></Code>
+						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
@@ -21871,7 +21871,7 @@ Load Rate]]></Text>
 						<Title><![CDATA[Trucks Served]]></Title>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-13447886</Color>
-					<Expression2><![CDATA[notServedTrucks]]></Expression2>
+					<Expression2><![CDATA[timeUnloading.out.count()]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
@@ -31595,8 +31595,8 @@ dataset_ship_load_times
 					<Value><![CDATA[]]></Value>
 					<NumberOfIntervals>1000</NumberOfIntervals>
 					<MinMaxAutodetect>false</MinMaxAutodetect>
-					<RangeMinExpression><![CDATA[1100]]></RangeMinExpression>
-					<RangeMaxExpression><![CDATA[3000]]></RangeMaxExpression>
+					<RangeMinExpression><![CDATA[800]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[2700]]></RangeMaxExpression>
 					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
 					<CalculateCDF>true</CalculateCDF>
 					<CalculatePercentiles>true</CalculatePercentiles>
@@ -32087,9 +32087,6 @@ dataset_ship_load_times
 			</FreeformParamValue>
 			<FreeformParamValue>	
 				<Id>1604695564479</Id>
-				<Expression Class="CodeValue">
-					<Code><![CDATA[17]]></Code>
-				</Expression>
 			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602641751835</Id>
