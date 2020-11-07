@@ -1935,12 +1935,12 @@ silos.get(silos.size() - 1).unloadExit.connect(pier.unloadEnterWSS);]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1603785600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[2]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[2]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Code><![CDATA[3600]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
@@ -31483,9 +31483,9 @@ dataset_ship_load_times
 					<Logging>false</Logging>
 					<Value><![CDATA[]]></Value>
 					<NumberOfIntervals>1000</NumberOfIntervals>
-					<MinMaxAutodetect>true</MinMaxAutodetect>
-					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
-					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<MinMaxAutodetect>false</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[1100]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[4000]]></RangeMaxExpression>
 					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
 					<CalculateCDF>true</CalculateCDF>
 					<CalculatePercentiles>true</CalculatePercentiles>
@@ -31542,7 +31542,7 @@ dataset_ship_load_times
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
-					<ShowCDF>false</ShowCDF>
+					<ShowCDF>true</ShowCDF>
 					<ShowMean>true</ShowMean>
 					<Bars>
 						<Direction>UP</Direction>
@@ -31648,7 +31648,7 @@ dataset_ship_load_times
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
-					<ShowCDF>false</ShowCDF>
+					<ShowCDF>true</ShowCDF>
 					<ShowMean>true</ShowMean>
 					<Bars>
 						<Direction>UP</Direction>
@@ -31733,7 +31733,7 @@ dataset_ship_load_times
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
-					<ShowCDF>false</ShowCDF>
+					<ShowCDF>true</ShowCDF>
 					<ShowMean>true</ShowMean>
 					<Bars>
 						<Direction>UP</Direction>
@@ -31826,7 +31826,7 @@ dataset_ship_load_times
 					</Labels>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
-					<ShowCDF>false</ShowCDF>
+					<ShowCDF>true</ShowCDF>
 					<ShowMean>true</ShowMean>
 					<Bars>
 						<Direction>UP</Direction>
@@ -32048,7 +32048,7 @@ dataset_ship_load_times
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 			</PresentationProperties>
 			<ReplicationsProperties>
-				<UseReplication>true</UseReplication>
+				<UseReplication>false</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
 				<ReplicationPerIteration>10</ReplicationPerIteration>
 				<MinimumReplication>2</MinimumReplication>
