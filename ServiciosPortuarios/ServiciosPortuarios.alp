@@ -124,7 +124,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1604726274235</Id>
 					<Name><![CDATA[notServedTrucks]]></Name>
-					<X>1370</X><Y>-1140</Y>
+					<X>1320</X><Y>-960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -225,30 +225,6 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602642345446</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1602643193655</Id>
-					<Name><![CDATA[truckCapacity]]></Name>
-					<X>1320</X><Y>-960</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[normal(30, 150)]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1602643193653</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -6124,7 +6100,7 @@ send("shipArrivedPort", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[truckCapacity]]></Code>
+								<Code><![CDATA[normal(30, 100)]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -24547,7 +24523,7 @@ self.select(1);]]></Code>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[main.truckCapacity]]></Code>
+							<Code><![CDATA[100]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1602601268046</Id>
@@ -31327,9 +31303,6 @@ through the different views.]]></Text>
 					<ParameterName><![CDATA[silosPerRow]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[truckCapacity]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[siloSecurityBand]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -32095,12 +32068,6 @@ dataset_ship_load_times
 				<Id>1602642345448</Id>
 			</FreeformParamValue>
 			<FreeformParamValue>	
-				<Id>1602643193655</Id>
-				<Expression Class="CodeValue">
-					<Code><![CDATA[normal(30, 150)]]></Code>
-				</Expression>
-			</FreeformParamValue>
-			<FreeformParamValue>	
 				<Id>1602861560824</Id>
 			</FreeformParamValue>
 			<FreeformParamValue>	
@@ -32138,10 +32105,6 @@ dataset_ship_load_times
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1602642345448</Id>
-				<Type>FIXED</Type>
-			</RangeVariationParamValue>
-			<RangeVariationParamValue>	
-				<Id>1602643193655</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
