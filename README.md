@@ -1,2 +1,11 @@
 ## [TPI] - Docking Services Simulation
-Real simulation of the critical processes of the organization "Servicios Portuarios SA" located in Argentina. From the arrival and unloading of the trucks, through the storage and conditioning services that are performed on the cereals, until finally the shipment.
+This work proposes a dynamic computational simulation to study the behavior
+and performance of the activities that make up the critical grain shipment process
+from one of Rosario’s ports (city considered to be the most important agro-export
+node in the world), through the implementation of measurable indicators for the
+different activities in the simulated process to then analyze, through an alternative
+model, how a specific change (such as increasing the silos’ unload rate by purchasing
+better conveyor belts) can decrease the shipping time of grains and how this change
+influences other activities in the process, eliminating bottlenecks and making the
+port a more desirable option compared to the competition, justifying whether the
+investment necessary to optimize such activities is worth it.
