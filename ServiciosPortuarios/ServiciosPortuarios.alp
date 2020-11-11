@@ -30850,20 +30850,7 @@ through the different views.]]></Text>
 			<MaximumMemory>2048</MaximumMemory>
 			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<AfterSimulationRunCode><![CDATA[dataset_Corn
-	.add(root.getUnallocatedCargo()
-	.get(0));
-dataset_Wheat
-	.add(root.getUnallocatedCargo()
-	.get(1));
-dataset_Soy
-	.add(root.getUnallocatedCargo()
-	.get(2));
-dataset_Sorghum
-	.add(root.getUnallocatedCargo()
-	.get(3));
-
-dataset_mean_queue_time_C
+			<AfterSimulationRunCode><![CDATA[dataset_mean_queue_time_C
 	.add(root.timeQueue_OUT_Corn
 	.distribution.mean());
 
